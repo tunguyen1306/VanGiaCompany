@@ -1,0 +1,1496 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DataAdminvanGiaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ctr_in_form">
+    <Key>
+      <PropertyRef Name="id_ctr_in_form" />
+    </Key>
+    <Property Name="id_ctr" Type="Int32" Nullable="false" />
+    <Property Name="id_form" Type="Int32" Nullable="false" />
+    <Property Name="order_ctr" Type="Int32" Nullable="false" />
+    <Property Name="ctr_client_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ctr_store" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ctr_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="id_ctr_in_form" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ctr_placeholder" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ctr_name_us" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ctr_placeholder_us" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ctr_parent_active" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ctr_effect_show" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ctr_query_data" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ctr_require_validate" Type="Boolean" />
+    <Property Name="ctr_require_validate_rex" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ctr_require_validate_mess" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ctr_steel">
+    <Key>
+      <PropertyRef Name="id_ctr" />
+    </Key>
+    <Property Name="ctr_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ctr_request_default" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ctr_page_name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ctr_type" Type="Int32" Nullable="false" />
+    <Property Name="id_ctr" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ctr_client_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="id_project" Type="Int32" />
+    <Property Name="ctr_des" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ctr_store_default" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ctr_placeholder" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ctr_placeholder_us" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ctr_name_us" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ctr_code_js" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ctr_img" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ctr_require_validate" Type="Boolean" />
+    <Property Name="ctr_require_validate_rex" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ctr_require_validate_mess" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="form_steel">
+    <Key>
+      <PropertyRef Name="id_form" />
+    </Key>
+    <Property Name="id_form" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="form_name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="id_project" Type="Int32" />
+    <Property Name="form_grid_view" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="form_name_us" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="form_view_store" Type="Int32" />
+    <Property Name="form_grid_chart" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="form_grid_form" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="form_db" Type="Int32" />
+    <Property Name="fs_table_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="fs_store_c_u_d_s" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="fs_script_page_load" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="form_store">
+    <Key>
+      <PropertyRef Name="id_form_store" />
+    </Key>
+    <Property Name="id_form_store" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="form_store_code" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="form_store_type" Type="Int32" />
+    <Property Name="form_store_admin" Type="Int32" />
+  </EntityType>
+  <EntityType Name="form_store_para">
+    <Key>
+      <PropertyRef Name="id_store_para" />
+    </Key>
+    <Property Name="id_store_para" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="store_para_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="store_para_type" Type="Int32" />
+    <Property Name="id_form_store" Type="Int32" />
+  </EntityType>
+  <EntityType Name="fs_auth">
+    <Key>
+      <PropertyRef Name="auth_id" />
+    </Key>
+    <Property Name="auth_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="auth_name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="fs_manga">
+    <Key>
+      <PropertyRef Name="manga_id" />
+    </Key>
+    <Property Name="manga_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="manga_name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="manga_key" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="type_id" Type="Int64" />
+    <Property Name="manga_des" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="manga_img" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="manga_view" Type="Int32" />
+    <Property Name="manga_status" Type="Int32" />
+    <Property Name="manga_create" Type="DateTime" Precision="3" />
+    <Property Name="auth_id" Type="Int64" />
+  </EntityType>
+  <EntityType Name="fs_manga_chap">
+    <Key>
+      <PropertyRef Name="chap_id" />
+    </Key>
+    <Property Name="chap_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="manga_id" Type="Int64" />
+    <Property Name="chap_name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="chap_orther" Type="Int32" />
+    <Property Name="chap_create" Type="DateTime" Precision="3" />
+    <Property Name="chap_key" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="fs_manga_tag">
+    <Key>
+      <PropertyRef Name="tag_id" />
+    </Key>
+    <Property Name="tag_id" Type="Int64" Nullable="false" />
+    <Property Name="manga_id" Type="Int64" />
+    <Property Name="tag_view" Type="Int32" />
+  </EntityType>
+  <EntityType Name="fs_manga_type">
+    <Key>
+      <PropertyRef Name="type_id" />
+    </Key>
+    <Property Name="type_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="type_name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="type_key" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="type_orther" Type="Int32" />
+    <Property Name="type_status" Type="Int32" />
+  </EntityType>
+  <EntityType Name="mar_project">
+    <Key>
+      <PropertyRef Name="mar_project_name" />
+    </Key>
+    <Property Name="id_mar_project" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="mar_project_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="mar_project_status" Type="Int32" />
+    <Property Name="mar_project_begin" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="mar_project_end" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="mar_project_sell_off" Type="Int32" />
+    <Property Name="mar_project_sell_type" Type="Int32" />
+  </EntityType>
+  <EntityType Name="pct_department">
+    <Key>
+      <PropertyRef Name="id_department" />
+    </Key>
+    <Property Name="id_department" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="department_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pct_employee">
+    <Key>
+      <PropertyRef Name="id_employee" />
+    </Key>
+    <Property Name="id_employee" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_title" Type="Int32" Nullable="false" />
+    <Property Name="employee_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="employee_address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="employee_mobile" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pct_ticket">
+    <Key>
+      <PropertyRef Name="id_ticket" />
+    </Key>
+    <Property Name="id_ticket" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_employee" Type="Int32" Nullable="false" />
+    <Property Name="ticket_fromdate" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ticket_todate" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ticket_money" Type="Int32" Nullable="false" />
+    <Property Name="ticket_add" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ticket_note" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pct_title">
+    <Key>
+      <PropertyRef Name="id_title" />
+    </Key>
+    <Property Name="id_title" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_department" Type="Int32" Nullable="false" />
+    <Property Name="title_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="project_steel">
+    <Key>
+      <PropertyRef Name="id_project" />
+    </Key>
+    <Property Name="id_project" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="project_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="project_status" Type="Int32" />
+    <Property Name="project_des" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="so_orther">
+    <Key>
+      <PropertyRef Name="so_id" />
+    </Key>
+    <Property Name="so_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="so_code" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="so_date" Type="DateTime" Precision="3" />
+    <Property Name="so_user_id" Type="Int32" Nullable="false" />
+    <Property Name="so_sms_status" Type="Int32" />
+    <Property Name="so_fullname" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="so_email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="so_phone_number" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="so_address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="so_orther_detail">
+    <Key>
+      <PropertyRef Name="so_orther_id" />
+      <PropertyRef Name="so_prod_id" />
+    </Key>
+    <Property Name="so_orther_id" Type="Int32" Nullable="false" />
+    <Property Name="so_prod_id" Type="Int32" Nullable="false" />
+    <Property Name="so_prod_count_id" Type="Int32" Nullable="false" />
+    <Property Name="so_prod_price" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="so_prod_image_detail">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="so_image" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="so_orther" Type="Int32" />
+    <Property Name="so_id_prod" Type="Int32" />
+  </EntityType>
+  <EntityType Name="store_">
+    <Key>
+      <PropertyRef Name="store_name" />
+    </Key>
+    <Property Name="id_store" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="store_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="store_ads" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="store_phone" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="store_des" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="store_cate">
+    <Key>
+      <PropertyRef Name="store_cate_name" />
+    </Key>
+    <Property Name="id_store_cate" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="store_cate_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="store_cate_order" Type="Int32" />
+    <Property Name="store_cate_status" Type="Int32" />
+    <Property Name="store_cate_key" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="store_cate_img" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="store_com_ship">
+    <Key>
+      <PropertyRef Name="id_store_com_ship" />
+    </Key>
+    <Property Name="id_store_com_ship" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="store_com_type">
+    <Key>
+      <PropertyRef Name="id_store_com_type" />
+    </Key>
+    <Property Name="id_store_com_type" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="type_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="store_company">
+    <Key>
+      <PropertyRef Name="id_store_company" />
+    </Key>
+    <Property Name="id_store_company" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="company_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="company_code" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="company_address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="company_phone" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="company_email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="company_website" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="company_logo" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="company_des" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="id_store_com_type" Type="Int32" />
+    <Property Name="company_fax" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="company_bank" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="company_bank_ads" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="store_contact">
+    <Key>
+      <PropertyRef Name="id_store_contact" />
+    </Key>
+    <Property Name="id_store_contact" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_store_company" Type="Int32" />
+    <Property Name="contact_full_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="contact_chat" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="contact_mobile" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="contact_title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="contact_ext" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="contact_email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="store_exp">
+    <Key>
+      <PropertyRef Name="id_store_exp" />
+    </Key>
+    <Property Name="id_store_exp" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="store_exp_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="store_exp_list_data" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="store_exp_creater" Type="Int32" />
+    <Property Name="store_exp_checker" Type="Int32" />
+    <Property Name="store_exp_cost" Type="Int32" />
+  </EntityType>
+  <EntityType Name="store_imp">
+    <Key>
+      <PropertyRef Name="id_store_imp" />
+    </Key>
+    <Property Name="id_store_imp" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="store_imp_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="store_imp_checker" Type="Int32" />
+    <Property Name="store_imp_creater" Type="Int32" />
+    <Property Name="store_imp_list_data" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="store_imp_store" Type="Int32" />
+  </EntityType>
+  <EntityType Name="store_prod">
+    <Key>
+      <PropertyRef Name="store_prod_code" />
+    </Key>
+    <Property Name="id_store_prod" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="store_prod_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="id_store_unit" Type="Int32" Nullable="false" />
+    <Property Name="store_prod_img" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="store_prod_code" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="id_store_cate" Type="Int32" />
+    <Property Name="store_prod_cost" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="store_prod_sku">
+    <Key>
+      <PropertyRef Name="id_store_prod" />
+      <PropertyRef Name="id_prod_sku" />
+    </Key>
+    <Property Name="id_store_prod_sku" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_store_prod" Type="Int32" Nullable="false" />
+    <Property Name="sku_count" Type="Int32" Nullable="false" />
+    <Property Name="id_prod_sku" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="store_slot">
+    <Key>
+      <PropertyRef Name="store_slot_code" />
+    </Key>
+    <Property Name="id_store_slot" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_store" Type="Int32" />
+    <Property Name="store_slot_code" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="id_store_stock" Type="Int32" />
+    <Property Name="store_slot_contain" Type="Int32" />
+  </EntityType>
+  <EntityType Name="store_stock">
+    <Key>
+      <PropertyRef Name="store_stock_code" />
+    </Key>
+    <Property Name="id_store_stock" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="store_stock_code" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="store_stock_status" Type="Int32" />
+    <Property Name="store_stock_store" Type="Int32" />
+  </EntityType>
+  <EntityType Name="store_unit">
+    <Key>
+      <PropertyRef Name="store_unit_name" />
+    </Key>
+    <Property Name="id_store_unit" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="store_unit_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sys_company">
+    <Key>
+      <PropertyRef Name="id_company" />
+    </Key>
+    <Property Name="id_company" Type="Int32" Nullable="false" />
+    <Property Name="company_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="sys_fs_help">
+    <Key>
+      <PropertyRef Name="id_fs_help" />
+    </Key>
+    <Property Name="id_fs_help" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fs_help_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="fs_help_content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="sys_gridview_control">
+    <Key>
+      <PropertyRef Name="table_name" />
+      <PropertyRef Name="column_name" />
+    </Key>
+    <Property Name="table_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="column_name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="column_caption" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="column_key" Type="Boolean" />
+    <Property Name="column_edit" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="sys_group_page">
+    <Key>
+      <PropertyRef Name="id_group_page" />
+    </Key>
+    <Property Name="id_group_page" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="group_page_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="group_page_status" Type="Int32" />
+    <Property Name="group_page_order" Type="Int32" />
+    <Property Name="group_page_icon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="sys_info">
+    <Key>
+      <PropertyRef Name="id_sys_info" />
+    </Key>
+    <Property Name="id_sys_info" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sys_info_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="sys_info_des" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="sys_info_key" Type="Int32" />
+  </EntityType>
+  <EntityType Name="sys_mapped_col">
+    <Key>
+      <PropertyRef Name="id_mapped_col" />
+    </Key>
+    <Property Name="id_mapped_col" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_mapped" Type="Int32" />
+    <Property Name="mapped_col_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="mapped_col_type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="mapped_col_key" Type="Int32" />
+    <Property Name="mapped_col_code" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="mapped_col_order" Type="Int32" />
+  </EntityType>
+  <EntityType Name="sys_mapped_join">
+    <Key>
+      <PropertyRef Name="id_mapped_join" />
+    </Key>
+    <Property Name="id_mapped_join" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="mapped_table_parent" Type="Int32" />
+    <Property Name="referencedTableName" Type="Int32" />
+    <Property Name="ref_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="id_mapped_col_p" Type="Int32" />
+    <Property Name="id_mapped_col_c" Type="Int32" />
+  </EntityType>
+  <EntityType Name="sys_mapped_operators">
+    <Key>
+      <PropertyRef Name="id_operators" />
+    </Key>
+    <Property Name="id_operators" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="operators_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="operators_label" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="operators_cardinality" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="sys_mapped_table">
+    <Key>
+      <PropertyRef Name="id_mapped" />
+    </Key>
+    <Property Name="id_mapped" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="mapped_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="mapped_code" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="type_other" Type="Int32" />
+  </EntityType>
+  <EntityType Name="sys_mapped_ty_op">
+    <Key>
+      <PropertyRef Name="id_operators" />
+      <PropertyRef Name="id_operators_type" />
+    </Key>
+    <Property Name="id_operators" Type="Int32" Nullable="false" />
+    <Property Name="id_operators_type" Type="Int32" Nullable="false" />
+    <Property Name="op_order" Type="Int32" />
+  </EntityType>
+  <EntityType Name="sys_mapped_type">
+    <Key>
+      <PropertyRef Name="id_operators_type" />
+    </Key>
+    <Property Name="id_operators_type" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="operators_type_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="operators_type_editor" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="sys_page">
+    <Key>
+      <PropertyRef Name="id_page" />
+    </Key>
+    <Property Name="id_page" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="page_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="id_form" Type="Int32" />
+    <Property Name="page_order" Type="Int32" />
+    <Property Name="id_group_page" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tbl_blog_tra">
+    <Key>
+      <PropertyRef Name="id_blog_tra" />
+    </Key>
+    <Property Name="id_blog_tra" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="titile_blog_tra" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="short_des_blog_tra" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="des_blog_tra" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="status_blog_tra" Type="Int32" />
+    <Property Name="type_blog_tra" Type="Int32" />
+    <Property Name="create_date_blog_tra" Type="DateTime" Precision="3" />
+    <Property Name="img_blog_tra" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="video_blog_tra" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="id_company" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tbl_menu_dulich">
+    <Key>
+      <PropertyRef Name="id_menu_dulich" />
+    </Key>
+    <Property Name="id_menu_dulich" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name_menu_dulich" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="link_menu_dulich" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="trangthai_menu_dulich" Type="Int32" />
+    <Property Name="thutu_menu_dulich" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tbl_new_dulich">
+    <Key>
+      <PropertyRef Name="id_new_dulich" />
+    </Key>
+    <Property Name="id_new_dulich" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name_new_dulich" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="img_new_dulich" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="thutu_new_dulich" Type="Int32" />
+    <Property Name="tomtat_new_dulich" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="img1_new_dulich" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="img2_new_dulich" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="img3_new_dulich" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="img4_new_dulich" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="img5_new_dulich" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="mota_new_dulich" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="trangthai_new_dulich" Type="Int32" />
+    <Property Name="type_new_dulich" Type="Int32" />
+    <Property Name="img6_new_dulich" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="img7_new_dulich" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="class_new_dulich" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_products_tra">
+    <Key>
+      <PropertyRef Name="id_products_tra" />
+    </Key>
+    <Property Name="id_products_tra" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="img_products_tra" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="img1_products_tra" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="img2_products_tra" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="img3_products_tra" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="name_products_tra" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="code_products_tra" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="des_products_tra" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="status_products_tra" Type="Int32" />
+    <Property Name="newprice_products_tra" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="oldprice_products_tra" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="type_products_tra" Type="Int32" />
+    <Property Name="featured_products_tra" Type="Int32" />
+    <Property Name="discount_products_tra" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="yes_products_tra" Type="Int32" />
+    <Property Name="new_products_tra" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tbl_slide_dulich">
+    <Key>
+      <PropertyRef Name="id_slide_dulich" />
+    </Key>
+    <Property Name="id_slide_dulich" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name_silde_dulich" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="img_silde_dulich" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="tomtat_silde_dulich" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="trangthai_silde_dulich" Type="Int32" />
+    <Property Name="thutu_silde_dulich" Type="Int32" />
+    <Property Name="thutunew_dulich" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tbl_slide_tra">
+    <Key>
+      <PropertyRef Name="id_slide_tra" />
+    </Key>
+    <Property Name="id_slide_tra" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="img_slide_tra" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="title_slide_tra" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="des_slide_tra" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="status_slide_tra" Type="Int32" />
+    <Property Name="title1_slide_tra" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_spam_dulich">
+    <Key>
+      <PropertyRef Name="id_spam_dulich" />
+    </Key>
+    <Property Name="id_spam_dulich" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name_spam_dulich" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="hinh_spam_dulich" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="link_spam_dulich" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="mo_spam_dulich" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblDomain">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="domain_name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="id_company" Type="Int64" />
+    <Property Name="domain_status" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tblSysCompany">
+    <Key>
+      <PropertyRef Name="id_company" />
+    </Key>
+    <Property Name="id_company" Type="Int32" Nullable="false" />
+    <Property Name="company_name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblSysGroupPage">
+    <Key>
+      <PropertyRef Name="id_group_page" />
+    </Key>
+    <Property Name="id_group_page" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="group_page_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="group_page_status" Type="Int32" />
+    <Property Name="group_page_create" Type="DateTime" Precision="3" />
+    <Property Name="id_company" Type="Int32" />
+    <Property Name="group_page_order" Type="Int32" />
+    <Property Name="group_page_img" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblSysGroupPageDetail">
+    <Key>
+      <PropertyRef Name="id_page" />
+    </Key>
+    <Property Name="id_page" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_group_page" Type="Int32" Nullable="false" />
+    <Property Name="page_name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="page_status" Type="Int32" Nullable="false" />
+    <Property Name="page_create" Type="DateTime" Precision="3" />
+    <Property Name="page_link" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="id_company" Type="Int32" Nullable="false" />
+    <Property Name="page_key" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="max_record" Type="Int32" />
+    <Property Name="page_order" Type="Int32" />
+    <Property Name="page_type_role" Type="Int32" Nullable="false" />
+    <Property Name="page_icon" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="page_type" Type="Int32" />
+    <Property Name="page_type_chart" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tblSysPicture">
+    <Key>
+      <PropertyRef Name="picture_id" />
+    </Key>
+    <Property Name="picture_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="advert_id" Type="Int32" />
+    <Property Name="originalFilepath" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="position" Type="Byte" />
+    <Property Name="converted" Type="DateTime" Precision="3" />
+    <Property Name="convertedFilename" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="tocheck" Type="Boolean" />
+    <Property Name="isvalidated" Type="Boolean" />
+    <Property Name="convertedFilename90" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="convertedFilename180" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="convertedFilename270" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="angleType" Type="Byte" />
+    <Property Name="type_id" Type="Byte" />
+    <Property Name="title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="cms_sql_id" Type="Int32" />
+    <Property Name="shortdescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblSysUser_Page">
+    <Key>
+      <PropertyRef Name="id_user_page" />
+    </Key>
+    <Property Name="id_user_page" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="user_page_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="user_page_control" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="user_page_sexy" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="user_page_parent" Type="Int32" />
+    <Property Name="user_page_order" Type="Int32" />
+    <Property Name="user_vip" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tblSysUserGroupPage">
+    <Key>
+      <PropertyRef Name="role_group_page_id" />
+    </Key>
+    <Property Name="role_group_page_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="role_group_page_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="role_group_page_des" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="create_date" Type="DateTime" Precision="3" />
+    <Property Name="update_by" Type="Int32" />
+    <Property Name="create_by" Type="Int32" />
+    <Property Name="id_company" Type="Int32" Nullable="false" />
+    <Property Name="role_group_status" Type="Int32" />
+    <Property Name="role_page_view" Type="Int32" />
+    <Property Name="role_page_create" Type="Int32" />
+    <Property Name="role_page_del" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tblSysUserGroupPageDetail">
+    <Key>
+      <PropertyRef Name="id_group_user_detail" />
+    </Key>
+    <Property Name="role_group_page_id" Type="Int32" Nullable="false" />
+    <Property Name="user_id" Type="Int32" Nullable="false" />
+    <Property Name="id_company" Type="Int32" Nullable="false" />
+    <Property Name="id_group_user_detail" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tblSysUserGroupPagePage">
+    <Key>
+      <PropertyRef Name="id_group_page_detail" />
+    </Key>
+    <Property Name="role_group_page_id" Type="Int32" Nullable="false" />
+    <Property Name="id_page" Type="Int32" Nullable="false" />
+    <Property Name="id_company" Type="Int32" Nullable="false" />
+    <Property Name="id_group_page_detail" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tblSysUserRoleGroup">
+    <Key>
+      <PropertyRef Name="group_role_id" />
+    </Key>
+    <Property Name="group_role_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="group_role_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="group_role_description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="group_role_create" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="group_role_parent" Type="Int64" />
+    <Property Name="group_role_type" Type="Int32" />
+    <Property Name="update_by" Type="Int64" Nullable="false" />
+    <Property Name="create_by" Type="Int64" Nullable="false" />
+    <Property Name="id_company" Type="Int32" Nullable="false" />
+    <Property Name="group_role_status" Type="Int32" />
+    <Property Name="id_page" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tblSysUserRolePage">
+    <Key>
+      <PropertyRef Name="id_page" />
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="id_page" Type="Int32" Nullable="false" />
+    <Property Name="user_id" Type="Int32" Nullable="false" />
+    <Property Name="role_page_view" Type="Int32" Nullable="false" />
+    <Property Name="role_page_create" Type="Int32" Nullable="false" />
+    <Property Name="role_page_del" Type="Int32" Nullable="false" />
+    <Property Name="role_page_config" Type="Int32" Nullable="false" />
+    <Property Name="role_page_role" Type="Int32" Nullable="false" />
+    <Property Name="id_company" Type="Int32" Nullable="false" />
+    <Property Name="id_user_role_page" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tblUser">
+    <Key>
+      <PropertyRef Name="user_id" />
+      <PropertyRef Name="user_email" />
+    </Key>
+    <Property Name="user_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="user_email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="user_pass" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="user_fullname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="user_status" Type="Int32" />
+    <Property Name="user_create" Type="DateTime" Precision="3" />
+    <Property Name="user_update" Type="DateTime" Precision="3" />
+    <Property Name="id_group_user" Type="Int32" />
+    <Property Name="user_img" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="user_vip" Type="Int32" />
+    <Property Name="user_vip_end" Type="DateTime" Precision="3" />
+    <Property Name="user_role" Type="Int32" />
+    <Property Name="forget_pass" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="user_money" Type="Int32" />
+    <Property Name="user_avatar" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="user_online" Type="Int32" />
+    <Property Name="id_company" Type="Int32" />
+    <Property Name="user_disk" Type="Int32" />
+    <Property Name="user_code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="seri_number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="user_birthday" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="user_code_country" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="user_gender" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="user_id_facebook" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="user_point" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tblUserCloud">
+    <Key>
+      <PropertyRef Name="user_cloud_id" />
+    </Key>
+    <Property Name="user_cloud_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="user_code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="user_birthday" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="user_code_country" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="user_gender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="user_id_facebook" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="user_email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="user_fullname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="user_fname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="user_lname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="user_avatar" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="user_type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="user_id" Type="Int64" />
+  </EntityType>
+  <EntityType Name="tblUserFriend">
+    <Key>
+      <PropertyRef Name="user_id" />
+      <PropertyRef Name="social_id" />
+    </Key>
+    <Property Name="user_id" Type="Int64" Nullable="false" />
+    <Property Name="social_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="social_user" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="social_type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="social_name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="social_picture" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblUserImg">
+    <Key>
+      <PropertyRef Name="id_user_img" />
+    </Key>
+    <Property Name="id_user_img" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="user_img_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="user_img_sexy_key" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="user_img_size" Type="Double" />
+    <Property Name="user_id" Type="Int64" />
+    <Property Name="user_img_create" Type="DateTime" Precision="3" />
+    <Property Name="user_img_w" Type="Double" />
+    <Property Name="user_img_h" Type="Double" />
+    <Property Name="user_img_type" Type="Int32" />
+    <Property Name="admin_view" Type="Int32" />
+  </EntityType>
+  <EntityType Name="user_steel">
+    <Key>
+      <PropertyRef Name="id_user" />
+    </Key>
+    <Property Name="id_user" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="user_first_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="user_last_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="user_full_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="user_email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="user_status" Type="Int32" Nullable="false" />
+    <Property Name="user_pass" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="web_banner">
+    <Key>
+      <PropertyRef Name="id_banner" />
+    </Key>
+    <Property Name="id_banner" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="banner_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="banner_order" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="banner_link" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="banner_img" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="banner_tiny" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="banner_status" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="web_chater">
+    <Key>
+      <PropertyRef Name="id_chater" />
+    </Key>
+    <Property Name="id_chater" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="chater_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="customer_logo" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="customer_prod" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="customer_idea" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="customer_order" Type="Int32" Nullable="false" />
+    <Property Name="customer_status" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="web_chater_content">
+    <Key>
+      <PropertyRef Name="id_up" />
+    </Key>
+    <Property Name="id_chater" Type="Int64" Nullable="false" />
+    <Property Name="id_employer" Type="Int32" Nullable="false" />
+    <Property Name="chater_content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="chater_content_create" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="id_up" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="web_content">
+    <Key>
+      <PropertyRef Name="id_content" />
+    </Key>
+    <Property Name="id_content" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="content_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="id_menu" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="web_content_other">
+    <Key>
+      <PropertyRef Name="id_content_other" />
+    </Key>
+    <Property Name="id_content_other" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="content_other_title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="content_other" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="id_menu" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="web_customer">
+    <Key>
+      <PropertyRef Name="id_customer" />
+    </Key>
+    <Property Name="id_customer" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="customer_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="customer_logo" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="customer_prod" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="customer_idea" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="customer_order" Type="Int32" Nullable="false" />
+    <Property Name="customer_status" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="web_department">
+    <Key>
+      <PropertyRef Name="id_department" />
+    </Key>
+    <Property Name="id_department" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="department_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="web_employer">
+    <Key>
+      <PropertyRef Name="id_employer" />
+    </Key>
+    <Property Name="id_employer" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="employer_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="id_title" Type="Int32" Nullable="false" />
+    <Property Name="employer_code" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="employer_ext" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="employer_mobile" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="employer_status" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="web_list_product">
+    <Key>
+      <PropertyRef Name="id_list_prod" />
+    </Key>
+    <Property Name="id_list_prod" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="list_prod_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="list_prod_order" Type="Int32" Nullable="false" />
+    <Property Name="list_prod_link" Type="Int32" Nullable="false" />
+    <Property Name="list_prod_status" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="web_menu_root">
+    <Key>
+      <PropertyRef Name="id_menu" />
+    </Key>
+    <Property Name="id_menu" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="menu_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="menu_order" Type="Int32" Nullable="false" />
+    <Property Name="menu_code" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="banner_tiny" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="menu_status" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="web_products">
+    <Key>
+      <PropertyRef Name="id_prod" />
+    </Key>
+    <Property Name="id_prod" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="prod_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="prod_order" Type="Int32" Nullable="false" />
+    <Property Name="prod_status" Type="Int32" Nullable="false" />
+    <Property Name="prod_content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="web_title">
+    <Key>
+      <PropertyRef Name="id_title" />
+    </Key>
+    <Property Name="id_title" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="title_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="id_department" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="web_vangia_config">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name_vg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="key_word_vg" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="laguage_word_vg" Type="Int32" />
+    <Property Name="order_word_vg" Type="Int32" />
+  </EntityType>
+  <EntityType Name="web_vangia_doitac">
+    <Key>
+      <PropertyRef Name="vangia_id_doitac" />
+    </Key>
+    <Property Name="vangia_id_doitac" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="vangia_name_doitac" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_img_doitac" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_noidung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_status_doitac" Type="Int32" />
+    <Property Name="vangia_order_doitac" Type="Int32" />
+    <Property Name="vangia_language_doitac" Type="Int32" />
+    <Property Name="vangia_type_doitac" Type="Int32" />
+  </EntityType>
+  <EntityType Name="web_vangia_duanmau">
+    <Key>
+      <PropertyRef Name="vangia_id_duanmau" />
+    </Key>
+    <Property Name="vangia_id_duanmau" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="vangia_img_duanmau" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_name_duanmau" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_time_duanmau" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_img1_duanmau" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_img2_duanmau" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_img3_duanmau" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_status_duanmau" Type="Int32" />
+    <Property Name="vangia_order_duanmau" Type="Int32" />
+    <Property Name="vangia_language" Type="Int32" />
+    <Property Name="vangia_content_duanmau" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_tomtat_duanmau" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="web_vangia_employee">
+    <Key>
+      <PropertyRef Name="vangia_id_employee" />
+    </Key>
+    <Property Name="vangia_id_employee" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="vangia_img_employee" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_name_employee" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_tiesu_employee" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_status_employee" Type="Int32" />
+    <Property Name="vangia_order_employee" Type="Int32" />
+    <Property Name="vangia_language_employee" Type="Int32" />
+    <Property Name="vangia_team_employee" Type="Int32" />
+    <Property Name="vangia_noidung_employee" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="web_vangia_language">
+    <Key>
+      <PropertyRef Name="vangia_id_language" />
+    </Key>
+    <Property Name="vangia_id_language" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="vangia_name_language" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_code_langue" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_status_lague" Type="Int32" />
+    <Property Name="vangia_icon_language" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="web_vangia_menu">
+    <Key>
+      <PropertyRef Name="vangia_id_menu" />
+    </Key>
+    <Property Name="vangia_id_menu" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="vangia_name_menu" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_link_menu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_status_menu" Type="Int32" />
+    <Property Name="vangia_order_menu" Type="Int32" />
+    <Property Name="vangia_id_language" Type="Int32" />
+    <Property Name="vangia_key_menu" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_loai_menu" Type="Int32" />
+    <Property Name="vangia_tt_menu" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="web_vangia_menucon">
+    <Key>
+      <PropertyRef Name="vangia_id_menucon" />
+    </Key>
+    <Property Name="vangia_id_menucon" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="vangia_name_menucon" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_link_menucon" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_menucha_menucon" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_status_menucon" Type="Int32" />
+    <Property Name="vangia_order_menucon" Type="Int32" />
+    <Property Name="vangia_language_menucon" Type="Int32" />
+  </EntityType>
+  <EntityType Name="web_vangia_news">
+    <Key>
+      <PropertyRef Name="vangia_id_news" />
+    </Key>
+    <Property Name="vangia_id_news" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="vangia_name_news" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_img_news" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_links_news" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_type_news" Type="Int32" />
+    <Property Name="vangia_img1_news" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_img2_news" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_tomtat_news" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_noidung_news" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_status_news" Type="Int32" />
+    <Property Name="vangia_order_news" Type="Int32" />
+    <Property Name="vangia_language_news" Type="Int32" />
+  </EntityType>
+  <EntityType Name="web_vangia_products">
+    <Key>
+      <PropertyRef Name="vangia_id_products" />
+    </Key>
+    <Property Name="vangia_id_products" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="vangia_img_products" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_name_products" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_noidung_products" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_img1_products" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_img2_products" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_img3_products" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_tomtat_products" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_order_products" Type="Int32" />
+    <Property Name="vangia_language_products" Type="Int32" />
+    <Property Name="vangia_status_products" Type="Int32" />
+    <Property Name="vangia_type_products" Type="Int32" />
+  </EntityType>
+  <EntityType Name="web_vangia_project">
+    <Key>
+      <PropertyRef Name="vangia_id_project" />
+    </Key>
+    <Property Name="vangia_id_project" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="vangia_img1_project" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_img2_project" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_img3_project" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_img_project" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_content_project" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_name_project" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_time_project" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_status_project" Type="Int32" />
+    <Property Name="vangia_order_project" Type="Int32" />
+    <Property Name="vangia_language_project" Type="Int32" />
+    <Property Name="vangia_tomtat_project" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_typeid_project" Type="Int32" />
+  </EntityType>
+  <EntityType Name="web_vangia_silde">
+    <Key>
+      <PropertyRef Name="vangia_id_silde" />
+    </Key>
+    <Property Name="vangia_id_silde" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="vangia_noidung_silde" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_tomtat_silde" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_img_silde" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_name_silde" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_status_silde" Type="Int32" />
+    <Property Name="vangia_order_silde" Type="Int32" />
+    <Property Name="vangia_language_silde" Type="Int32" />
+  </EntityType>
+  <EntityType Name="web_vangia_team">
+    <Key>
+      <PropertyRef Name="vangia_id_team" />
+    </Key>
+    <Property Name="vangia_id_team" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="vangia_name_team" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_status_team" Type="Int32" />
+    <Property Name="vangia_language_team" Type="Int32" />
+    <Property Name="vangia_tomtat_team" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_img_team" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="web_vangia_tuyendung">
+    <Key>
+      <PropertyRef Name="vangia_id_tuyendung" />
+    </Key>
+    <Property Name="vangia_id_tuyendung" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="vangia_name_tuyendung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_img_tuyendung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_tomtat_tuyendung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_img1_tuyendung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_img2_tuyendung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_status_tuyendung" Type="Int32" />
+    <Property Name="vangia_noidung_tuyendung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_language_tuyendung" Type="Int32" />
+    <Property Name="vangia_order_tuyendung" Type="Int32" />
+    <Property Name="vangia_type_tuyendung" Type="Int32" />
+    <Property Name="vangia_ma_tuyendung" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_vitri_tuyendung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_soluong_tuyendung" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_diadiem_tuyendung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_date_tuyendung" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="web_vangia_type_products">
+    <Key>
+      <PropertyRef Name="vangia_id_type_products" />
+    </Key>
+    <Property Name="vangia_id_type_products" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="vangia_img_type_products" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_name_type_products" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_status_type_products" Type="Int32" />
+    <Property Name="vangia_order_type_products" Type="Int32" />
+    <Property Name="vangia_language_type_products" Type="Int32" />
+  </EntityType>
+  <EntityType Name="web_vangia_typeproject">
+    <Key>
+      <PropertyRef Name="vangia_id_typeproject" />
+    </Key>
+    <Property Name="vangia_id_typeproject" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="vangia_name_typeproject" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="vangia_status_typeproject" Type="Int32" />
+    <Property Name="vangia_language_typeproject" Type="Int32" />
+  </EntityType>
+  <EntityType Name="fs_manga_img">
+    <Key>
+      <PropertyRef Name="img_orther" />
+    </Key>
+    <Property Name="chap_id" Type="Int64" />
+    <Property Name="img_orther" Type="Int32" Nullable="false" />
+    <Property Name="img_link" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="grid_view_mapping">
+    <Key>
+      <PropertyRef Name="id_mapped" />
+    </Key>
+    <Property Name="id_mapped" Type="Int32" Nullable="false" />
+    <Property Name="id_ctr_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="orther" Type="Int32" />
+  </EntityType>
+  <EntityType Name="log_store_prod">
+    <Key>
+      <PropertyRef Name="id_store_prod" />
+      <PropertyRef Name="store_prod_name" />
+      <PropertyRef Name="store_prod_code" />
+      <PropertyRef Name="store_prod_img" />
+      <PropertyRef Name="store_prod_count" />
+      <PropertyRef Name="store_prod_cost" />
+      <PropertyRef Name="store_prod_cost_sell" />
+      <PropertyRef Name="store_prod_shelf" />
+      <PropertyRef Name="log_sell" />
+      <PropertyRef Name="id_store_cate" />
+      <PropertyRef Name="store_cate_name" />
+      <PropertyRef Name="id_store_unit" />
+      <PropertyRef Name="store_unit_name" />
+      <PropertyRef Name="id_store" />
+      <PropertyRef Name="store_name" />
+      <PropertyRef Name="id_store_stock" />
+      <PropertyRef Name="store_stock_code" />
+      <PropertyRef Name="id_store_slot" />
+      <PropertyRef Name="store_slot_code" />
+    </Key>
+    <Property Name="id_store_prod" Type="Int32" Nullable="false" />
+    <Property Name="store_prod_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="store_prod_code" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="store_prod_img" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="store_prod_count" Type="Int32" Nullable="false" />
+    <Property Name="store_prod_cost" Type="Int32" Nullable="false" />
+    <Property Name="store_prod_cost_sell" Type="Int32" Nullable="false" />
+    <Property Name="store_prod_shelf" Type="Int32" Nullable="false" />
+    <Property Name="log_sell" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="id_store_cate" Type="Int32" Nullable="false" />
+    <Property Name="store_cate_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="id_store_unit" Type="Int32" Nullable="false" />
+    <Property Name="store_unit_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="id_store" Type="Int32" Nullable="false" />
+    <Property Name="store_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="id_store_stock" Type="Int32" Nullable="false" />
+    <Property Name="store_stock_code" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="id_store_slot" Type="Int32" Nullable="false" />
+    <Property Name="store_slot_code" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sys_data_fixed">
+    <Key>
+      <PropertyRef Name="ctr_client_id" />
+    </Key>
+    <Property Name="ctr_client_id" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="record_order" Type="Int32" />
+    <Property Name="st_value" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="st_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="st_parent" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ctr_key_query" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="id_form" Type="Int32" />
+  </EntityType>
+  <EntityType Name="sys_store_prod">
+    <Key>
+      <PropertyRef Name="id_store_prod" />
+      <PropertyRef Name="store_prod_count" />
+      <PropertyRef Name="id_store_slot" />
+      <PropertyRef Name="store_prod_cost" />
+      <PropertyRef Name="store_prod_shelf" />
+    </Key>
+    <Property Name="id_store_prod" Type="Int32" Nullable="false" />
+    <Property Name="store_prod_count" Type="Int32" Nullable="false" />
+    <Property Name="id_store_slot" Type="Int32" Nullable="false" />
+    <Property Name="store_prod_cost" Type="Int32" Nullable="false" />
+    <Property Name="store_prod_shelf" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblSysUserListShareDetail">
+    <Key>
+      <PropertyRef Name="group_role_id" />
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="group_role_id" Type="Int64" Nullable="false" />
+    <Property Name="user_id" Type="Int64" Nullable="false" />
+    <Property Name="id_company" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tblSysUserRoleRecord">
+    <Key>
+      <PropertyRef Name="user_id_master" />
+      <PropertyRef Name="user_id_staff" />
+      <PropertyRef Name="role_type" />
+      <PropertyRef Name="id_page" />
+    </Key>
+    <Property Name="user_id_master" Type="Int64" Nullable="false" />
+    <Property Name="user_id_staff" Type="Int64" Nullable="false" />
+    <Property Name="role_type" Type="Int32" Nullable="false" />
+    <Property Name="id_page" Type="Int32" Nullable="false" />
+    <Property Name="id_company" Type="Int32" />
+  </EntityType>
+  <EntityType Name="wb_advertising">
+    <Key>
+      <PropertyRef Name="id_advertising" />
+    </Key>
+    <Property Name="id_advertising" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name_advertising" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="links_advertising" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="status_advertising" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="order_advertising" Type="Int32" />
+    <Property Name="img_advertising" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="wb_banner">
+    <Key>
+      <PropertyRef Name="id_banner" />
+    </Key>
+    <Property Name="id_banner" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name_banner" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="links_banner" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="order_banner" Type="Int32" />
+    <Property Name="image_banner" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="status_banner" Type="Int32" />
+    <Property Name="type_banner" Type="Int32" />
+  </EntityType>
+  <EntityType Name="wb_comment">
+    <Key>
+      <PropertyRef Name="id_comment" />
+    </Key>
+    <Property Name="id_comment" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="noidung_comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="id_products" Type="Int32" />
+    <Property Name="phone" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="name_full" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="wb_mail">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="mail_name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="wb_menu">
+    <Key>
+      <PropertyRef Name="id_menu" />
+    </Key>
+    <Property Name="id_menu" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="menu_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="menu_key_url" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="menu_order" Type="Int32" />
+    <Property Name="menu_status" Type="Int32" />
+    <Property Name="menu_title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="menu_links" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="wb_menu_products">
+    <Key>
+      <PropertyRef Name="id_menu_products" />
+    </Key>
+    <Property Name="id_menu_products" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="menu_products_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="menu_products_key" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="menu_products_order" Type="Int32" />
+    <Property Name="img_products" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="menu_status" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="menu_tomtat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="wb_products">
+    <Key>
+      <PropertyRef Name="id_products" />
+    </Key>
+    <Property Name="id_products" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name_products" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="type_products" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="tomtat_products" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="noidung_products" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="price_products" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="giamgia_products" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="giasaugiam_products" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="status_products" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="img_main_products" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="order_products" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="img1_products" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="img2_products" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="img3_products" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="img4_products" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="tieubieu_products" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="img5_products" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="img0_products" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="web_tr_menu_product">
+    <Key>
+      <PropertyRef Name="id_menu_products" />
+    </Key>
+    <Property Name="id_menu_products" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name_menu_products" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="order_menu_products" Type="Int32" />
+    <Property Name="status_menu_products" Type="Int32" />
+    <Property Name="img_menu_products" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="tomtat_menu_products" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="web_tr_menutop">
+    <Key>
+      <PropertyRef Name="id_menu_top" />
+    </Key>
+    <Property Name="id_menu_top" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name_menu_top" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="links_menu_top" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="key_links_menu_top" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="status_menu_top" Type="Int32" />
+    <Property Name="order_menu_top" Type="Int32" />
+  </EntityType>
+  <EntityType Name="web_tr_products">
+    <Key>
+      <PropertyRef Name="id_products_tr" />
+    </Key>
+    <Property Name="id_products_tr" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name_product_tr" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="type_products_tr" Type="Int32" />
+    <Property Name="status_products_tr" Type="Int32" />
+    <Property Name="order_products_tr" Type="Int32" />
+    <Property Name="img_main_products_tr" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="img1_main_products_tr" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Specials" Type="Int32" />
+    <Property Name="price_products" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="tomtat_products" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="noidung_products" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="img_small_products" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="img2_main_products_tr" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="img3_main_products_tr" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="price_products1" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="phantram_products" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="web_tr_quangcao">
+    <Key>
+      <PropertyRef Name="id_quangcao" />
+    </Key>
+    <Property Name="id_quangcao" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name_quangcao" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="links_quangcao" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="status_quangcao" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="order_quangcao" Type="Int32" />
+    <Property Name="img_quangcao" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="type_quangcao" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="DataAdminVanGiaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ctr_in_form" EntityType="Self.ctr_in_form" />
+    <EntitySet Name="ctr_steel" EntityType="Self.ctr_steel" />
+    <EntitySet Name="form_steel" EntityType="Self.form_steel" />
+    <EntitySet Name="form_store" EntityType="Self.form_store" />
+    <EntitySet Name="form_store_para" EntityType="Self.form_store_para" />
+    <EntitySet Name="fs_auth" EntityType="Self.fs_auth" />
+    <EntitySet Name="fs_manga" EntityType="Self.fs_manga" />
+    <EntitySet Name="fs_manga_chap" EntityType="Self.fs_manga_chap" />
+    <EntitySet Name="fs_manga_tag" EntityType="Self.fs_manga_tag" />
+    <EntitySet Name="fs_manga_type" EntityType="Self.fs_manga_type" />
+    <EntitySet Name="mar_project" EntityType="Self.mar_project" />
+    <EntitySet Name="pct_department" EntityType="Self.pct_department" />
+    <EntitySet Name="pct_employee" EntityType="Self.pct_employee" />
+    <EntitySet Name="pct_ticket" EntityType="Self.pct_ticket" />
+    <EntitySet Name="pct_title" EntityType="Self.pct_title" />
+    <EntitySet Name="project_steel" EntityType="Self.project_steel" />
+    <EntitySet Name="so_orther" EntityType="Self.so_orther" />
+    <EntitySet Name="so_orther_detail" EntityType="Self.so_orther_detail" />
+    <EntitySet Name="so_prod_image_detail" EntityType="Self.so_prod_image_detail" />
+    <EntitySet Name="store_" EntityType="Self.store_" />
+    <EntitySet Name="store_cate" EntityType="Self.store_cate" />
+    <EntitySet Name="store_com_ship" EntityType="Self.store_com_ship" />
+    <EntitySet Name="store_com_type" EntityType="Self.store_com_type" />
+    <EntitySet Name="store_company" EntityType="Self.store_company" />
+    <EntitySet Name="store_contact" EntityType="Self.store_contact" />
+    <EntitySet Name="store_exp" EntityType="Self.store_exp" />
+    <EntitySet Name="store_imp" EntityType="Self.store_imp" />
+    <EntitySet Name="store_prod" EntityType="Self.store_prod" />
+    <EntitySet Name="store_prod_sku" EntityType="Self.store_prod_sku" />
+    <EntitySet Name="store_slot" EntityType="Self.store_slot" />
+    <EntitySet Name="store_stock" EntityType="Self.store_stock" />
+    <EntitySet Name="store_unit" EntityType="Self.store_unit" />
+    <EntitySet Name="sys_company" EntityType="Self.sys_company" />
+    <EntitySet Name="sys_fs_help" EntityType="Self.sys_fs_help" />
+    <EntitySet Name="sys_gridview_control" EntityType="Self.sys_gridview_control" />
+    <EntitySet Name="sys_group_page" EntityType="Self.sys_group_page" />
+    <EntitySet Name="sys_info" EntityType="Self.sys_info" />
+    <EntitySet Name="sys_mapped_col" EntityType="Self.sys_mapped_col" />
+    <EntitySet Name="sys_mapped_join" EntityType="Self.sys_mapped_join" />
+    <EntitySet Name="sys_mapped_operators" EntityType="Self.sys_mapped_operators" />
+    <EntitySet Name="sys_mapped_table" EntityType="Self.sys_mapped_table" />
+    <EntitySet Name="sys_mapped_ty_op" EntityType="Self.sys_mapped_ty_op" />
+    <EntitySet Name="sys_mapped_type" EntityType="Self.sys_mapped_type" />
+    <EntitySet Name="sys_page" EntityType="Self.sys_page" />
+    <EntitySet Name="tbl_blog_tra" EntityType="Self.tbl_blog_tra" />
+    <EntitySet Name="tbl_menu_dulich" EntityType="Self.tbl_menu_dulich" />
+    <EntitySet Name="tbl_new_dulich" EntityType="Self.tbl_new_dulich" />
+    <EntitySet Name="tbl_products_tra" EntityType="Self.tbl_products_tra" />
+    <EntitySet Name="tbl_slide_dulich" EntityType="Self.tbl_slide_dulich" />
+    <EntitySet Name="tbl_slide_tra" EntityType="Self.tbl_slide_tra" />
+    <EntitySet Name="tbl_spam_dulich" EntityType="Self.tbl_spam_dulich" />
+    <EntitySet Name="tblDomains" EntityType="Self.tblDomain" />
+    <EntitySet Name="tblSysCompanies" EntityType="Self.tblSysCompany" />
+    <EntitySet Name="tblSysGroupPages" EntityType="Self.tblSysGroupPage" />
+    <EntitySet Name="tblSysGroupPageDetails" EntityType="Self.tblSysGroupPageDetail" />
+    <EntitySet Name="tblSysPictures" EntityType="Self.tblSysPicture" />
+    <EntitySet Name="tblSysUser_Page" EntityType="Self.tblSysUser_Page" />
+    <EntitySet Name="tblSysUserGroupPages" EntityType="Self.tblSysUserGroupPage" />
+    <EntitySet Name="tblSysUserGroupPageDetails" EntityType="Self.tblSysUserGroupPageDetail" />
+    <EntitySet Name="tblSysUserGroupPagePages" EntityType="Self.tblSysUserGroupPagePage" />
+    <EntitySet Name="tblSysUserRoleGroups" EntityType="Self.tblSysUserRoleGroup" />
+    <EntitySet Name="tblSysUserRolePages" EntityType="Self.tblSysUserRolePage" />
+    <EntitySet Name="tblUsers" EntityType="Self.tblUser" />
+    <EntitySet Name="tblUserClouds" EntityType="Self.tblUserCloud" />
+    <EntitySet Name="tblUserFriends" EntityType="Self.tblUserFriend" />
+    <EntitySet Name="tblUserImgs" EntityType="Self.tblUserImg" />
+    <EntitySet Name="user_steel" EntityType="Self.user_steel" />
+    <EntitySet Name="web_banner" EntityType="Self.web_banner" />
+    <EntitySet Name="web_chater" EntityType="Self.web_chater" />
+    <EntitySet Name="web_chater_content" EntityType="Self.web_chater_content" />
+    <EntitySet Name="web_content" EntityType="Self.web_content" />
+    <EntitySet Name="web_content_other" EntityType="Self.web_content_other" />
+    <EntitySet Name="web_customer" EntityType="Self.web_customer" />
+    <EntitySet Name="web_department" EntityType="Self.web_department" />
+    <EntitySet Name="web_employer" EntityType="Self.web_employer" />
+    <EntitySet Name="web_list_product" EntityType="Self.web_list_product" />
+    <EntitySet Name="web_menu_root" EntityType="Self.web_menu_root" />
+    <EntitySet Name="web_products" EntityType="Self.web_products" />
+    <EntitySet Name="web_title" EntityType="Self.web_title" />
+    <EntitySet Name="web_vangia_config" EntityType="Self.web_vangia_config" />
+    <EntitySet Name="web_vangia_doitac" EntityType="Self.web_vangia_doitac" />
+    <EntitySet Name="web_vangia_duanmau" EntityType="Self.web_vangia_duanmau" />
+    <EntitySet Name="web_vangia_employee" EntityType="Self.web_vangia_employee" />
+    <EntitySet Name="web_vangia_language" EntityType="Self.web_vangia_language" />
+    <EntitySet Name="web_vangia_menu" EntityType="Self.web_vangia_menu" />
+    <EntitySet Name="web_vangia_menucon" EntityType="Self.web_vangia_menucon" />
+    <EntitySet Name="web_vangia_news" EntityType="Self.web_vangia_news" />
+    <EntitySet Name="web_vangia_products" EntityType="Self.web_vangia_products" />
+    <EntitySet Name="web_vangia_project" EntityType="Self.web_vangia_project" />
+    <EntitySet Name="web_vangia_silde" EntityType="Self.web_vangia_silde" />
+    <EntitySet Name="web_vangia_team" EntityType="Self.web_vangia_team" />
+    <EntitySet Name="web_vangia_tuyendung" EntityType="Self.web_vangia_tuyendung" />
+    <EntitySet Name="web_vangia_type_products" EntityType="Self.web_vangia_type_products" />
+    <EntitySet Name="web_vangia_typeproject" EntityType="Self.web_vangia_typeproject" />
+    <EntitySet Name="fs_manga_img" EntityType="Self.fs_manga_img" />
+    <EntitySet Name="grid_view_mapping" EntityType="Self.grid_view_mapping" />
+    <EntitySet Name="log_store_prod" EntityType="Self.log_store_prod" />
+    <EntitySet Name="sys_data_fixed" EntityType="Self.sys_data_fixed" />
+    <EntitySet Name="sys_store_prod" EntityType="Self.sys_store_prod" />
+    <EntitySet Name="tblSysUserListShareDetails" EntityType="Self.tblSysUserListShareDetail" />
+    <EntitySet Name="tblSysUserRoleRecords" EntityType="Self.tblSysUserRoleRecord" />
+    <EntitySet Name="wb_advertising" EntityType="Self.wb_advertising" />
+    <EntitySet Name="wb_banner" EntityType="Self.wb_banner" />
+    <EntitySet Name="wb_comment" EntityType="Self.wb_comment" />
+    <EntitySet Name="wb_mail" EntityType="Self.wb_mail" />
+    <EntitySet Name="wb_menu" EntityType="Self.wb_menu" />
+    <EntitySet Name="wb_menu_products" EntityType="Self.wb_menu_products" />
+    <EntitySet Name="wb_products" EntityType="Self.wb_products" />
+    <EntitySet Name="web_tr_menu_product" EntityType="Self.web_tr_menu_product" />
+    <EntitySet Name="web_tr_menutop" EntityType="Self.web_tr_menutop" />
+    <EntitySet Name="web_tr_products" EntityType="Self.web_tr_products" />
+    <EntitySet Name="web_tr_quangcao" EntityType="Self.web_tr_quangcao" />
+  </EntityContainer>
+</Schema>
