@@ -618,7 +618,6 @@
     <Content Include="Template\css\responsive.css" />
     <Content Include="Template\css\theme.css" />
     <Content Include="Template\Home.html" />
-    <Content Include="Template\img\def_bg.jpg" />
     <Content Include="Template\img\diamond_sprite.png" />
     <Content Include="Template\img\gallery\slider\1.jpg" />
     <Content Include="Template\img\gallery\slider\10.jpg" />
@@ -644,6 +643,9 @@
     <Content Include="Template\img\logo.png" />
     <Content Include="Template\img\retina\diamond_sprite.png" />
     <Content Include="Template\img\retina\logo.png" />
+    <Content Include="Template\img\def_bg.jpg" />
+    <Content Include="Template\img\sl1.jpg" />
+    <Content Include="Template\img\sl2.jpg" />
     <Content Include="Template\img\VGLogo.jpg" />
     <Content Include="Template\js\fs_gallery.js" />
     <Content Include="Template\js\jquery-ui.min.js" />
