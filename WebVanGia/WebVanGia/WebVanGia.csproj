@@ -41,6 +41,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
@@ -217,6 +225,9 @@
     <Compile Include="Models\pct_title.cs">
       <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\PicturesModel.cs" />
+    <Compile Include="Models\ProductsModel.cs" />
+    <Compile Include="Models\ProjectsModel.cs" />
     <Compile Include="Models\project_steel.cs">
       <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
@@ -507,6 +518,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\PagedList.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -588,6 +600,7 @@
     <Content Include="Models\DataAdminVanGia.edmx.diagram">
       <DependentUpon>DataAdminVanGia.edmx</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\publish.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Models\DataVanGia.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -622,7 +635,6 @@
     <Content Include="Template\img\diamond_sprite.png" />
     <Content Include="Template\img\gallery\slider\1.jpg" />
     <Content Include="Template\img\gallery\slider\10.jpg" />
-    <Content Include="Template\img\gallery\slider\12345.jpg" />
     <Content Include="Template\img\gallery\slider\2.jpg" />
     <Content Include="Template\img\gallery\slider\3.jpg" />
     <Content Include="Template\img\gallery\slider\4.jpg" />
@@ -631,11 +643,9 @@
     <Content Include="Template\img\gallery\slider\7.jpg" />
     <Content Include="Template\img\gallery\slider\8.jpg" />
     <Content Include="Template\img\gallery\slider\9.jpg" />
-    <Content Include="Template\img\gallery\slider\thumbs\a12345.jpg" />
     <Content Include="Template\img\gallery\slider\thumbs\1.jpg" />
     <Content Include="Template\img\gallery\slider\thumbs\10.jpg" />
     <Content Include="Template\img\gallery\slider\thumbs\2.jpg" />
-    <Content Include="Template\img\gallery\slider\thumbs\234.jpg" />
     <Content Include="Template\img\gallery\slider\thumbs\3.jpg" />
     <Content Include="Template\img\gallery\slider\thumbs\4.jpg" />
     <Content Include="Template\img\gallery\slider\thumbs\5.jpg" />
@@ -643,10 +653,26 @@
     <Content Include="Template\img\gallery\slider\thumbs\7.jpg" />
     <Content Include="Template\img\gallery\slider\thumbs\8.jpg" />
     <Content Include="Template\img\gallery\slider\thumbs\9.jpg" />
-    <Content Include="Template\img\gallery\slider\thumbs\111.jpg" />
     <Content Include="Template\img\gallery\slider\thumbs\sl2.jpg" />
     <Content Include="Template\img\imgs\widget.jpg" />
     <Content Include="Template\img\logo.png" />
+    <Content Include="Template\img\portfolio\masonry\1.jpg" />
+    <Content Include="Template\img\portfolio\masonry\10.jpg" />
+    <Content Include="Template\img\portfolio\masonry\11.jpg" />
+    <Content Include="Template\img\portfolio\masonry\12.jpg" />
+    <Content Include="Template\img\portfolio\masonry\13.jpg" />
+    <Content Include="Template\img\portfolio\masonry\14.jpg" />
+    <Content Include="Template\img\portfolio\masonry\15.jpg" />
+    <Content Include="Template\img\portfolio\masonry\16.jpg" />
+    <Content Include="Template\img\portfolio\masonry\2.jpg" />
+    <Content Include="Template\img\portfolio\masonry\3.jpg" />
+    <Content Include="Template\img\portfolio\masonry\4.jpg" />
+    <Content Include="Template\img\portfolio\masonry\5.jpg" />
+    <Content Include="Template\img\portfolio\masonry\6.jpg" />
+    <Content Include="Template\img\portfolio\masonry\7.jpg" />
+    <Content Include="Template\img\portfolio\masonry\8.jpg" />
+    <Content Include="Template\img\portfolio\masonry\9.jpg" />
+    <Content Include="Template\img\portfolio\masonry\widget.jpg" />
     <Content Include="Template\img\retina\diamond_sprite.png" />
     <Content Include="Template\img\retina\logo.png" />
     <Content Include="Template\img\def_bg.jpg" />
@@ -676,6 +702,8 @@
     <Content Include="Views\Default\BlogList.cshtml" />
     <Content Include="Views\Default\ProductList.cshtml" />
     <Content Include="Views\Default\DetailBlog.cshtml" />
+    <Content Include="Views\Default\Travel.cshtml" />
+    <Content Include="Views\Default\BlogListById.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

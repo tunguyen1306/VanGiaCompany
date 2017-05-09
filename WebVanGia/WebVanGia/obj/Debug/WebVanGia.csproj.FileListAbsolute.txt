@@ -87,3 +87,7 @@ D:\Company\WebSite\VanGiaCompany\WebVanGia\WebVanGia\bin\System.Web.WebPages.Raz
 D:\Company\WebSite\VanGiaCompany\WebVanGia\WebVanGia\obj\Debug\WebVanGia.csprojResolveAssemblyReference.cache
 D:\Company\WebSite\VanGiaCompany\WebVanGia\WebVanGia\obj\Debug\WebVanGia.dll
 D:\Company\WebSite\VanGiaCompany\WebVanGia\WebVanGia\obj\Debug\WebVanGia.pdb
+D:\Company\WebSite\VanGiaCompany\WebVanGia\WebVanGia\bin\PagedList.dll
+D:\Company\WebSite\VanGiaCompany\WebVanGia\WebVanGia\bin\PagedList.xml
+D:\Company\WebSite\VanGiaCompany\WebVanGia\WebVanGia\bin\PagedList.Mvc.dll
+D:\Company\WebSite\VanGiaCompany\WebVanGia\WebVanGia\bin\PagedList.Mvc.xml

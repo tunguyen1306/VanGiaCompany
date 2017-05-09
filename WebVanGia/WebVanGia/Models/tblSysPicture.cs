@@ -11,7 +11,8 @@ namespace WebVanGia.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Text.RegularExpressions;
+
     public partial class tblSysPicture
     {
         public int picture_id { get; set; }
@@ -31,5 +32,19 @@ namespace WebVanGia.Models
         public string description { get; set; }
         public Nullable<int> cms_sql_id { get; set; }
         public string shortdescription { get; set; }
+        public string vangia_img_id
+        {
+            get
+            {
+                var regex = new Regex(@"^(?<id>\d+).*$");
+                var match = regex.Match(originalFilepath);
+
+                if (match.Success)
+                {
+                    return match.Groups["id"].Value;
+                }
+                return null;
+            }
+        }
     }
 }

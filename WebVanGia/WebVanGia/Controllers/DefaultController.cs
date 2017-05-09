@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PagedList;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
@@ -23,11 +24,50 @@ namespace WebVanGia.Controllers
         {
             return View();
         }
-        public ActionResult BlogList()
+        public ActionResult BlogList( int? page)
+        {
+            var pagenum = page ?? 1;
+            var pageSize = 10;
+            var data = from dataBlog in dbadmin.tbl_blog_tra
+                       where dataBlog.id_company == 2
+                       select dataBlog;
+            return View(data.ToList().ToPagedList(pagenum, pageSize));
+        }
+        public ActionResult BlogList1( int? page)
+        {
+            var pagenum = page ?? 1;
+            var pageSize = 10;
+            var data = from dataBlog in dbadmin.tbl_blog_tra
+                       where dataBlog.id_company == 2
+                       select dataBlog;
+            return PartialView("BlogList", data.ToList().ToPagedList(pagenum, pageSize));
+        }
+        public ActionResult ProductList()
         {
             return View();
         }
-        public ActionResult ProductList()
+        [HttpPost]
+        public ActionResult LoadProducts()
+        {
+            var urlLink = ConfigurationManager.AppSettings["domainvg"];
+
+            var qrData = (from dataPro in dbadmin.web_vangia_project
+                          join dataImg in dbadmin.tblSysPictures on dataPro.vangia_id_project equals dataImg.advert_id
+                          where dataImg.position == 1 && dataPro.vangia_status_project == 1 && dataPro.vangia_typeid_project == 1
+                          select new ProductsModel { tblProject = dataPro, tblPicture = dataImg }).ToList();
+            return Json(qrData.Select(x => new
+            {
+                type = "image",
+                image = urlLink + x.tblPicture.vangia_img_id + "/" + x.tblPicture.originalFilepath,
+                thmb = urlLink + x.tblPicture.vangia_img_id + "/" + x.tblPicture.originalFilepath,
+                alt = x.tblProject.vangia_name_project,
+                title = x.tblProject.vangia_name_project,
+                description = x.tblProject.vangia_content_project,
+                titleColor = "#ffffff",
+                descriptionColor = "#ffffff"
+            }));
+        }
+        public ActionResult Travel()
         {
             return View();
         }
@@ -65,14 +105,6 @@ namespace WebVanGia.Controllers
                 descriptionColor = "#ffffff"
             }));
         }
-        public string addLink(string link)
-        {
-            var data = "";
-
-            data = link.Split('_')[0];
-
-            return data;
-
-        }
+       
     }
 }
