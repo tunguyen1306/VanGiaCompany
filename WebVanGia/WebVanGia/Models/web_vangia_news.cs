@@ -26,5 +26,6 @@ namespace WebVanGia.Models
         public Nullable<int> vangia_status_news { get; set; }
         public Nullable<int> vangia_order_news { get; set; }
         public Nullable<int> vangia_language_news { get; set; }
+        public string vangia_vanban_news { get; set; }
     }
 }

@@ -19,5 +19,7 @@ namespace WebVanGia.Models
         public string key_word_vg { get; set; }
         public Nullable<int> laguage_word_vg { get; set; }
         public Nullable<int> order_word_vg { get; set; }
+        public Nullable<int> type_word_vg { get; set; }
+        public string detail_type_word_vg { get; set; }
     }
 }

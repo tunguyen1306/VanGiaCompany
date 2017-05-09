@@ -26,5 +26,11 @@ namespace WebVanGia.Models
         public Nullable<int> vangia_language_products { get; set; }
         public Nullable<int> vangia_status_products { get; set; }
         public Nullable<int> vangia_type_products { get; set; }
+        public string ful_img4_products_vg { get; set; }
+        public string ful_img5_products_vg { get; set; }
+        public string ful_img6_products_vg { get; set; }
+        public string ful_img7_products_vg { get; set; }
+        public string ful_img8_products_vg { get; set; }
+        public string ful_img9_products_vg { get; set; }
     }
 }

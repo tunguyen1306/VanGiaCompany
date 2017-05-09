@@ -11,7 +11,7 @@ namespace WebVanGia.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Text.RegularExpressions;
     public partial class web_vangia_silde
     {
         public int vangia_id_silde { get; set; }
@@ -22,5 +22,9 @@ namespace WebVanGia.Models
         public Nullable<int> vangia_status_silde { get; set; }
         public Nullable<int> vangia_order_silde { get; set; }
         public Nullable<int> vangia_language_silde { get; set; }
+        public string vangia_link_silde { get; set; }
+        public string vangia_stype_slide { get; set; }
+        public Nullable<int> vangia_type_slide { get; set; }
+        
     }
 }

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DataVanGiaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DataVanGiaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="ctr_in_form">
           <Key>
             <PropertyRef Name="id_ctr_in_form" />
@@ -210,13 +210,6 @@ warning 6002: The table/view 'nhvanxol_vangia.dbo.log_store_prod' does not have 
           <Property Name="mar_project_sell_off" Type="int" />
           <Property Name="mar_project_sell_type" Type="int" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'nhvanxol_vangia.dbo.mar_project_detail' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="mar_project_detail">
-          <Property Name="id_mar_project" Type="int" />
-          <Property Name="id_store_prod" Type="int" />
-          <Property Name="store_prod_sell_off" Type="int" />
-        </EntityType>-->
         <EntityType Name="pct_department">
           <Key>
             <PropertyRef Name="id_department" />
@@ -372,16 +365,6 @@ warning 6013: The table/view 'nhvanxol_vangia.dbo.mar_project_detail' does not h
           <Property Name="store_exp_checker" Type="int" />
           <Property Name="store_exp_cost" Type="int" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'nhvanxol_vangia.dbo.store_exp_detail' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="store_exp_detail">
-          <Property Name="id_store_exp" Type="int" />
-          <Property Name="id_store_prod" Type="int" />
-          <Property Name="store_prod_count" Type="int" />
-          <Property Name="id_store_slot" Type="int" />
-          <Property Name="store_prod_cost" Type="int" />
-          <Property Name="store_prod_shelf" Type="datetime" />
-        </EntityType>-->
         <EntityType Name="store_imp">
           <Key>
             <PropertyRef Name="id_store_imp" />
@@ -393,16 +376,6 @@ warning 6013: The table/view 'nhvanxol_vangia.dbo.store_exp_detail' does not hav
           <Property Name="store_imp_list_data" Type="nvarchar" MaxLength="200" />
           <Property Name="store_imp_store" Type="int" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'nhvanxol_vangia.dbo.store_imp_detail' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="store_imp_detail">
-          <Property Name="id_store_imp" Type="int" />
-          <Property Name="id_store_prod" Type="int" />
-          <Property Name="store_prod_count" Type="int" />
-          <Property Name="id_store_slot" Type="int" />
-          <Property Name="store_prod_cost" Type="int" />
-          <Property Name="store_prod_shelf" Type="datetime" />
-        </EntityType>-->
         <EntityType Name="store_prod">
           <Key>
             <PropertyRef Name="store_prod_code" />
@@ -522,15 +495,6 @@ warning 6002: The table/view 'nhvanxol_vangia.dbo.sys_data_fixed' does not have 
           <Property Name="mapped_col_code" Type="nvarchar" MaxLength="200" />
           <Property Name="mapped_col_order" Type="int" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'nhvanxol_vangia.dbo.sys_mapped_form' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="sys_mapped_form">
-          <Property Name="ctr_client_id" Type="nvarchar" MaxLength="50" />
-          <Property Name="id_form" Type="int" />
-          <Property Name="mapped_col_code" Type="nvarchar" MaxLength="200" />
-          <Property Name="view_selected" Type="int" />
-          <Property Name="ctr_name" Type="nvarchar" MaxLength="200" />
-        </EntityType>-->
         <EntityType Name="sys_mapped_join">
           <Key>
             <PropertyRef Name="id_mapped_join" />
@@ -860,12 +824,6 @@ warning 6002: The table/view 'nhvanxol_vangia.dbo.tblSysUserRoleRecord' does not
           <Property Name="user_img_type" Type="int" />
           <Property Name="admin_view" Type="int" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'nhvanxol_vangia.dbo.TestAndroid' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="TestAndroid">
-          <Property Name="studentNo" Type="nvarchar" MaxLength="50" />
-          <Property Name="Name" Type="nvarchar" MaxLength="50" />
-        </EntityType>-->
         <EntityType Name="user_steel">
           <Key>
             <PropertyRef Name="id_user" />
@@ -1686,8 +1644,7 @@ FROM [dbo].[web_tr_products] AS [web_tr_products]</DefiningQuery>
 FROM [dbo].[web_tr_quangcao] AS [web_tr_quangcao]</DefiningQuery>
           </EntitySet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DataVanGiaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">

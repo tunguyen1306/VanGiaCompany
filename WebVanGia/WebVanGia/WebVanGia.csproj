@@ -134,10 +134,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ctr_in_form.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ctr_steel.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DataAdminVanGia.Context.cs">
       <AutoGen>True</AutoGen>
@@ -170,199 +170,200 @@
       <DependentUpon>DataVanGia.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\form_steel.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\form_store.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\form_store_para.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\fs_auth.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\fs_manga.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\fs_manga_chap.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\fs_manga_img.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\fs_manga_tag.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\fs_manga_type.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\grid_view_mapping.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\log_store_prod.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\mar_project.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\pct_department.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\pct_employee.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\pct_ticket.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\pct_title.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\project_steel.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\SliderModel.cs" />
     <Compile Include="Models\so_orther.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\so_orther_detail.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\so_prod_image_detail.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\store_.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\store_cate.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\store_company.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\store_com_ship.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\store_com_type.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\store_contact.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\store_exp.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\store_imp.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\store_prod.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\store_prod_sku.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\store_slot.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\store_stock.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\store_unit.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sys_company.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sys_data_fixed.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sys_fs_help.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sys_gridview_control.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sys_group_page.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sys_info.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sys_mapped_col.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sys_mapped_join.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sys_mapped_operators.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sys_mapped_table.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sys_mapped_type.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sys_mapped_ty_op.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sys_page.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sys_store_prod.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tblDomain.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tblMath_vangia.cs">
       <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tblSysCompany.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tblSysGroupPage.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tblSysGroupPageDetail.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tblSysPicture.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tblSysUserGroupPage.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tblSysUserGroupPageDetail.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tblSysUserGroupPagePage.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tblSysUserListShareDetail.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tblSysUserRoleGroup.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tblSysUserRolePage.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tblSysUserRoleRecord.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tblSysUser_Page.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tblUser.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tblUserCloud.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tblUserFriend.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tblUserImg.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tbl_blog_tra.cs">
       <DependentUpon>DataAdminVanGia.tt</DependentUpon>
@@ -387,121 +388,121 @@
     </Compile>
     <Compile Include="Models\UrlFriendly.cs" />
     <Compile Include="Models\user_steel.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\wb_advertising.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\wb_banner.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\wb_comment.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\wb_mail.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\wb_menu.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\wb_menu_products.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\wb_products.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\web_banner.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\web_chater.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\web_chater_content.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\web_content.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\web_content_other.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\web_customer.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\web_department.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\web_employer.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\web_list_product.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\web_menu_root.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\web_products.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\web_title.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\web_tr_menutop.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\web_tr_menu_product.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\web_tr_products.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\web_tr_quangcao.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\web_vangia_config.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\web_vangia_doitac.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\web_vangia_duanmau.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\web_vangia_employee.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\web_vangia_language.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\web_vangia_menu.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\web_vangia_menucon.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\web_vangia_news.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\web_vangia_products.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\web_vangia_project.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\web_vangia_silde.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\web_vangia_team.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\web_vangia_tuyendung.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\web_vangia_typeproject.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\web_vangia_type_products.cs">
-      <DependentUpon>DataAdminVanGia.tt</DependentUpon>
+      <DependentUpon>DataVanGia.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -621,6 +622,7 @@
     <Content Include="Template\img\diamond_sprite.png" />
     <Content Include="Template\img\gallery\slider\1.jpg" />
     <Content Include="Template\img\gallery\slider\10.jpg" />
+    <Content Include="Template\img\gallery\slider\12345.jpg" />
     <Content Include="Template\img\gallery\slider\2.jpg" />
     <Content Include="Template\img\gallery\slider\3.jpg" />
     <Content Include="Template\img\gallery\slider\4.jpg" />
@@ -629,9 +631,11 @@
     <Content Include="Template\img\gallery\slider\7.jpg" />
     <Content Include="Template\img\gallery\slider\8.jpg" />
     <Content Include="Template\img\gallery\slider\9.jpg" />
+    <Content Include="Template\img\gallery\slider\thumbs\a12345.jpg" />
     <Content Include="Template\img\gallery\slider\thumbs\1.jpg" />
     <Content Include="Template\img\gallery\slider\thumbs\10.jpg" />
     <Content Include="Template\img\gallery\slider\thumbs\2.jpg" />
+    <Content Include="Template\img\gallery\slider\thumbs\234.jpg" />
     <Content Include="Template\img\gallery\slider\thumbs\3.jpg" />
     <Content Include="Template\img\gallery\slider\thumbs\4.jpg" />
     <Content Include="Template\img\gallery\slider\thumbs\5.jpg" />
@@ -639,6 +643,7 @@
     <Content Include="Template\img\gallery\slider\thumbs\7.jpg" />
     <Content Include="Template\img\gallery\slider\thumbs\8.jpg" />
     <Content Include="Template\img\gallery\slider\thumbs\9.jpg" />
+    <Content Include="Template\img\gallery\slider\thumbs\111.jpg" />
     <Content Include="Template\img\gallery\slider\thumbs\sl2.jpg" />
     <Content Include="Template\img\imgs\widget.jpg" />
     <Content Include="Template\img\logo.png" />
