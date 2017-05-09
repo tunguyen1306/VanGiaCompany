@@ -639,6 +639,7 @@
     <Content Include="Template\img\gallery\slider\thumbs\7.jpg" />
     <Content Include="Template\img\gallery\slider\thumbs\8.jpg" />
     <Content Include="Template\img\gallery\slider\thumbs\9.jpg" />
+    <Content Include="Template\img\gallery\slider\thumbs\sl2.jpg" />
     <Content Include="Template\img\imgs\widget.jpg" />
     <Content Include="Template\img\logo.png" />
     <Content Include="Template\img\retina\diamond_sprite.png" />
