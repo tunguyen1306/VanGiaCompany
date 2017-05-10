@@ -1120,6 +1120,11 @@ a.fs_slider_next:before {
 .fs_thmb_viewport .fs_thmb_list li img {
     width: 100%;
     height: auto;
+        /*width: 130px;
+    height: 130px;
+    border-radius: 0;
+    background-position: center center;
+    background-size: cover;*/
 }
 
 .fs_thmb_viewport .fs_thmb_list li.video_thmb img {

@@ -629,6 +629,7 @@
     <Content Include="Scripts\_references.js" />
     <Content Include="Template\Blog.html" />
     <Content Include="Template\css\custom.css" />
+    <Content Include="Template\css\CusWeb.css" />
     <Content Include="Template\css\responsive.css" />
     <Content Include="Template\css\theme.css" />
     <Content Include="Template\Home.html" />
@@ -656,23 +657,23 @@
     <Content Include="Template\img\gallery\slider\thumbs\sl2.jpg" />
     <Content Include="Template\img\imgs\widget.jpg" />
     <Content Include="Template\img\logo.png" />
-    <Content Include="Template\img\portfolio\masonry\1.jpg" />
-    <Content Include="Template\img\portfolio\masonry\10.jpg" />
-    <Content Include="Template\img\portfolio\masonry\11.jpg" />
-    <Content Include="Template\img\portfolio\masonry\12.jpg" />
-    <Content Include="Template\img\portfolio\masonry\13.jpg" />
-    <Content Include="Template\img\portfolio\masonry\14.jpg" />
-    <Content Include="Template\img\portfolio\masonry\15.jpg" />
-    <Content Include="Template\img\portfolio\masonry\16.jpg" />
-    <Content Include="Template\img\portfolio\masonry\2.jpg" />
-    <Content Include="Template\img\portfolio\masonry\3.jpg" />
-    <Content Include="Template\img\portfolio\masonry\4.jpg" />
-    <Content Include="Template\img\portfolio\masonry\5.jpg" />
-    <Content Include="Template\img\portfolio\masonry\6.jpg" />
-    <Content Include="Template\img\portfolio\masonry\7.jpg" />
-    <Content Include="Template\img\portfolio\masonry\8.jpg" />
-    <Content Include="Template\img\portfolio\masonry\9.jpg" />
-    <Content Include="Template\img\portfolio\masonry\widget.jpg" />
+    <Content Include="Template\img\portfolio\grid\1.jpg" />
+    <Content Include="Template\img\portfolio\grid\10.jpg" />
+    <Content Include="Template\img\portfolio\grid\11.jpg" />
+    <Content Include="Template\img\portfolio\grid\12.jpg" />
+    <Content Include="Template\img\portfolio\grid\13.jpg" />
+    <Content Include="Template\img\portfolio\grid\14.jpg" />
+    <Content Include="Template\img\portfolio\grid\15.jpg" />
+    <Content Include="Template\img\portfolio\grid\16.jpg" />
+    <Content Include="Template\img\portfolio\grid\2.jpg" />
+    <Content Include="Template\img\portfolio\grid\3.jpg" />
+    <Content Include="Template\img\portfolio\grid\4.jpg" />
+    <Content Include="Template\img\portfolio\grid\5.jpg" />
+    <Content Include="Template\img\portfolio\grid\6.jpg" />
+    <Content Include="Template\img\portfolio\grid\7.jpg" />
+    <Content Include="Template\img\portfolio\grid\8.jpg" />
+    <Content Include="Template\img\portfolio\grid\9.jpg" />
+    <Content Include="Template\img\portfolio\grid\widget.jpg" />
     <Content Include="Template\img\retina\diamond_sprite.png" />
     <Content Include="Template\img\retina\logo.png" />
     <Content Include="Template\img\def_bg.jpg" />
@@ -681,8 +682,10 @@
     <Content Include="Template\img\VGLogo.jpg" />
     <Content Include="Template\js\fs_gallery.js" />
     <Content Include="Template\js\jquery-ui.min.js" />
+    <Content Include="Template\js\jquery.isotope.min.js" />
     <Content Include="Template\js\jquery.min.js" />
     <Content Include="Template\js\modules.js" />
+    <Content Include="Template\js\sorting.js" />
     <Content Include="Template\js\theme.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -704,6 +707,7 @@
     <Content Include="Views\Default\DetailBlog.cshtml" />
     <Content Include="Views\Default\Travel.cshtml" />
     <Content Include="Views\Default\BlogListById.cshtml" />
+    <Content Include="Views\Default\DetailProduct.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

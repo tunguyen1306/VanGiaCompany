@@ -29,7 +29,7 @@ namespace WebVanGia.Controllers
             var pagenum = page ?? 1;
             var pageSize = 10;
             var data = from dataBlog in dbadmin.tbl_blog_tra
-                       where dataBlog.id_company == 2
+                       where dataBlog.id_company == 2 && dataBlog.status_blog_tra == 1
                        select dataBlog;
             return View(data.ToList().ToPagedList(pagenum, pageSize));
         }
@@ -38,7 +38,7 @@ namespace WebVanGia.Controllers
             var pagenum = page ?? 1;
             var pageSize = 10;
             var data = from dataBlog in dbadmin.tbl_blog_tra
-                       where dataBlog.id_company == 2
+                       where dataBlog.id_company == 2 && dataBlog.status_blog_tra==1
                        select dataBlog;
             return PartialView("BlogList", data.ToList().ToPagedList(pagenum, pageSize));
         }
@@ -64,7 +64,8 @@ namespace WebVanGia.Controllers
                 title = x.tblProject.vangia_name_project,
                 description = x.tblProject.vangia_content_project,
                 titleColor = "#ffffff",
-                descriptionColor = "#ffffff"
+                descriptionColor = "#ffffff",
+                link = "DetailProduct/" + x.tblProject.vangia_name_project.UrlFrendly() + "-" + x.tblProject.vangia_id_project
             }));
         }
         public ActionResult Travel()
@@ -75,6 +76,17 @@ namespace WebVanGia.Controllers
         {
             var id_ = int.Parse(id.Split('-').Last());
             return View(dbadmin.tbl_blog_tra.Where(x=>x.id_blog_tra== id_).FirstOrDefault());
+        }
+        public ActionResult DetailProduct(string id)
+        {
+            var id_ = int.Parse(id.Split('-').Last());
+            ProductsModel pic = new ProductsModel
+            {
+               
+                tblProject = dbadmin.web_vangia_project.Where(t => t.vangia_id_project == id_).FirstOrDefault(),
+                tblListPicture = dbadmin.tblSysPictures.Where(x => x.advert_id == id_).ToList()
+            };
+            return View(pic);
         }
         [HttpPost]
         public ActionResult LoadSlider()

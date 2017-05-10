@@ -16,7 +16,7 @@ jQuery.fn.fs_gallery = function (fs_options) {
     }
     fs_body.append('<div class="fs_gallery_wrapper"><ul class="' + fs_options.fit + ' fs_gallery_container ' + fs_options.fx + '"/></div>');
     fs_container = jQuery('.fs_gallery_container');
-    fs_body.append('<div class="fs_title_wrapper ' + set_state + '"><h1 class="fs_title"></h1><h3 class="fs_descr"></h3></div>');
+    fs_body.append('<div class="fs_title_wrapper ' + set_state + '"><a class="classtitle" href=""><h1 class="fs_title"></h1></a><h3 class="fs_descr"></h3></div>');
     if (fs_options.slides.length > 1) {
         fs_body.append('<div class="controls_wrapper"><a href="javascript:void(0)" class="fs_slider_prev"/><a href="javascript:void(0)" id="fs_play-pause" class="' + playpause + '"></a><a href="javascript:void(0)" class="fs_slider_next"/></div>');
     }
@@ -27,6 +27,7 @@ jQuery.fn.fs_gallery = function (fs_options) {
     }
     fs_thmb_viewport = jQuery('.fs_thmb_viewport');
     $fs_title = jQuery('.fs_title');
+    $fs_title_link = jQuery('.classtitle');
     $fs_descr = jQuery('.fs_descr');
 
     thisSlide = 0;
@@ -40,7 +41,7 @@ jQuery.fn.fs_gallery = function (fs_options) {
         }
 
         if (fs_options.slides[thisSlide].type == "image") {
-            fs_thmb.append('<li class="fs_slide_thmb slide' + thisSlide + '" data-count="' + thisSlide + '"><img alt="' + fs_options.slides[thisSlide].alt + ' ' + thisSlide + '" src="' + fs_options.slides[thisSlide].thmb + '"/><div class="fs_thmb_fadder"></div></li>');
+            fs_thmb.append('<li class="fs_slide_thmb slide' + thisSlide + '" data-count="' + thisSlide + '"><img  alt="' + fs_options.slides[thisSlide].alt + ' ' + thisSlide + '" src="' + fs_options.slides[thisSlide].thmb + '"/><div class="fs_thmb_fadder"></div></li>');
         } else if (fs_options.slides[thisSlide].type == "youtube") {
             fs_thmb.append('<li class="fs_slide_thmb video_thmb yt_thmb slide' + thisSlide + '" data-count="' + thisSlide + '"><img alt="' + fs_options.slides[thisSlide].alt + ' ' + thisSlide + '" src="' + fs_options.slides[thisSlide].thmb + '"/><div class="fs_thmb_fadder"></div></li>');
         } else {
@@ -112,7 +113,7 @@ jQuery.fn.fs_gallery = function (fs_options) {
 			'margin-top': '0px'
 		});			
 	}
-
+    $fs_title_link.attr("href", fs_options.slides[0].link)
     $fs_title.html(fs_options.slides[0].title).css('color', fs_options.slides[0].titleColor);
     $fs_descr.html(fs_options.slides[0].description).css('color', fs_options.slides[0].descriptionColor);
 
@@ -172,6 +173,7 @@ jQuery.fn.fs_gallery = function (fs_options) {
         }
         $fs_title.fadeOut(300);
         $fs_descr.fadeOut(300, function () {
+            $fs_title_link.attr("href", fs_options.slides[thisSlide].link)
             $fs_title.html(fs_options.slides[thisSlide].title).css('color', fs_options.slides[thisSlide].titleColor);
             $fs_descr.html(fs_options.slides[thisSlide].description).css('color', fs_options.slides[thisSlide].descriptionColor);
             $fs_title.fadeIn(300);
@@ -283,6 +285,7 @@ jQuery.fn.fs_gallery = function (fs_options) {
         }
         $fs_title.fadeOut(300);
         $fs_descr.fadeOut(300, function () {
+            $fs_title_link.attr("href", fs_options.slides[thisSlide].link)
             $fs_title.html(fs_options.slides[thisSlide].title).css('color', fs_options.slides[thisSlide].titleColor);
             $fs_descr.html(fs_options.slides[thisSlide].description).css('color', fs_options.slides[thisSlide].descriptionColor);
             $fs_title.fadeIn(300);
@@ -362,6 +365,7 @@ jQuery.fn.fs_gallery = function (fs_options) {
 
         $fs_title.fadeOut(300);
         $fs_descr.fadeOut(300, function () {
+            $fs_title_link.attr("href", fs_options.slides[thisSlide].link)
             $fs_title.html(fs_options.slides[thisSlide].title).css('color', fs_options.slides[thisSlide].titleColor);
             $fs_descr.html(fs_options.slides[thisSlide].description).css('color', fs_options.slides[thisSlide].descriptionColor);
             $fs_title.fadeIn(300);
