@@ -1,0 +1,39 @@
+﻿@using WebVanGia.Models
+@model PagedList.IPagedList<ProductsModel>
+@using System.Configuration
+@using System.Linq;
+@using PagedList.Mvc
+<div id="loader">
+
+    <div class="row">
+        <div class="span12 module_number_2 module_cont pb0 module_portfolio">
+
+            <div class="portfolio_block image-grid columns3 sorting_block" id="list">
+                @foreach (var item in Model)
+                {
+                    <div class="element portfolio_item cities advertisement">
+                        <div class="portfolio_item_block">
+                            <div class="portfolio_item_wrapper">
+                                <div class="img_block wrapped_img">
+                                    <a class="featured_ico_link" href="@Url.Action("DetailProduct","Default",new { id=item.tblProject.vangia_name_project.UrlFrendly()+"-"+item.tblProject.vangia_id_project})">
+                                    <img src="@(ConfigurationManager.AppSettings["domainvg"] +  (item.tblPicture.originalFilepath!=null?( item.tblPicture.originalFilepath.Split('_')[0] +"/"+ item.tblPicture.originalFilepath) :"img.png"))" alt=""><div class="featured_item_fadder"></div></a>
+                                    <div class="">
+                                        
+                                        <span>@item.tblProject.vangia_name_project</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+                
+
+                <div class="clear"></div>
+            </div>
+            <ul class="pagerblock">
+                @Html.PagedListPager(Model, page => Url.Action("Trade1", "Default", new { page }), PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(new AjaxOptions() { UpdateTargetId = "loader" }))
+            </ul>
+        </div><!-- .module_cont -->
+    </div>
+</div>

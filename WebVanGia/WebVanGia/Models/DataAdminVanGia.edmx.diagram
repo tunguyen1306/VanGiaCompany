@@ -117,6 +117,7 @@
         <EntityTypeShape EntityType="DataAdminvanGiaModel.web_tr_menutop" Width="1.5" PointX="28.75" PointY="19.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DataAdminvanGiaModel.web_tr_products" Width="1.5" PointX="28.75" PointY="22.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DataAdminvanGiaModel.web_tr_quangcao" Width="1.5" PointX="28.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataAdminvanGiaModel.tblMath_vangia" Width="1.5" PointX="0.75" PointY="29.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

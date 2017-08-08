@@ -1,0 +1,69 @@
+﻿
+@using WebVanGia.Models
+@model PagedList.IPagedList<tbl_blog_tra>
+@using System.Configuration
+@using System.Linq;
+@using PagedList.Mvc
+<div id="loader">
+    <div class="span12 first-module module_number_1 module_cont pb0 module_blog">
+
+
+        @foreach (var item in Model)
+        {
+            <div class="blog_post_preview">
+                <div class="post_preview_wrapper">
+                    <div class="blog_content">
+                        <div class="blogpreview_top">
+                            <h3 class="blogpost_title"><a href="@Url.Action("DetailBlog","Default",new { id=item.titile_blog_tra.UrlFrendly()+"-"+item.id_blog_tra})">@item.titile_blog_tra</a></h3>
+                            <div class="listing_meta">
+                                <span><i class="stand_icon icon-calendar-o"></i>@(item.create_date_blog_tra != null ? item.create_date_blog_tra : DateTime.Now )</span>
+                                @*<span><i class="icon-user"></i><a href="javascript:void(0);">gt3dev</a></span>
+                                <span><i class="icon-folder"></i><a href="javascript:void(0);">Nature</a></span>
+                                <span class="preview_meta_tags"><i class="icon-tag"></i> <a href="javascript:void(0);">photo</a>, <a href="javascript:void(0);">sea</a>, <a href="javascript:void(0);">sky</a>, <a href="javascript:void(0);">wordpress</a></span>
+                                <span><i class="icon-comments"></i><a href="javascript:void(0);">3 comments</a></span>*@
+                            </div>
+                            <div class="likes_icons">
+                                @*<div class="post-views"><i class="stand_icon icon-eye"></i> <span>1893</span></div>
+                                <div class="gallery_likes gallery_likes_add">
+                                    <i class="stand_icon icon-heart-o"></i>
+                                    <span>64</span>
+                                </div>*@
+                                <a target="_blank" href="http://www.facebook.com/share.php?u=http://vangia.vangia.net/Default/DetailBlog/@item.titile_blog_tra.UrlFrendly()-@item.id_blog_tra&title=@item.titile_blog_tra" class="top_socials share_facebook"><i class="stand_icon icon-facebook-square"></i></a>
+                                <a target="_blank" href="javascript:void(0);" class="top_socials share_tweet"><i class="stand_icon icon-twitter"></i></a>
+                                <a target="_blank" href="javascript:void(0);" class="top_socials share_gplus"><i class="icon-google-plus-square"></i></a>
+                                <a target="_blank" href="javascript:void(0);" class="top_socials share_pinterest"><i class="stand_icon icon-pinterest"></i></a>
+                            </div>
+                        </div>
+                        <div class="pf_output_container">
+                            <div class="slider-wrapper theme-default ">
+                                <div class="nivoSlider">
+                                    <img src="@(ConfigurationManager.AppSettings["domainvg"] +  (item.img_blog_tra!=null?( item.img_blog_tra.Split('_')[0] +"/"+ item.img_blog_tra):"img.png"))" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <article class="contentarea">
+                            @if ((item.short_des_blog_tra != null ? item.short_des_blog_tra : item.titile_blog_tra).Length > 250)
+                            {
+                                @((item.short_des_blog_tra != null ? item.short_des_blog_tra : item.titile_blog_tra).Substring(0, 250))
+                            }
+                            else
+                            {
+                                @(item.short_des_blog_tra != null ? item.short_des_blog_tra : item.titile_blog_tra)
+                            }
+
+                            <a href="@Url.Action("DetailBlog","Default",new { id=item.titile_blog_tra.UrlFrendly()+"-"+item.id_blog_tra})" class="gt3_readmore">Xem chi tiết</a>
+                        </article>
+                    </div>
+                </div>
+            </div>
+          
+}
+        <ul class="pagerblock">
+            @Html.PagedListPager(Model, page => Url.Action("BlogList1", "Default", new { page }), PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(new AjaxOptions() { UpdateTargetId = "loader" }))
+        </ul>
+        
+        
+
+    </div><!-- .module_cont -->
+   
+</div>

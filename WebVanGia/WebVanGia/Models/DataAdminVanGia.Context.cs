@@ -137,5 +137,6 @@ namespace WebVanGia.Models
         public DbSet<web_tr_menutop> web_tr_menutop { get; set; }
         public DbSet<web_tr_products> web_tr_products { get; set; }
         public DbSet<web_tr_quangcao> web_tr_quangcao { get; set; }
+        public DbSet<tblMath_vangia> tblMath_vangia { get; set; }
     }
 }

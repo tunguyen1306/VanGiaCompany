@@ -34,12 +34,12 @@
                                                         <span><i class="icon-comments"></i><a href="javascript:void(0);">3 comments</a></span>*@
                                                     </div>
                                                     <div class="likes_icons">
-                                                        <div class="post-views"><i class="stand_icon icon-eye"></i> <span>1305</span></div>
+                                                        @*<div class="post-views"><i class="stand_icon icon-eye"></i> <span>1305</span></div>
                                                         <div class="gallery_likes gallery_likes_add">
                                                             <i class="stand_icon icon-heart-o"></i>
                                                             <span>34</span>
-                                                        </div>
-                                                        <a target="_blank" href="javascript:void(0);" class="top_socials share_facebook"><i class="stand_icon icon-facebook-square"></i></a>
+                                                        </div>*@
+                                                        <a target="_blank" href="http://www.facebook.com/share.php?u=http://vangia.net/Default/DetailBlog/@Model.titile_blog_tra.UrlFrendly()-@Model.id_blog_tra&title=@Model.titile_blog_tra" class="top_socials share_facebook"><i class="stand_icon icon-facebook-square"></i></a>
                                                         <a target="_blank" href="javascript:void(0);" class="top_socials share_tweet"><i class="stand_icon icon-twitter"></i></a>
                                                         <a target="_blank" href="javascript:void(0);" class="top_socials share_gplus"><i class="icon-google-plus-square"></i></a>
                                                         <a target="_blank" href="javascript:void(0);" class="top_socials share_pinterest"><i class="stand_icon icon-pinterest"></i></a>
@@ -67,7 +67,7 @@
                                                 <h4>About the Author</h4>
                                                 <div class="user_meta_content">
                                                     <div class="author-ava">
-                                                        <img alt="" src="img/imgs/avatar/2.jpg" class="avatar" height="130" width="130" />
+                                                        <img alt="" src="~/Template/img/imgs/avatar/2.jpg" class="avatar" height="130" width="130" />
                                                     </div>
                                                     <h5 class="author-name"><a href="javascript:void(0);" title="Posts by gt3dev">gt3dev</a></h5>
                                                     <div class="author-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit vivamus hendrerit scelerisque tortor quis tempus in pretium nulla at mi dictum venenatis vitae in felis suspendisse sed, sem et nulla pellentesque tincidunt condimentum vitae leo maecenas at fringilla quam sed imperdiet arcu blandit.</div>
@@ -107,7 +107,7 @@
                                                     <li class="comment">
                                                         <div class="stand_comment">
                                                             <div class="commentava wrapped_img">
-                                                                <img alt="" src="img/imgs/avatar/1.jpg" class="avatar" height="130" width="130" />
+                                                                <img alt="" src="~/Template/img/imgs/avatar/1.jpg" class="avatar" height="130" width="130" />
                                                                 <div class="img_inset"></div>
                                                             </div>
                                                             <div class="thiscommentbody">
@@ -124,7 +124,7 @@
                                                             <li class="comment">
                                                                 <div class="stand_comment">
                                                                     <div class="commentava wrapped_img">
-                                                                        <img alt="" src="img/imgs/avatar/2.jpg" class="avatar" height="130" width="130" />
+                                                                        <img alt="" src="~/Template/img/imgs/avatar/2.jpg" class="avatar" height="130" width="130" />
                                                                         <div class="img_inset"></div>
                                                                     </div>
                                                                     <div class="thiscommentbody">
@@ -133,7 +133,7 @@
                                                                             <span class="comment_date">July 11, 2014</span>
                                                                             <span class="comments"><a class="comment-reply-link" href="javascript:void(0);"></a></span>
                                                                         </div>
-                                                                        <p>Yes, worked hard <img src="img/imgs/icon_wink.gif" alt="" class="wp-smiley" /></p>
+                                                                        <p>Yes, worked hard <img src="~/Template/img/imgs/icon_wink.gif" alt="" class="wp-smiley" /></p>
                                                                     </div>
                                                                     <div class="clear"></div>
                                                                 </div>
@@ -143,7 +143,7 @@
                                                     <li class="comment">
                                                         <div class="stand_comment">
                                                             <div class="commentava wrapped_img">
-                                                                <img alt="" src="img/imgs/avatar/3.jpg" class="avatar" height="130" width="130" />
+                                                                <img alt="" src="~/Template/img/imgs/avatar/3.jpg" class="avatar" height="130" width="130" />
                                                                 <div class="img_inset"></div>
                                                             </div>
                                                             <div class="thiscommentbody">
@@ -188,3 +188,19 @@
         </div>
     </div><!-- .main_wrapper -->
 </div>
+@section share_fb{
+  
+        <meta property="og:title" content="@Model.titile_blog_tra" />
+
+            <meta property="og:url" content='http://vangia.net/Default/DetailBlog/@Model.titile_blog_tra.UrlFrendly()-@Model.id_blog_tra' />
+            <meta name="description" content="@Model.short_des_blog_tra">
+            <meta property="og:description" content="@Model.short_des_blog_tra" />
+            <meta name="keywords" content="CÔNG TY CỔ PHẦN XÂY DỰNG VÀ THƯƠNG MẠI DỊCH VỤ VẠN GIA" />
+
+            <meta property="og:image:width" content="600" />
+            <meta property="og:image:height" content="315" />
+
+            <meta property="og:image" content="@(ConfigurationManager.AppSettings["domainvg"] + (Model.img_blog_tra != null ? (Model.img_blog_tra.Split('_')[0] + "/" + Model.img_blog_tra) : "img.png"))" />
+    
+
+}

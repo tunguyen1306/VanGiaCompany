@@ -2,82 +2,90 @@
 <!DOCTYPE html>
 <html class="fullscreen">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<link rel="shortcut icon" href="~/Template/img/favicon.ico" type="image/x-icon">
-<link rel="apple-touch-icon" href="~/Template/img/apple_icons_57x57.png">
-<link rel="apple-touch-icon" sizes="72x72" href="~/Template/img/apple_icons_72x72.png">
-<link rel="apple-touch-icon" sizes="114x114" href="~/Template/img/apple_icons_114x114.png">
-<title>Diamond | Html Photography Template</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    @RenderSection("share_fb", false)
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="~/Template/img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="~/Template/img/apple_icons_57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="~/Template/img/apple_icons_72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="~/Template/img/apple_icons_114x114.png">
+    <title>CÔNG TY CỔ PHẦN XÂY DỰNG VÀ THƯƠNG MẠI DỊCH VỤ VẠN GIA</title>
     <link href="http://fonts.googleapis.com/css?family=Roboto:400,700,400italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Muli" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="~/Template/css/theme.css" type="text/css" media="all" />
     <link rel="stylesheet" href="~/Template/css/responsive.css" type="text/css" media="all" />
     <link rel="stylesheet" href="~/Template/css/custom.css" type="text/css" media="all" />
-
+    <link href="~/Template/css/CusWeb.css" rel="stylesheet" />
 </head>
-    <body>
-        <header class="main_header">
-            <div class="header_scroll">
-                <div class="header_wrapper">
-                    <a href="index.html" class="logo"><img src="~/Template/img/VGLogo.jpg" alt="" class="logo_def"><img src="~/Template/img/VGLogo.jpg" alt="" class="logo_retina"></a>
-                    <nav>
-                        <div class="menu-main-menu-container">
-                            <ul id="menu-main-menu" class="menu">
-                                <li>
-                                    <a href="@Url.Action("Index")"><span>Trang chủ</span></a>
-                                </li>
-                                <li><a href="@Url.Action("About")"><span>Giới thiệu</span></a></li>
-                                <li><a href="@Url.Action("ProductList")"><span>Xây dựng</span></a></li>
-                                <li><a href="@Url.Action("ProductList")"><span>Thương mại</span></a></li>
-                                <li><a href="@Url.Action("ProductList")"><span>Dịch vụ</span></a></li>
-                                <li><a href="@Url.Action("BlogList")"><span>Blog</span></a></li>
-                            </ul>
-                        </div>
-                    </nav>
-                    <div class="widget_area">
-                        <div class="span12">
-                            <div class="sidepanel widget_text">
-                                <div class="textwidget">
-                                    <div class="center_text">
-                                        <img src="~/Template/img/imgs/widget.jpg" alt="" class="header_widget" />
-                                        <h6>Hello And Welcome</h6>
-                                        to Black Diamond photo studio! Glad to see you here!
-                                    </div>
+<body>
+    <header class="main_header">
+        <div class="header_scroll">
+            <div class="header_wrapper">
+                <a href="@Url.Action("Index","Default")" class="logo"><img src="~/Template/img/VGLogo.jpg" alt="" class="logo_def"><img src="~/Template/img/VGLogo.jpg" alt="" class="logo_retina"></a>
+                <nav>
+                    <div class="menu-main-menu-container">
+                        <ul id="menu-main-menu" class="menu">
+                            <li>
+                                <a href="@Url.Action("Index","Default")"><span>Trang chủ</span></a>
+                            </li>
+                            <li><a href="@Url.Action("About","Default")"><span>Giới thiệu</span></a></li>
+
+                            <li>
+                                <a href="@Url.Action("ProductList","Default")"><span>Xây dựng</span></a>
+
+                            </li>
+
+                            <li><a href="@Url.Action("Math","Math")"><span>Tính xây dựng</span></a></li>
+
+                            <li><a href="@Url.Action("Trade","Default")"><span>Thương mại</span></a></li>
+                            <li><a href="@Url.Action("Travel","Default")"><span>Dịch vụ</span></a></li>
+                            <li><a href="@Url.Action("BlogList","Default")"><span>Blog</span></a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="widget_area">
+                    <div class="span12">
+                        <div class="sidepanel widget_text">
+                            <div class="textwidget">
+                                <div class="center_text">
+                                    <img src="~/Template/img/def_bg.jpg" style="width:90px;height:90px" alt="" class="header_widget" />
+                                    <h6>Xin chào mừng</h6>
+                                   đến với chúng tôi Vạn Gia Company
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Header Wrapper -->
-                <div class="footer_wrapper">
-                    <div class="socials_wrapper">
-                        <ul class="socials_list">
-                            <li><a class="ico_social_facebook" target="_blank" href="http://facebook.com" title="Facebook"></a></li>
-                            <li><a class="ico_social_pinterest" target="_blank" href="http://pinterest.com" title="Pinterest"></a></li>
-                            <li><a class="ico_social_instagram" target="_blank" href="http://instagram.com" title="Instagram"></a></li>
-                            <li><a class="ico_social_flickr" target="_blank" href="http://flickr.com" title="Flickr"></a></li>
-                        </ul>
-                    </div>
-                    <div class="copyright">Copyright &copy; Black Diamond.<br>All Rights Reserved</div>
-                </div><!-- footer_wrapper -->
             </div>
-        </header>
+
+            <!-- Header Wrapper -->
+            <div class="footer_wrapper">
+                <div class="socials_wrapper">
+                    <ul class="socials_list">
+                        <li><a class="ico_social_facebook" target="_blank" href="http://facebook.com" title="Facebook"></a></li>
+                        <li><a class="ico_social_pinterest" target="_blank" href="http://pinterest.com" title="Pinterest"></a></li>
+                        <li><a class="ico_social_instagram" target="_blank" href="http://instagram.com" title="Instagram"></a></li>
+                        <li><a class="ico_social_flickr" target="_blank" href="http://flickr.com" title="Flickr"></a></li>
+                    </ul>
+                </div>
+                <div class="copyright">Copyright &copy; Black Diamond.<br>All Rights Reserved</div>
+            </div><!-- footer_wrapper -->
+        </div>
+    </header>
 
 
-        @RenderBody()
-       
-    
-       
-    
-        
-        <div class="custom_bg img_bg def_bg"></div>
-        <script type="text/javascript" src="~/Template/js/jquery.min.js"></script>
-        <script type="text/javascript" src="~/Template/js/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="~/Template/js/modules.js"></script>
-        <script type="text/javascript" src="~/Template/js/theme.js"></script>
+    @RenderBody()
 
-        <script type="text/javascript" src="~/Template/js/fs_gallery.js"></script>
-    </body>
+
+
+
+
+    <div class="custom_bg img_bg def_bg"></div>
+    <script type="text/javascript" src="~/Template/js/jquery.min.js"></script>
+    <script type="text/javascript" src="~/Template/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="~/Template/js/modules.js"></script>
+    <script type="text/javascript" src="~/Template/js/theme.js"></script>
+    <script type="text/javascript" src="~/Template/js/fs_gallery.js"></script>
+
+</body>
 </html>

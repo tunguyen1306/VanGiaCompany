@@ -2,3 +2,16 @@
         background: #ffffff!important;
     color: #222222!important;
 }
+select option{
+    background-color:black;
+    opacity:0.1;
+}
+.classtitle{
+    width:100%;
+     text-align: left;
+    text-transform: uppercase;
+    font-size: 40px;
+    line-height: 52px;
+    color: #000000;
+   
+}

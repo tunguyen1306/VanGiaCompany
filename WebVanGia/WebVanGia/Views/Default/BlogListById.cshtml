@@ -23,12 +23,12 @@
                                 <span><i class="icon-comments"></i><a href="javascript:void(0);">3 comments</a></span>*@
                             </div>
                             <div class="likes_icons">
-                                <div class="post-views"><i class="stand_icon icon-eye"></i> <span>1893</span></div>
+                                @*<div class="post-views"><i class="stand_icon icon-eye"></i> <span>1893</span></div>
                                 <div class="gallery_likes gallery_likes_add">
                                     <i class="stand_icon icon-heart-o"></i>
                                     <span>64</span>
-                                </div>
-                                <a target="_blank" href="javascript:void(0);" class="top_socials share_facebook"><i class="stand_icon icon-facebook-square"></i></a>
+                                </div>*@
+                                <a target="_blank" href="http://www.facebook.com/share.php?u=http://vangia.net/Default/DetailBlog/@item.titile_blog_tra.UrlFrendly()-@item.id_blog_tra&title=@item.titile_blog_tra" class="top_socials share_facebook"><i class="stand_icon icon-facebook-square"></i></a>
                                 <a target="_blank" href="javascript:void(0);" class="top_socials share_tweet"><i class="stand_icon icon-twitter"></i></a>
                                 <a target="_blank" href="javascript:void(0);" class="top_socials share_gplus"><i class="icon-google-plus-square"></i></a>
                                 <a target="_blank" href="javascript:void(0);" class="top_socials share_pinterest"><i class="stand_icon icon-pinterest"></i></a>
@@ -56,10 +56,13 @@
                     </div>
                 </div>
             </div>
-        }
+          
+}
         <ul class="pagerblock">
             @Html.PagedListPager(Model, page => Url.Action("BlogList1", "Default", new { page }), PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(new AjaxOptions() { UpdateTargetId = "loader" }))
         </ul>
+        
+        
 
     </div><!-- .module_cont -->
    

@@ -1,0 +1,8 @@
+﻿.active a {
+        background: #ffffff!important;
+    color: #222222!important;
+}
+select option{
+    background-color:black;
+    opacity:0.1;
+}

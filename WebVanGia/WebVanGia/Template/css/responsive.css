@@ -16,7 +16,7 @@ img.logo_retina {
 
     .nivo-prevNav:before,
     .nivo-nextNav:before {
-        background: url(../img/retina/diamond_sprite.png) no-repeat 0 0;
+        background: url(../img/retina/diamond_sprite.png) no-repeat 2px 0;
     }
     a.fs_slider_prev:before {
         background: url(../img/retina/diamond_sprite.png) no-repeat 0 -20px;
@@ -1848,8 +1848,9 @@ img.logo_retina {
 		padding-top:20px;
 	}
 	.fs_title_wrapper h1 {
-		font-size:22px;
-		line-height:24px;
+		font-size:17px;
+		line-height:22px;
+        font-weight:500;
 	}
 	.control_toggle {
 		left:20px!important;

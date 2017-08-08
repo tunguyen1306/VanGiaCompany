@@ -1,0 +1,83 @@
+﻿@{
+    ViewBag.Title = "DetailProduct";
+    Layout = "~/Views/Shared/_LayoutWeb.cshtml";
+}
+@model WebVanGia.Models.ProductsModel
+@using WebVanGia.Models
+@using System.Configuration
+<div class="site_wrapper">
+    <div class="main_wrapper">
+        <div class="content_wrapper">
+            <div class="container simple-post-container">
+                <div class="content_block row no-sidebar">
+                    <div class="fl-container ">
+                        <div class="row">
+                            <div class="posts-block simple-post">
+                                <div class="contentarea">
+                                    <div class="row">
+                                        <div class="span12 module_cont module_blog module_none_padding module_blog_page">
+                                            <div class="blog_post_page">
+                                                <div class="single_post_top">
+                                                    <h1 class="blogpost_title">@Model.tblProject.vangia_name_project</h1>
+                                                    <div class="prev_next_links">
+                                                        <div class="post_close"><a href="javascript:history.back()"></a></div>
+                                                        <div class="fright_top"><a href="javascript:void(0);"></a></div>
+                                                        <div class="fleft_top"><a href="javascript:void(0);"></a></div>
+                                                    </div>
+                                                </div>
+                                                <div class="blogpreview_top">
+                                                    <div class="listing_meta">
+                                                        <span><i class="stand_icon icon-calendar-o"></i>March 04, 2014</span>
+                                                        <span><i class="icon-user"></i>gt3dev</span>
+                                                        <span><i class="icon-folder"></i><a href="javascript:void(0);">Cities</a>, <a href="javascript:void(0);">Stuff</a></span>
+                                                        <span><i class="icon-tag"></i><a href="javascript:void(0);">advertisement</a>, <a href="javascript:void(0);">html5</a>, <a href="javascript:void(0);">sky</a>, <a href="javascript:void(0);">stuff</a></span>
+                                                        <span><i class="icon-comments"></i><a href="javascript:void(0);">3 comments</a></span>
+                                                    </div>
+                                                    <div class="likes_icons">
+                                                        <div class="post-views"><i class="stand_icon icon-eye"></i> <span>1305</span></div>
+                                                        <div class="gallery_likes gallery_likes_add">
+                                                            <i class="stand_icon icon-heart-o"></i>
+                                                            <span>34</span>
+                                                        </div>
+                                                        <a target="_blank" href="javascript:void(0);" class="top_socials share_facebook"><i class="stand_icon icon-facebook-square"></i></a>
+                                                        <a target="_blank" href="javascript:void(0);" class="top_socials share_tweet"><i class="stand_icon icon-twitter"></i></a>
+                                                        <a target="_blank" href="javascript:void(0);" class="top_socials share_gplus"><i class="icon-google-plus-square"></i></a>
+                                                        <a target="_blank" href="javascript:void(0);" class="top_socials share_pinterest"><i class="stand_icon icon-pinterest"></i></a>
+                                                        <div class="clear"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="pf_output_container">
+                                                    <div class="slider-wrapper theme-default ">
+                                                        <div class="nivoSlider">
+                                                            @foreach (var item in Model.tblListPicture)
+                                                            {
+                                                                <img src="@(ConfigurationManager.AppSettings["domainvg"] +  (item.originalFilepath!=null?( item.originalFilepath.Split('_')[0] +"/"+ item.originalFilepath):"img.png"))" alt="@Model.tblProject.vangia_name_project" />
+                                                            }
+                                                           
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="blog_post_content">
+                                                    <article class="contentarea">
+                                                        <p style="white-space:pre-line;">@Html.Raw(Model.tblProject.vangia_tomtat_project)</p>
+                                                        <p style="white-space:pre-line;">@Html.Raw(Model.tblProject.vangia_content_project)</p>
+                                                    </article>
+                                                </div>
+                                            </div>
+                                           
+                                        </div>
+
+                                    </div>
+
+                                  
+                                </div><!-- .contentarea -->
+                            </div>
+                        </div>
+                        <div class="clear"><!-- ClearFix --></div>
+                    </div>
+                    <div class="clear"><!-- ClearFix --></div>
+                </div>
+            </div>
+        </div>
+    </div><!-- .main_wrapper -->
+</div>

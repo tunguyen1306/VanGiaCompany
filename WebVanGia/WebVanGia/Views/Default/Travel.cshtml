@@ -1,361 +1,207 @@
-﻿@{
+﻿@using WebVanGia.Models
+@using System.Configuration
+@{
     ViewBag.Title = "Travel";
     Layout = "~/Views/Shared/_LayoutWeb.cshtml";
+    DataAdminVanGiaEntities dbadmin = new DataAdminVanGiaEntities();
 }
-<div class="fullscreen_block hided">
-    <div class="fs_blog_module fw_port_module sorting_block">
-        <div class="blogpost_preview_fw fw-portPreview element nature">
-            <div class="fw-portPreview-wrapper mas_style1 pr40 pb40">
-                <a href="portfolio_simple_fullwidth_image_post.html">
-                    <img src="~/Template/img/portfolio/grid/1.jpg" alt="" class="fw_featured_image" width="540">
-                    <div class="fw-portPreview-fadder"></div>
-                    <div class="fw-portPreview-content">
-                        <h2 class="fw-portPreview-title">Lorem ipsum dolor sit amet</h2>
-                        <div class="block_likes">
-                            <div class="fw-portPreview-views">
-                                <i class="stand_icon icon-eye"></i> <span>2386</span>
-                            </div>
-                            <div class="fw-portPreview-likes">
-                                <i class="stand_icon icon-heart-o"></i>
-                                <span>82</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="blogpost_preview_fw fw-portPreview element fashion portrait">
-            <div class="fw-portPreview-wrapper mas_style1 pr40 pb40">
-                <a href="portfolio_simple_fullwidth_image_post.html">
-                    <img src="~/Template/img/portfolio/grid/2.jpg" alt="" class="fw_featured_image" width="540">
-                    <div class="fw-portPreview-fadder"></div>
-                    <div class="fw-portPreview-content">
-                        <h2 class="fw-portPreview-title">Integer nec odio</h2>
-                        <div class="block_likes">
-                            <div class="fw-portPreview-views">
-                                <i class="stand_icon icon-eye"></i> <span>1686</span>
-                            </div>
-                            <div class="fw-portPreview-likes already_liked">
-                                <i class="stand_icon icon-heart"></i>
-                                <span>64</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="blogpost_preview_fw fw-portPreview element cities nature">
-            <div class="fw-portPreview-wrapper mas_style1 pr40 pb40">
-                <a href="portfolio_simple_fullwidth_image_post.html">
-                    <img src="~/Template/img/portfolio/grid/3.jpg" alt="" class="fw_featured_image" width="540">
-                    <div class="fw-portPreview-fadder"></div>
-                    <div class="fw-portPreview-content">
-                        <h2 class="fw-portPreview-title">Sed cursus ante</h2>
-                        <div class="block_likes">
-                            <div class="fw-portPreview-views">
-                                <i class="stand_icon icon-eye"></i> <span>736</span>
-                            </div>
-                            <div class="fw-portPreview-likes">
-                                <i class="stand_icon icon-heart-o"></i>
-                                <span>28</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="blogpost_preview_fw fw-portPreview element advertisement nature">
-            <div class="fw-portPreview-wrapper mas_style1 pr40 pb40">
-                <a href="portfolio_simple_fullwidth_image_post.html">
-                    <img src="~/Template/img/portfolio/grid/4.jpg" alt="" class="fw_featured_image" width="540">
-                    <div class="fw-portPreview-fadder"></div>
-                    <div class="fw-portPreview-content">
-                        <h2 class="fw-portPreview-title">Mauris massa</h2>
-                        <div class="block_likes">
-                            <div class="fw-portPreview-views">
-                                <i class="stand_icon icon-eye"></i> <span>483</span>
-                            </div>
-                            <div class="fw-portPreview-likes">
-                                <i class="stand_icon icon-heart-o"></i>
-                                <span>16</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="blogpost_preview_fw fw-portPreview element advertisement nature">
-            <div class="fw-portPreview-wrapper mas_style1 pr40 pb40">
-                <a href="portfolio_simple_fullwidth_image_post.html">
-                    <img src="~/Template/img/portfolio/grid/5.jpg" alt="" class="fw_featured_image" width="540">
-                    <div class="fw-portPreview-fadder"></div>
-                    <div class="fw-portPreview-content">
-                        <h2 class="fw-portPreview-title">Class aptent taciti</h2>
-                        <div class="block_likes">
-                            <div class="fw-portPreview-views">
-                                <i class="stand_icon icon-eye"></i> <span>586</span>
-                            </div>
-                            <div class="fw-portPreview-likes">
-                                <i class="stand_icon icon-heart-o"></i>
-                                <span>20</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="blogpost_preview_fw fw-portPreview element cities stuff">
-            <div class="fw-portPreview-wrapper mas_style1 pr40 pb40">
-                <a href="portfolio_simple_fullwidth_image_post.html">
-                    <img src="~/Template/img/portfolio/grid/6.jpg" alt="" class="fw_featured_image" width="540">
-                    <div class="fw-portPreview-fadder"></div>
-                    <div class="fw-portPreview-content">
-                        <h2 class="fw-portPreview-title">Aenean quam</h2>
-                        <div class="block_likes">
-                            <div class="fw-portPreview-views">
-                                <i class="stand_icon icon-eye"></i> <span>617</span>
-                            </div>
-                            <div class="fw-portPreview-likes">
-                                <i class="stand_icon icon-heart-o"></i>
-                                <span>27</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="blogpost_preview_fw fw-portPreview element fashion portrait">
-            <div class="fw-portPreview-wrapper mas_style1 pr40 pb40">
-                <a href="portfolio_simple_fullwidth_image_post.html">
-                    <img src="~/Template/img/portfolio/grid/7.jpg" alt="" class="fw_featured_image" width="540">
-                    <div class="fw-portPreview-fadder"></div>
-                    <div class="fw-portPreview-content">
-                        <h2 class="fw-portPreview-title">Mauris ipsum</h2>
-                        <div class="block_likes">
-                            <div class="fw-portPreview-views">
-                                <i class="stand_icon icon-eye"></i> <span>505</span>
-                            </div>
-                            <div class="fw-portPreview-likes">
-                                <i class="stand_icon icon-heart-o"></i>
-                                <span>20</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="blogpost_preview_fw fw-portPreview element advertisement nature">
-            <div class="fw-portPreview-wrapper mas_style1 pr40 pb40">
-                <a href="portfolio_simple_fullwidth_image_post.html">
-                    <img src="~/Template/img/portfolio/grid/8.jpg" alt="" class="fw_featured_image" width="540">
-                    <div class="fw-portPreview-fadder"></div>
-                    <div class="fw-portPreview-content">
-                        <h2 class="fw-portPreview-title">Curabitur sodales ligula</h2>
-                        <div class="block_likes">
-                            <div class="fw-portPreview-views">
-                                <i class="stand_icon icon-eye"></i> <span>333</span>
-                            </div>
-                            <div class="fw-portPreview-likes">
-                                <i class="stand_icon icon-heart-o"></i>
-                                <span>12</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="blogpost_preview_fw fw-portPreview element nature stuff">
-            <div class="fw-portPreview-wrapper mas_style1 pr40 pb40">
-                <a href="portfolio_simple_fullwidth_image_post.html">
-                    <img src="~/Template/img/portfolio/grid/9.jpg" alt="" class="fw_featured_image" width="540">
-                    <div class="fw-portPreview-fadder"></div>
-                    <div class="fw-portPreview-content">
-                        <h2 class="fw-portPreview-title">Sed convallis tristique</h2>
-                        <div class="block_likes">
-                            <div class="fw-portPreview-views">
-                                <i class="stand_icon icon-eye"></i> <span>356</span>
-                            </div>
-                            <div class="fw-portPreview-likes">
-                                <i class="stand_icon icon-heart-o"></i>
-                                <span>8</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="blogpost_preview_fw fw-portPreview element nature">
-            <div class="fw-portPreview-wrapper mas_style1 pr40 pb40">
-                <a href="portfolio_simple_fullwidth_image_post.html">
-                    <img src="~/Template/img/portfolio/grid/10.jpg" alt="" class="fw_featured_image" width="540">
-                    <div class="fw-portPreview-fadder"></div>
-                    <div class="fw-portPreview-content">
-                        <h2 class="fw-portPreview-title">Fusce ac turpis</h2>
-                        <div class="block_likes">
-                            <div class="fw-portPreview-views">
-                                <i class="stand_icon icon-eye"></i> <span>283</span>
-                            </div>
-                            <div class="fw-portPreview-likes">
-                                <i class="stand_icon icon-heart-o"></i>
-                                <span>6</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="blogpost_preview_fw fw-portPreview element advertisement cities stuff">
-            <div class="fw-portPreview-wrapper mas_style1 pr40 pb40">
-                <a href="portfolio_simple_fullwidth_image_post.html">
-                    <img src="~/Template/img/portfolio/grid/11.jpg" alt="" class="fw_featured_image" width="540">
-                    <div class="fw-portPreview-fadder"></div>
-                    <div class="fw-portPreview-content">
-                        <h2 class="fw-portPreview-title">Nulla metus metus</h2>
-                        <div class="block_likes">
-                            <div class="fw-portPreview-views">
-                                <i class="stand_icon icon-eye"></i> <span>285</span>
-                            </div>
-                            <div class="fw-portPreview-likes">
-                                <i class="stand_icon icon-heart-o"></i>
-                                <span>15</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="blogpost_preview_fw fw-portPreview element fashion portrait">
-            <div class="fw-portPreview-wrapper mas_style1 pr40 pb40">
-                <a href="portfolio_simple_fullwidth_image_post.html">
-                    <img src="~/Template/img/portfolio/grid/12.jpg" alt="" class="fw_featured_image" width="540">
-                    <div class="fw-portPreview-fadder"></div>
-                    <div class="fw-portPreview-content">
-                        <h2 class="fw-portPreview-title">Quisque volutpat</h2>
-                        <div class="block_likes">
-                            <div class="fw-portPreview-views">
-                                <i class="stand_icon icon-eye"></i> <span>233</span>
-                            </div>
-                            <div class="fw-portPreview-likes">
-                                <i class="stand_icon icon-heart-o"></i>
-                                <span>7</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="blogpost_preview_fw fw-portPreview element advertisement nature stuff">
-            <div class="fw-portPreview-wrapper mas_style1 pr40 pb40">
-                <a href="portfolio_simple_fullwidth_image_post.html">
-                    <img src="~/Template/img/portfolio/grid/13.jpg" alt="" class="fw_featured_image" width="540">
-                    <div class="fw-portPreview-fadder"></div>
-                    <div class="fw-portPreview-content">
-                        <h2 class="fw-portPreview-title">Lorem ipsum dolor sit amet</h2>
-                        <div class="block_likes">
-                            <div class="fw-portPreview-views">
-                                <i class="stand_icon icon-eye"></i> <span>2386</span>
-                            </div>
-                            <div class="fw-portPreview-likes">
-                                <i class="stand_icon icon-heart-o"></i>
-                                <span>82</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="blogpost_preview_fw fw-portPreview element cities stuff">
-            <div class="fw-portPreview-wrapper mas_style1 pr40 pb40">
-                <a href="portfolio_simple_fullwidth_image_post.html">
-                    <img src="~/Template/img/portfolio/grid/14.jpg" alt="" class="fw_featured_image" width="540">
-                    <div class="fw-portPreview-fadder"></div>
-                    <div class="fw-portPreview-content">
-                        <h2 class="fw-portPreview-title">Integer nec odio</h2>
-                        <div class="block_likes">
-                            <div class="fw-portPreview-views">
-                                <i class="stand_icon icon-eye"></i> <span>1686</span>
-                            </div>
-                            <div class="fw-portPreview-likes already_liked">
-                                <i class="stand_icon icon-heart"></i>
-                                <span>64</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="blogpost_preview_fw fw-portPreview element advertisement nature">
-            <div class="fw-portPreview-wrapper mas_style1 pr40 pb40">
-                <a href="portfolio_simple_fullwidth_image_post.html">
-                    <img src="~/Template/img/portfolio/grid/15.jpg" alt="" class="fw_featured_image" width="540">
-                    <div class="fw-portPreview-fadder"></div>
-                    <div class="fw-portPreview-content">
-                        <h2 class="fw-portPreview-title">Sed cursus ante</h2>
-                        <div class="block_likes">
-                            <div class="fw-portPreview-views">
-                                <i class="stand_icon icon-eye"></i> <span>736</span>
-                            </div>
-                            <div class="fw-portPreview-likes">
-                                <i class="stand_icon icon-heart-o"></i>
-                                <span>28</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="blogpost_preview_fw fw-portPreview element fashion portrait">
-            <div class="fw-portPreview-wrapper mas_style1 pr40 pb40">
-                <a href="portfolio_simple_fullwidth_image_post.html">
-                    <img src="~/Template/img/portfolio/grid/16.jpg" alt="" class="fw_featured_image" width="540">
-                    <div class="fw-portPreview-fadder"></div>
-                    <div class="fw-portPreview-content">
-                        <h2 class="fw-portPreview-title">Mauris massa</h2>
-                        <div class="block_likes">
-                            <div class="fw-portPreview-views">
-                                <i class="stand_icon icon-eye"></i> <span>483</span>
-                            </div>
-                            <div class="fw-portPreview-likes">
-                                <i class="stand_icon icon-heart-o"></i>
-                                <span>16</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="clear"></div>
-    </div>
-</div>
-<script>
-    	jQuery(document).ready(function ($) {
-			"use strict";
-			jQuery('.filter_toggler').click(function(){
-				jQuery('.optionset').slideToggle(300);
-				jQuery('.filter_toggler').toggleClass('toggled');
-			});
-			if (window_w < 760) {
-				jQuery('.optionset').slideToggle(1);
-				jQuery('.filter_toggler').toggleClass('toggled');
-			}
+<div class="site_wrapper">
+    <div class="main_wrapper">
+        <div class="content_wrapper">
+            <div class="container simple-post-container">
+                <div class="content_block no-sidebar row">
+                    <div class="fl-container ">
+                        <div class="row">
+                            <div class="posts-block simple-post ">
+                                <div class="contentarea">
+                                    <div class="row">
+                                        <div class="span12 module_cont module_blog module_none_padding module_blog_page">
+                                            <div class="blog_post_page">
 
-			jQuery('.custom_bg').remove();
-            port_setup();
-		});
-		jQuery(window).load(function($){
-			"use strict";
-            port_setup();
+
+                                                <div class="pf_output_container">
+                                                    <div class="slider-wrapper theme-default">
+                                                        <div class="">
+                                                            <iframe width="560" height="415" src="https://www.youtube.com/embed/Rs5R6SOhAgs" frameborder="0" allowfullscreen></iframe>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="blog_post_content">
+                                                    <article class="contentarea">
+                                                        <div class="single_post_top">
+                                                            <h1 class="blogpost_title">TOUR DU LỊCH</h1>
+
+                                                        </div>
+
+                                                        <div class="row">
+                                                            <div class="span12 module_number_2 module_cont pb20 module_gallery">
+                                                                <div class="list-of-images images_in_a_row_3">
+                                                                    @foreach (var item in dbadmin.web_vangia_project.Where(x => x.vangia_typeid_project == 31).OrderByDescending(x => x.vangia_id_project).Skip(1).Take(1))
+                                                                    {
+                                                                        <div class="gallery_item ">
+                                                                            <div class="pf_output_container">
+                                                                                <div class="slider-wrapper theme-default">
+                                                                                    <div class="gallery_item_padding">
+                                                                                        <div class="gallery_item_wrapper">
+                                                                                            <a href="@Url.Action("DetailProduct","Default",new { id=item.vangia_name_project.UrlFrendly()+"-"+item.vangia_id_project})">  <h2 class="">@item.vangia_name_project</h2></a>
+                                                                                            <div class="pf_output_container">
+                                                                                                <div class="slider-wrapper theme-default">
+                                                                                                    <div class="nivoSlider">
+                                                                                                        @foreach (var itemPic in dbadmin.tblSysPictures.Where(x => x.advert_id == item.vangia_id_project))
+                                                                                                        {
+                                                                                                            <img src="@(ConfigurationManager.AppSettings["domainvg"] +  (itemPic.originalFilepath!=null?( itemPic.originalFilepath.Split('_')[0] +"/"+ itemPic.originalFilepath) :"img.png"))" alt="" />
+                                                                                                        }
+                                                                                                        
+
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+
+                                                                    }
+
+                                                                    @foreach (var item in dbadmin.web_vangia_project.Where(x => x.vangia_typeid_project == 31).OrderByDescending(x => x.vangia_id_project).Skip(2).Take(1))
+                                                                    {
+                                                                        <div class="gallery_item ">
+                                                                            <div class="pf_output_container">
+                                                                                <div class="slider-wrapper theme-default">
+                                                                                    <div class="gallery_item_padding">
+                                                                                        <div class="gallery_item_wrapper">
+                                                                                            <a href="@Url.Action("DetailProduct","Default",new { id=item.vangia_name_project.UrlFrendly()+"-"+item.vangia_id_project})">  <h2 class="">@item.vangia_name_project</h2></a>
+                                                                                            <div class="pf_output_container">
+                                                                                                <div class="slider-wrapper theme-default">
+                                                                                                    <div class="nivoSlider">
+                                                                                                        @foreach (var itemPic in dbadmin.tblSysPictures.Where(x => x.advert_id == item.vangia_id_project))
+                                                                                                        {
+                                                                                                            <img src="@(ConfigurationManager.AppSettings["domainvg"] +  (itemPic.originalFilepath!=null?( itemPic.originalFilepath.Split('_')[0] +"/"+ itemPic.originalFilepath) :"img.png"))" alt="" />
+                                                                                                        }
+
+
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+
+                                                                    }
+                                                                    @foreach (var item in dbadmin.web_vangia_project.Where(x => x.vangia_typeid_project == 31).OrderByDescending(x => x.vangia_id_project).Skip(3).Take(1))
+                                                                    {
+                                                                        <div class="gallery_item ">
+                                                                            <div class="pf_output_container">
+                                                                                <div class="slider-wrapper theme-default">
+                                                                                    <div class="gallery_item_padding">
+                                                                                        <div class="gallery_item_wrapper">
+                                                                                           
+                                                                                            <a href="@Url.Action("DetailProduct","Default",new { id=item.vangia_name_project.UrlFrendly()+"-"+item.vangia_id_project})">  <h2 class="">@item.vangia_name_project</h2></a>
+                                                                                            <div class="pf_output_container">
+                                                                                                <div class="slider-wrapper theme-default">
+                                                                                                    <div class="nivoSlider">
+                                                                                                        @foreach (var itemPic in dbadmin.tblSysPictures.Where(x => x.advert_id == item.vangia_id_project))
+                                                                                                        {
+                                                                                                            <img src="@(ConfigurationManager.AppSettings["domainvg"] +  (itemPic.originalFilepath!=null?( itemPic.originalFilepath.Split('_')[0] +"/"+ itemPic.originalFilepath) :"img.png"))" alt="" />
+                                                                                                        }
+                                                                                                        
+
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+
+                                                                    }
+
+
+
+                                                                    <div class="clear"></div>
+                                                                </div>
+                                                            </div><!-- .module_cont -->
+                                                        </div>
+
+                                                    </article>
+                                                </div>
+                                            </div>
+                                            <!--.blog_post_page -->
+
+
+                                        </div>
+                                    </div>
+                                    <div class="dn"></div>
+                                    <div class="row">
+                                        <div class="span12 module_cont module_blog module_none_padding module_blog_page">
+                                            <div class="blog_post_page">
+                                               
+                                                @foreach (var item in dbadmin.web_vangia_project.Where(x => x.vangia_typeid_project == 31).OrderByDescending(x => x.vangia_id_project).Skip(4).Take(1))
+                                                {
+                                                    <a href="@Url.Action("DetailProduct","Default",new { id=item.vangia_name_project.UrlFrendly()+"-"+item.vangia_id_project})">  <h2 class="">@item.vangia_name_project</h2></a>
+                                                    <div class="pf_output_container">
+                                                        <div class="slider-wrapper theme-default">
+                                                            <div class="nivoSlider">
+                                                                @foreach (var itemPic in dbadmin.tblSysPictures.Where(x => x.advert_id == item.vangia_id_project))
+                                                                {
+                                                                    <img src="@(ConfigurationManager.AppSettings["domainvg"] +  (itemPic.originalFilepath!=null?( itemPic.originalFilepath.Split('_')[0] +"/"+ itemPic.originalFilepath) :"img.png"))" alt="" width="570" height="368" />
+                                                                }
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                }
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+
+                                </div><!-- .contentarea -->
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div><!-- .fl-container -->
+                    <div class="clear"></div>
+                </div>
+            </div><!-- .container -->
+        </div><!-- .content_wrapper -->
+    </div><!-- .main_wrapper -->
+</div>
+
+@Scripts.Render("~/bundles/jquery")
+<script>
+    jQuery(document).ready(function () {
+        "use strict";
+        jQuery('.commentlist').find('li').each(function () {
+            if (jQuery(this).find('ul').size() > 0) {
+                jQuery(this).addClass('has_ul');
+            }
         });
-        jQuery(window).resize(function($){
-			"use strict";
-            port_setup();
+        jQuery('.form-allowed-tags').width(jQuery('#commentform').width() - jQuery('.form-submit').width() - 13);
+        jQuery('.comment-reply-link').click(function () {
+            jQuery('.form-allowed-tags').width(jQuery('#commentform').width() - jQuery('.form-submit').width() - 13);
         });
-        function port_setup() {
-			"use strict";
-            jQuery('.fw-portPreview-content').each(function(){
-                jQuery(this).css('margin-top', -1*jQuery(this).height()/2+'px');
-            });
-        }
+
+        jQuery('.pf_output_container').each(function () {
+            if (jQuery(this).html() == '') {
+                jQuery(this).parents('.blog_post_page').addClass('no_pf');
+            } else {
+                jQuery(this).parents('.blog_post_page').addClass('has_pf');
+            }
+        });
+    });
+    jQuery(window).resize(function () {
+        "use strict";
+        jQuery('.form-allowed-tags').width(jQuery('#commentform').width() - jQuery('.form-submit').width() - 13);
+    });
 </script>
-<script src="~/Template/js/jquery.isotope.min.js"></script>
-<script src="~/Template/js/sorting.js"></script>
+@*<script src="~/Template/js/jquery.isotope.min.js"></script>
+    <script src="~/Template/js/sorting.js"></script>*@

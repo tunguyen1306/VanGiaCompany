@@ -65,12 +65,32 @@ namespace WebVanGia.Controllers
                 description = x.tblProject.vangia_content_project,
                 titleColor = "#ffffff",
                 descriptionColor = "#ffffff",
-                link = "DetailProduct/" + x.tblProject.vangia_name_project.UrlFrendly() + "-" + x.tblProject.vangia_id_project
+                link = "/Default/DetailProduct/" + x.tblProject.vangia_name_project.UrlFrendly() + "-" + x.tblProject.vangia_id_project
             }));
         }
         public ActionResult Travel()
         {
             return View();
+        }
+        public ActionResult Trade(int? page)
+        {
+            var pagenum = page ?? 1;
+            var pageSize = 10;
+            var qrData = (from dataPro in dbadmin.web_vangia_project
+                          join dataImg in dbadmin.tblSysPictures on dataPro.vangia_id_project equals dataImg.advert_id
+                          where dataImg.position == 1 && dataPro.vangia_status_project == 1 && dataPro.vangia_typeid_project == 1
+                          select new ProductsModel { tblProject = dataPro, tblPicture = dataImg }).ToList();
+            return View(qrData.ToList().ToPagedList(pagenum, pageSize));
+        }
+        public ActionResult Trade1(int? page)
+        {
+            var pagenum = page ?? 1;
+            var pageSize = 10;
+            var qrData = (from dataPro in dbadmin.web_vangia_project
+                          join dataImg in dbadmin.tblSysPictures on dataPro.vangia_id_project equals dataImg.advert_id
+                          where dataImg.position == 1 && dataPro.vangia_status_project == 1 && dataPro.vangia_typeid_project == 1
+                          select new ProductsModel { tblProject = dataPro, tblPicture = dataImg }).ToList();
+            return PartialView("Trade", qrData.ToList().ToPagedList(pagenum, pageSize));
         }
         public ActionResult DetailBlog(string id)
         {
@@ -116,6 +136,10 @@ namespace WebVanGia.Controllers
                 titleColor = "#ffffff",
                 descriptionColor = "#ffffff"
             }));
+        }
+        public ActionResult test()
+        {
+            return View();
         }
        
     }

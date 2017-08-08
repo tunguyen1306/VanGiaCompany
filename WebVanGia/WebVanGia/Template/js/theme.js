@@ -68,7 +68,8 @@ jQuery(document).ready(function ($) {
     header.find('.header_wrapper').append('<a href="javascript:void(0)" class="menu_toggler"></a>');
     if (jQuery('.header_filter').size() > 0) {
         jQuery('.header_filter').before('<div class="mobile_menu_wrapper"><ul class="mobile_menu container"/></div>');
-    } else {
+        }
+    else {
         header.append('<div class="mobile_menu_wrapper"><ul class="mobile_menu container"/></div>');
     }
     jQuery('.mobile_menu').html(header.find('.menu').html());
