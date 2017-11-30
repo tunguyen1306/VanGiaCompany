@@ -1081,6 +1081,7 @@
     <Property Name="vangia_img9_project" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="vangia_vanban_project" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
     <Property Name="vangia_link_video_project" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="company" Type="Int32" />
   </EntityType>
   <EntityType Name="web_vangia_silde">
     <Key>
@@ -1097,6 +1098,7 @@
     <Property Name="vangia_link_silde" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="vangia_stype_slide" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="vangia_type_slide" Type="Int32" />
+    <Property Name="company" Type="Int32" />
   </EntityType>
   <EntityType Name="web_vangia_team">
     <Key>

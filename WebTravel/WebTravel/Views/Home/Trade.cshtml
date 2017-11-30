@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = "Trade";
+    Layout = "~/Views/Shared/_LayoutWeb.cshtml";
+}
+@using WebTravel.Models
+@model PagedList.IPagedList<ProductsModel>
+<div class="site_wrapper">
+    <div class="main_wrapper">
+        <div class="content_wrapper">
+            <div class="container">
+                <div class="content_block row no-sidebar">
+                    <div class="fl-container ">
+                        <div class="row">
+                            <div class="posts-block ">
+                                <div class="page_title_block">
+                                    <h1 class="title">Mua bán yến chất lượng cao</h1>
+                                </div>
+                                <div class="contentarea">
+                                   
+                                    @Html.Partial("TradeById", Model)
+                                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- .main_wrapper -->
+</div>  
+@Scripts.Render("~/bundles/jquery")  
+<script>
+		jQuery(document).ready(function(){
+			"use strict";
+			setUpWindow();
+
+			jQuery('.portfolio_title').each(function(){
+				jQuery(this).css('margin-top', -1*jQuery(this).height()/2+'px');
+			});
+
+			if (jQuery('.pagerblock').size() > 0) {
+				jQuery('.pagerblock').addClass('type_columns3');
+			}
+		});
+		jQuery(window).load(function(){
+			"use strict";
+			setUpWindow();
+		});
+		jQuery(window).resize(function(){
+			"use strict";
+			setUpWindow();
+			setTimeout('setUpWindow()',500);
+			setTimeout('setUpWindow()',1000);
+		});
+		function setUpWindow() {
+			"use strict";
+			main_wrapper.css('min-height', window_h-parseInt(site_wrapper.css('padding-top')) - parseInt(site_wrapper.css('padding-bottom'))+'px');
+		}
+</script>

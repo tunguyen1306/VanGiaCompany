@@ -1375,6 +1375,7 @@ warning 6002: The table/view 'nhvanxol_dulichbautrang.dbo.web_tr_quangcao' does 
     <Property Name="vangia_img9_project" Type="ntext" />
     <Property Name="vangia_vanban_project" Type="nvarchar" MaxLength="200" />
     <Property Name="vangia_link_video_project" Type="nvarchar(max)" />
+    <Property Name="company" Type="int" />
   </EntityType>
   <EntityType Name="web_vangia_silde">
     <Key>
@@ -1391,6 +1392,7 @@ warning 6002: The table/view 'nhvanxol_dulichbautrang.dbo.web_tr_quangcao' does 
     <Property Name="vangia_link_silde" Type="ntext" />
     <Property Name="vangia_stype_slide" Type="ntext" />
     <Property Name="vangia_type_slide" Type="int" />
+    <Property Name="company" Type="int" />
   </EntityType>
   <EntityType Name="web_vangia_team">
     <Key>

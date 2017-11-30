@@ -1380,6 +1380,7 @@ warning 6002: The table/view 'nhvanxol_dulichbautrang.dbo.web_tr_quangcao' does 
           <Property Name="vangia_img9_project" Type="ntext" />
           <Property Name="vangia_vanban_project" Type="nvarchar" MaxLength="200" />
           <Property Name="vangia_link_video_project" Type="nvarchar(max)" />
+          <Property Name="company" Type="int" />
         </EntityType>
         <EntityType Name="web_vangia_silde">
           <Key>
@@ -1396,6 +1397,7 @@ warning 6002: The table/view 'nhvanxol_dulichbautrang.dbo.web_tr_quangcao' does 
           <Property Name="vangia_link_silde" Type="ntext" />
           <Property Name="vangia_stype_slide" Type="ntext" />
           <Property Name="vangia_type_slide" Type="int" />
+          <Property Name="company" Type="int" />
         </EntityType>
         <EntityType Name="web_vangia_team">
           <Key>
@@ -2836,6 +2838,7 @@ FROM [dbo].[web_tr_quangcao] AS [web_tr_quangcao]</DefiningQuery>
           <Property Name="vangia_img9_project" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="vangia_vanban_project" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="vangia_link_video_project" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="company" Type="Int32" />
         </EntityType>
         <EntityType Name="web_vangia_silde">
           <Key>
@@ -2852,6 +2855,7 @@ FROM [dbo].[web_tr_quangcao] AS [web_tr_quangcao]</DefiningQuery>
           <Property Name="vangia_link_silde" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="vangia_stype_slide" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="vangia_type_slide" Type="Int32" />
+          <Property Name="company" Type="Int32" />
         </EntityType>
         <EntityType Name="web_vangia_team">
           <Key>
@@ -4424,6 +4428,7 @@ FROM [dbo].[web_tr_quangcao] AS [web_tr_quangcao]</DefiningQuery>
           <EntitySetMapping Name="web_vangia_project">
             <EntityTypeMapping TypeName="DataAdminvanGiaModel.web_vangia_project">
               <MappingFragment StoreEntitySet="web_vangia_project">
+                <ScalarProperty Name="company" ColumnName="company" />
                 <ScalarProperty Name="vangia_link_video_project" ColumnName="vangia_link_video_project" />
                 <ScalarProperty Name="vangia_vanban_project" ColumnName="vangia_vanban_project" />
                 <ScalarProperty Name="vangia_img9_project" ColumnName="vangia_img9_project" />
@@ -4451,6 +4456,7 @@ FROM [dbo].[web_tr_quangcao] AS [web_tr_quangcao]</DefiningQuery>
           <EntitySetMapping Name="web_vangia_silde">
             <EntityTypeMapping TypeName="DataAdminvanGiaModel.web_vangia_silde">
               <MappingFragment StoreEntitySet="web_vangia_silde">
+                <ScalarProperty Name="company" ColumnName="company" />
                 <ScalarProperty Name="vangia_type_slide" ColumnName="vangia_type_slide" />
                 <ScalarProperty Name="vangia_stype_slide" ColumnName="vangia_stype_slide" />
                 <ScalarProperty Name="vangia_link_silde" ColumnName="vangia_link_silde" />

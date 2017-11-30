@@ -1,0 +1,104 @@
+﻿
+<!DOCTYPE html>
+<html class="fullscreen">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    @RenderSection("share_fb", false)
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="~/Template/img/VGLogo.jpg" type="image/x-icon">
+    <link rel="apple-touch-icon" href="~/Template/img/VGLogo.jpg">
+    <link rel="apple-touch-icon" sizes="72x72" href="~/Template/img/VGLogo.jpg">
+    <link rel="apple-touch-icon" sizes="114x114" href="~/Template/img/VGLogo.jpg">
+    <title>CÔNG TY CỔ PHẦN XÂY DỰNG VÀ THƯƠNG MẠI DỊCH VỤ VẠN GIA</title>
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,700,400italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Muli" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="~/Template/css/theme.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="~/Template/css/responsive.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="~/Template/css/custom.css" type="text/css" media="all" />
+    <link href="~/Template/css/CusWeb.css" rel="stylesheet" />
+
+
+</head>
+<body>
+    <header class="main_header">
+        <div class="header_scroll">
+            <div class="header_wrapper">
+                <a href="@Url.Action("Index","Home")" class="logo"><img src="~/Template/img/VGLogo.png" alt="" class="logo_def"><img src="~/Template/img/VGLogo.png" alt="" class="logo_retina"></a>
+                <nav>
+                    <div class="menu-main-menu-container">
+                        <ul id="menu-main-menu" class="menu">
+                            <li>
+                                <a href="@Url.Action("Index","Home")"><span>Trang chủ</span></a>
+                            </li>
+                            <li><a><span>Giới thiệu</span></a></li>
+                            <li><a href="@Url.Action("Trade","Home")"><span>Mua bán yến</span></a></li>
+                          
+                            <li><a href="@Url.Action("BlogList","Home")"><span>Blog</span></a></li>
+                           
+                        </ul>
+                    </div>
+
+                    <style>
+                        
+
+
+                    </style>
+
+                </nav>
+                @*href="@Url.Action("About", "Default")"*@
+                <div class="widget_area">
+                    <div class="span12">
+                        <div class="sidepanel widget_text">
+                            <div class="textwidget">
+                                <div class="center_text">
+                                    <img src="~/Template/img/def_bg.jpg" style="width:90px;height:90px" alt="" class="header_widget" />
+                                    <h6>Xin chào mừng</h6>
+                                    đến với chúng tôi Vạn Gia Company
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Header Wrapper -->
+            <div class="footer_wrapper">
+                <div class="socials_wrapper">
+                    <ul class="socials_list">
+                        <li><a class="ico_social_facebook" target="_blank" href="https://www.facebook.com/vangia.net" title="Facebook"></a></li>
+                        <li><a class="ico_social_pinterest" target="_blank" href="https://www.facebook.com/vangia.net" title="Pinterest"></a></li>
+                        <li><a class="ico_social_instagram" target="_blank" href="https://www.facebook.com/vangia.net" title="Instagram"></a></li>
+                        <li><a class="ico_social_flickr" target="_blank" href="https://www.facebook.com/vangia.net" title="Flickr"></a></li>
+                    </ul>
+                </div>
+                <div class="copyright">Copyright &copy;Vangia.net<br/> tunguyen@gmail.com</div>
+            </div><!-- footer_wrapper -->
+        </div>
+    </header>
+
+
+
+    @RenderBody()
+
+
+
+
+
+    <div class="custom_bg img_bg def_bg"></div>
+    <script type="text/javascript" src="~/Template/js/jquery.min.js"></script>
+    <script type="text/javascript" src="~/Template/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="~/Template/js/modules.js"></script>
+    <script type="text/javascript" src="~/Template/js/theme.js"></script>
+    <script type="text/javascript" src="~/Template/js/fs_gallery.js"></script>
+
+
+    <script>
+
+        $('.menu_toggler').click(function () {
+            $('.mobile_menu_wrapper').eq(1).attr('style', 'display:none');
+        });
+
+    </script>
+
+</body>
+</html>

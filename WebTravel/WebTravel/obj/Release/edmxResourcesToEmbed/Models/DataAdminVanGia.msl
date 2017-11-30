@@ -1,0 +1,1493 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DataAdminvanGiaModelStoreContainer" CdmEntityContainer="DataAdminVanGiaEntities">
+    <EntitySetMapping Name="ctr_in_form">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.ctr_in_form">
+        <MappingFragment StoreEntitySet="ctr_in_form">
+          <ScalarProperty Name="id_ctr" ColumnName="id_ctr" />
+          <ScalarProperty Name="id_form" ColumnName="id_form" />
+          <ScalarProperty Name="order_ctr" ColumnName="order_ctr" />
+          <ScalarProperty Name="ctr_client_id" ColumnName="ctr_client_id" />
+          <ScalarProperty Name="ctr_store" ColumnName="ctr_store" />
+          <ScalarProperty Name="ctr_name" ColumnName="ctr_name" />
+          <ScalarProperty Name="id_ctr_in_form" ColumnName="id_ctr_in_form" />
+          <ScalarProperty Name="ctr_placeholder" ColumnName="ctr_placeholder" />
+          <ScalarProperty Name="ctr_name_us" ColumnName="ctr_name_us" />
+          <ScalarProperty Name="ctr_placeholder_us" ColumnName="ctr_placeholder_us" />
+          <ScalarProperty Name="ctr_parent_active" ColumnName="ctr_parent_active" />
+          <ScalarProperty Name="ctr_effect_show" ColumnName="ctr_effect_show" />
+          <ScalarProperty Name="ctr_query_data" ColumnName="ctr_query_data" />
+          <ScalarProperty Name="ctr_require_validate" ColumnName="ctr_require_validate" />
+          <ScalarProperty Name="ctr_require_validate_rex" ColumnName="ctr_require_validate_rex" />
+          <ScalarProperty Name="ctr_require_validate_mess" ColumnName="ctr_require_validate_mess" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ctr_steel">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.ctr_steel">
+        <MappingFragment StoreEntitySet="ctr_steel">
+          <ScalarProperty Name="ctr_name" ColumnName="ctr_name" />
+          <ScalarProperty Name="ctr_request_default" ColumnName="ctr_request_default" />
+          <ScalarProperty Name="ctr_page_name" ColumnName="ctr_page_name" />
+          <ScalarProperty Name="ctr_type" ColumnName="ctr_type" />
+          <ScalarProperty Name="id_ctr" ColumnName="id_ctr" />
+          <ScalarProperty Name="ctr_client_id" ColumnName="ctr_client_id" />
+          <ScalarProperty Name="id_project" ColumnName="id_project" />
+          <ScalarProperty Name="ctr_des" ColumnName="ctr_des" />
+          <ScalarProperty Name="ctr_store_default" ColumnName="ctr_store_default" />
+          <ScalarProperty Name="ctr_placeholder" ColumnName="ctr_placeholder" />
+          <ScalarProperty Name="ctr_placeholder_us" ColumnName="ctr_placeholder_us" />
+          <ScalarProperty Name="ctr_name_us" ColumnName="ctr_name_us" />
+          <ScalarProperty Name="ctr_code_js" ColumnName="ctr_code_js" />
+          <ScalarProperty Name="ctr_img" ColumnName="ctr_img" />
+          <ScalarProperty Name="ctr_require_validate" ColumnName="ctr_require_validate" />
+          <ScalarProperty Name="ctr_require_validate_rex" ColumnName="ctr_require_validate_rex" />
+          <ScalarProperty Name="ctr_require_validate_mess" ColumnName="ctr_require_validate_mess" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="form_steel">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.form_steel">
+        <MappingFragment StoreEntitySet="form_steel">
+          <ScalarProperty Name="id_form" ColumnName="id_form" />
+          <ScalarProperty Name="form_name" ColumnName="form_name" />
+          <ScalarProperty Name="id_project" ColumnName="id_project" />
+          <ScalarProperty Name="form_grid_view" ColumnName="form_grid_view" />
+          <ScalarProperty Name="form_name_us" ColumnName="form_name_us" />
+          <ScalarProperty Name="form_view_store" ColumnName="form_view_store" />
+          <ScalarProperty Name="form_grid_chart" ColumnName="form_grid_chart" />
+          <ScalarProperty Name="form_grid_form" ColumnName="form_grid_form" />
+          <ScalarProperty Name="form_db" ColumnName="form_db" />
+          <ScalarProperty Name="fs_table_name" ColumnName="fs_table_name" />
+          <ScalarProperty Name="fs_store_c_u_d_s" ColumnName="fs_store_c_u_d_s" />
+          <ScalarProperty Name="fs_script_page_load" ColumnName="fs_script_page_load" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="form_store">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.form_store">
+        <MappingFragment StoreEntitySet="form_store">
+          <ScalarProperty Name="id_form_store" ColumnName="id_form_store" />
+          <ScalarProperty Name="form_store_code" ColumnName="form_store_code" />
+          <ScalarProperty Name="form_store_type" ColumnName="form_store_type" />
+          <ScalarProperty Name="form_store_admin" ColumnName="form_store_admin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="form_store_para">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.form_store_para">
+        <MappingFragment StoreEntitySet="form_store_para">
+          <ScalarProperty Name="id_store_para" ColumnName="id_store_para" />
+          <ScalarProperty Name="store_para_name" ColumnName="store_para_name" />
+          <ScalarProperty Name="store_para_type" ColumnName="store_para_type" />
+          <ScalarProperty Name="id_form_store" ColumnName="id_form_store" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="fs_auth">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.fs_auth">
+        <MappingFragment StoreEntitySet="fs_auth">
+          <ScalarProperty Name="auth_id" ColumnName="auth_id" />
+          <ScalarProperty Name="auth_name" ColumnName="auth_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="fs_manga">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.fs_manga">
+        <MappingFragment StoreEntitySet="fs_manga">
+          <ScalarProperty Name="manga_id" ColumnName="manga_id" />
+          <ScalarProperty Name="manga_name" ColumnName="manga_name" />
+          <ScalarProperty Name="manga_key" ColumnName="manga_key" />
+          <ScalarProperty Name="type_id" ColumnName="type_id" />
+          <ScalarProperty Name="manga_des" ColumnName="manga_des" />
+          <ScalarProperty Name="manga_img" ColumnName="manga_img" />
+          <ScalarProperty Name="manga_view" ColumnName="manga_view" />
+          <ScalarProperty Name="manga_status" ColumnName="manga_status" />
+          <ScalarProperty Name="manga_create" ColumnName="manga_create" />
+          <ScalarProperty Name="auth_id" ColumnName="auth_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="fs_manga_chap">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.fs_manga_chap">
+        <MappingFragment StoreEntitySet="fs_manga_chap">
+          <ScalarProperty Name="chap_id" ColumnName="chap_id" />
+          <ScalarProperty Name="manga_id" ColumnName="manga_id" />
+          <ScalarProperty Name="chap_name" ColumnName="chap_name" />
+          <ScalarProperty Name="chap_orther" ColumnName="chap_orther" />
+          <ScalarProperty Name="chap_create" ColumnName="chap_create" />
+          <ScalarProperty Name="chap_key" ColumnName="chap_key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="fs_manga_tag">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.fs_manga_tag">
+        <MappingFragment StoreEntitySet="fs_manga_tag">
+          <ScalarProperty Name="tag_id" ColumnName="tag_id" />
+          <ScalarProperty Name="manga_id" ColumnName="manga_id" />
+          <ScalarProperty Name="tag_view" ColumnName="tag_view" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="fs_manga_type">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.fs_manga_type">
+        <MappingFragment StoreEntitySet="fs_manga_type">
+          <ScalarProperty Name="type_id" ColumnName="type_id" />
+          <ScalarProperty Name="type_name" ColumnName="type_name" />
+          <ScalarProperty Name="type_key" ColumnName="type_key" />
+          <ScalarProperty Name="type_orther" ColumnName="type_orther" />
+          <ScalarProperty Name="type_status" ColumnName="type_status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mar_project">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.mar_project">
+        <MappingFragment StoreEntitySet="mar_project">
+          <ScalarProperty Name="id_mar_project" ColumnName="id_mar_project" />
+          <ScalarProperty Name="mar_project_name" ColumnName="mar_project_name" />
+          <ScalarProperty Name="mar_project_status" ColumnName="mar_project_status" />
+          <ScalarProperty Name="mar_project_begin" ColumnName="mar_project_begin" />
+          <ScalarProperty Name="mar_project_end" ColumnName="mar_project_end" />
+          <ScalarProperty Name="mar_project_sell_off" ColumnName="mar_project_sell_off" />
+          <ScalarProperty Name="mar_project_sell_type" ColumnName="mar_project_sell_type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pct_department">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.pct_department">
+        <MappingFragment StoreEntitySet="pct_department">
+          <ScalarProperty Name="id_department" ColumnName="id_department" />
+          <ScalarProperty Name="department_name" ColumnName="department_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pct_employee">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.pct_employee">
+        <MappingFragment StoreEntitySet="pct_employee">
+          <ScalarProperty Name="id_employee" ColumnName="id_employee" />
+          <ScalarProperty Name="id_title" ColumnName="id_title" />
+          <ScalarProperty Name="employee_name" ColumnName="employee_name" />
+          <ScalarProperty Name="employee_address" ColumnName="employee_address" />
+          <ScalarProperty Name="employee_mobile" ColumnName="employee_mobile" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pct_ticket">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.pct_ticket">
+        <MappingFragment StoreEntitySet="pct_ticket">
+          <ScalarProperty Name="id_ticket" ColumnName="id_ticket" />
+          <ScalarProperty Name="id_employee" ColumnName="id_employee" />
+          <ScalarProperty Name="ticket_fromdate" ColumnName="ticket_fromdate" />
+          <ScalarProperty Name="ticket_todate" ColumnName="ticket_todate" />
+          <ScalarProperty Name="ticket_money" ColumnName="ticket_money" />
+          <ScalarProperty Name="ticket_add" ColumnName="ticket_add" />
+          <ScalarProperty Name="ticket_note" ColumnName="ticket_note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pct_title">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.pct_title">
+        <MappingFragment StoreEntitySet="pct_title">
+          <ScalarProperty Name="id_title" ColumnName="id_title" />
+          <ScalarProperty Name="id_department" ColumnName="id_department" />
+          <ScalarProperty Name="title_name" ColumnName="title_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="project_steel">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.project_steel">
+        <MappingFragment StoreEntitySet="project_steel">
+          <ScalarProperty Name="id_project" ColumnName="id_project" />
+          <ScalarProperty Name="project_name" ColumnName="project_name" />
+          <ScalarProperty Name="project_status" ColumnName="project_status" />
+          <ScalarProperty Name="project_des" ColumnName="project_des" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="so_orther">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.so_orther">
+        <MappingFragment StoreEntitySet="so_orther">
+          <ScalarProperty Name="so_id" ColumnName="so_id" />
+          <ScalarProperty Name="so_code" ColumnName="so_code" />
+          <ScalarProperty Name="so_date" ColumnName="so_date" />
+          <ScalarProperty Name="so_user_id" ColumnName="so_user_id" />
+          <ScalarProperty Name="so_sms_status" ColumnName="so_sms_status" />
+          <ScalarProperty Name="so_fullname" ColumnName="so_fullname" />
+          <ScalarProperty Name="so_email" ColumnName="so_email" />
+          <ScalarProperty Name="so_phone_number" ColumnName="so_phone_number" />
+          <ScalarProperty Name="so_address" ColumnName="so_address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="so_orther_detail">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.so_orther_detail">
+        <MappingFragment StoreEntitySet="so_orther_detail">
+          <ScalarProperty Name="so_orther_id" ColumnName="so_orther_id" />
+          <ScalarProperty Name="so_prod_id" ColumnName="so_prod_id" />
+          <ScalarProperty Name="so_prod_count_id" ColumnName="so_prod_count_id" />
+          <ScalarProperty Name="so_prod_price" ColumnName="so_prod_price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="so_prod_image_detail">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.so_prod_image_detail">
+        <MappingFragment StoreEntitySet="so_prod_image_detail">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="so_image" ColumnName="so_image" />
+          <ScalarProperty Name="so_orther" ColumnName="so_orther" />
+          <ScalarProperty Name="so_id_prod" ColumnName="so_id_prod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="store_">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.store_">
+        <MappingFragment StoreEntitySet="store_">
+          <ScalarProperty Name="id_store" ColumnName="id_store" />
+          <ScalarProperty Name="store_name" ColumnName="store_name" />
+          <ScalarProperty Name="store_ads" ColumnName="store_ads" />
+          <ScalarProperty Name="store_phone" ColumnName="store_phone" />
+          <ScalarProperty Name="store_des" ColumnName="store_des" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="store_cate">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.store_cate">
+        <MappingFragment StoreEntitySet="store_cate">
+          <ScalarProperty Name="id_store_cate" ColumnName="id_store_cate" />
+          <ScalarProperty Name="store_cate_name" ColumnName="store_cate_name" />
+          <ScalarProperty Name="store_cate_order" ColumnName="store_cate_order" />
+          <ScalarProperty Name="store_cate_status" ColumnName="store_cate_status" />
+          <ScalarProperty Name="store_cate_key" ColumnName="store_cate_key" />
+          <ScalarProperty Name="store_cate_img" ColumnName="store_cate_img" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="store_com_ship">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.store_com_ship">
+        <MappingFragment StoreEntitySet="store_com_ship">
+          <ScalarProperty Name="id_store_com_ship" ColumnName="id_store_com_ship" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="store_com_type">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.store_com_type">
+        <MappingFragment StoreEntitySet="store_com_type">
+          <ScalarProperty Name="id_store_com_type" ColumnName="id_store_com_type" />
+          <ScalarProperty Name="type_name" ColumnName="type_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="store_company">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.store_company">
+        <MappingFragment StoreEntitySet="store_company">
+          <ScalarProperty Name="id_store_company" ColumnName="id_store_company" />
+          <ScalarProperty Name="company_name" ColumnName="company_name" />
+          <ScalarProperty Name="company_code" ColumnName="company_code" />
+          <ScalarProperty Name="company_address" ColumnName="company_address" />
+          <ScalarProperty Name="company_phone" ColumnName="company_phone" />
+          <ScalarProperty Name="company_email" ColumnName="company_email" />
+          <ScalarProperty Name="company_website" ColumnName="company_website" />
+          <ScalarProperty Name="company_logo" ColumnName="company_logo" />
+          <ScalarProperty Name="company_des" ColumnName="company_des" />
+          <ScalarProperty Name="id_store_com_type" ColumnName="id_store_com_type" />
+          <ScalarProperty Name="company_fax" ColumnName="company_fax" />
+          <ScalarProperty Name="company_bank" ColumnName="company_bank" />
+          <ScalarProperty Name="company_bank_ads" ColumnName="company_bank_ads" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="store_contact">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.store_contact">
+        <MappingFragment StoreEntitySet="store_contact">
+          <ScalarProperty Name="id_store_contact" ColumnName="id_store_contact" />
+          <ScalarProperty Name="id_store_company" ColumnName="id_store_company" />
+          <ScalarProperty Name="contact_full_name" ColumnName="contact_full_name" />
+          <ScalarProperty Name="contact_chat" ColumnName="contact_chat" />
+          <ScalarProperty Name="contact_mobile" ColumnName="contact_mobile" />
+          <ScalarProperty Name="contact_title" ColumnName="contact_title" />
+          <ScalarProperty Name="contact_ext" ColumnName="contact_ext" />
+          <ScalarProperty Name="contact_email" ColumnName="contact_email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="store_exp">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.store_exp">
+        <MappingFragment StoreEntitySet="store_exp">
+          <ScalarProperty Name="id_store_exp" ColumnName="id_store_exp" />
+          <ScalarProperty Name="store_exp_name" ColumnName="store_exp_name" />
+          <ScalarProperty Name="store_exp_list_data" ColumnName="store_exp_list_data" />
+          <ScalarProperty Name="store_exp_creater" ColumnName="store_exp_creater" />
+          <ScalarProperty Name="store_exp_checker" ColumnName="store_exp_checker" />
+          <ScalarProperty Name="store_exp_cost" ColumnName="store_exp_cost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="store_imp">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.store_imp">
+        <MappingFragment StoreEntitySet="store_imp">
+          <ScalarProperty Name="id_store_imp" ColumnName="id_store_imp" />
+          <ScalarProperty Name="store_imp_name" ColumnName="store_imp_name" />
+          <ScalarProperty Name="store_imp_checker" ColumnName="store_imp_checker" />
+          <ScalarProperty Name="store_imp_creater" ColumnName="store_imp_creater" />
+          <ScalarProperty Name="store_imp_list_data" ColumnName="store_imp_list_data" />
+          <ScalarProperty Name="store_imp_store" ColumnName="store_imp_store" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="store_prod">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.store_prod">
+        <MappingFragment StoreEntitySet="store_prod">
+          <ScalarProperty Name="id_store_prod" ColumnName="id_store_prod" />
+          <ScalarProperty Name="store_prod_name" ColumnName="store_prod_name" />
+          <ScalarProperty Name="id_store_unit" ColumnName="id_store_unit" />
+          <ScalarProperty Name="store_prod_img" ColumnName="store_prod_img" />
+          <ScalarProperty Name="store_prod_code" ColumnName="store_prod_code" />
+          <ScalarProperty Name="id_store_cate" ColumnName="id_store_cate" />
+          <ScalarProperty Name="store_prod_cost" ColumnName="store_prod_cost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="store_prod_sku">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.store_prod_sku">
+        <MappingFragment StoreEntitySet="store_prod_sku">
+          <ScalarProperty Name="id_store_prod_sku" ColumnName="id_store_prod_sku" />
+          <ScalarProperty Name="id_store_prod" ColumnName="id_store_prod" />
+          <ScalarProperty Name="sku_count" ColumnName="sku_count" />
+          <ScalarProperty Name="id_prod_sku" ColumnName="id_prod_sku" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="store_slot">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.store_slot">
+        <MappingFragment StoreEntitySet="store_slot">
+          <ScalarProperty Name="id_store_slot" ColumnName="id_store_slot" />
+          <ScalarProperty Name="id_store" ColumnName="id_store" />
+          <ScalarProperty Name="store_slot_code" ColumnName="store_slot_code" />
+          <ScalarProperty Name="id_store_stock" ColumnName="id_store_stock" />
+          <ScalarProperty Name="store_slot_contain" ColumnName="store_slot_contain" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="store_stock">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.store_stock">
+        <MappingFragment StoreEntitySet="store_stock">
+          <ScalarProperty Name="id_store_stock" ColumnName="id_store_stock" />
+          <ScalarProperty Name="store_stock_code" ColumnName="store_stock_code" />
+          <ScalarProperty Name="store_stock_status" ColumnName="store_stock_status" />
+          <ScalarProperty Name="store_stock_store" ColumnName="store_stock_store" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="store_unit">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.store_unit">
+        <MappingFragment StoreEntitySet="store_unit">
+          <ScalarProperty Name="id_store_unit" ColumnName="id_store_unit" />
+          <ScalarProperty Name="store_unit_name" ColumnName="store_unit_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sys_company">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.sys_company">
+        <MappingFragment StoreEntitySet="sys_company">
+          <ScalarProperty Name="id_company" ColumnName="id_company" />
+          <ScalarProperty Name="company_name" ColumnName="company_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sys_fs_help">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.sys_fs_help">
+        <MappingFragment StoreEntitySet="sys_fs_help">
+          <ScalarProperty Name="id_fs_help" ColumnName="id_fs_help" />
+          <ScalarProperty Name="fs_help_name" ColumnName="fs_help_name" />
+          <ScalarProperty Name="fs_help_content" ColumnName="fs_help_content" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sys_gridview_control">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.sys_gridview_control">
+        <MappingFragment StoreEntitySet="sys_gridview_control">
+          <ScalarProperty Name="table_name" ColumnName="table_name" />
+          <ScalarProperty Name="column_name" ColumnName="column_name" />
+          <ScalarProperty Name="column_caption" ColumnName="column_caption" />
+          <ScalarProperty Name="column_key" ColumnName="column_key" />
+          <ScalarProperty Name="column_edit" ColumnName="column_edit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sys_group_page">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.sys_group_page">
+        <MappingFragment StoreEntitySet="sys_group_page">
+          <ScalarProperty Name="id_group_page" ColumnName="id_group_page" />
+          <ScalarProperty Name="group_page_name" ColumnName="group_page_name" />
+          <ScalarProperty Name="group_page_status" ColumnName="group_page_status" />
+          <ScalarProperty Name="group_page_order" ColumnName="group_page_order" />
+          <ScalarProperty Name="group_page_icon" ColumnName="group_page_icon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sys_info">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.sys_info">
+        <MappingFragment StoreEntitySet="sys_info">
+          <ScalarProperty Name="id_sys_info" ColumnName="id_sys_info" />
+          <ScalarProperty Name="sys_info_name" ColumnName="sys_info_name" />
+          <ScalarProperty Name="sys_info_des" ColumnName="sys_info_des" />
+          <ScalarProperty Name="sys_info_key" ColumnName="sys_info_key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sys_mapped_col">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.sys_mapped_col">
+        <MappingFragment StoreEntitySet="sys_mapped_col">
+          <ScalarProperty Name="id_mapped_col" ColumnName="id_mapped_col" />
+          <ScalarProperty Name="id_mapped" ColumnName="id_mapped" />
+          <ScalarProperty Name="mapped_col_name" ColumnName="mapped_col_name" />
+          <ScalarProperty Name="mapped_col_type" ColumnName="mapped_col_type" />
+          <ScalarProperty Name="mapped_col_key" ColumnName="mapped_col_key" />
+          <ScalarProperty Name="mapped_col_code" ColumnName="mapped_col_code" />
+          <ScalarProperty Name="mapped_col_order" ColumnName="mapped_col_order" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sys_mapped_join">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.sys_mapped_join">
+        <MappingFragment StoreEntitySet="sys_mapped_join">
+          <ScalarProperty Name="id_mapped_join" ColumnName="id_mapped_join" />
+          <ScalarProperty Name="mapped_table_parent" ColumnName="mapped_table_parent" />
+          <ScalarProperty Name="referencedTableName" ColumnName="referencedTableName" />
+          <ScalarProperty Name="ref_name" ColumnName="ref_name" />
+          <ScalarProperty Name="id_mapped_col_p" ColumnName="id_mapped_col_p" />
+          <ScalarProperty Name="id_mapped_col_c" ColumnName="id_mapped_col_c" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sys_mapped_operators">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.sys_mapped_operators">
+        <MappingFragment StoreEntitySet="sys_mapped_operators">
+          <ScalarProperty Name="id_operators" ColumnName="id_operators" />
+          <ScalarProperty Name="operators_name" ColumnName="operators_name" />
+          <ScalarProperty Name="operators_label" ColumnName="operators_label" />
+          <ScalarProperty Name="operators_cardinality" ColumnName="operators_cardinality" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sys_mapped_table">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.sys_mapped_table">
+        <MappingFragment StoreEntitySet="sys_mapped_table">
+          <ScalarProperty Name="id_mapped" ColumnName="id_mapped" />
+          <ScalarProperty Name="mapped_name" ColumnName="mapped_name" />
+          <ScalarProperty Name="mapped_code" ColumnName="mapped_code" />
+          <ScalarProperty Name="type_other" ColumnName="type_other" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sys_mapped_ty_op">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.sys_mapped_ty_op">
+        <MappingFragment StoreEntitySet="sys_mapped_ty_op">
+          <ScalarProperty Name="id_operators" ColumnName="id_operators" />
+          <ScalarProperty Name="id_operators_type" ColumnName="id_operators_type" />
+          <ScalarProperty Name="op_order" ColumnName="op_order" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sys_mapped_type">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.sys_mapped_type">
+        <MappingFragment StoreEntitySet="sys_mapped_type">
+          <ScalarProperty Name="id_operators_type" ColumnName="id_operators_type" />
+          <ScalarProperty Name="operators_type_name" ColumnName="operators_type_name" />
+          <ScalarProperty Name="operators_type_editor" ColumnName="operators_type_editor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sys_page">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.sys_page">
+        <MappingFragment StoreEntitySet="sys_page">
+          <ScalarProperty Name="id_page" ColumnName="id_page" />
+          <ScalarProperty Name="page_name" ColumnName="page_name" />
+          <ScalarProperty Name="id_form" ColumnName="id_form" />
+          <ScalarProperty Name="page_order" ColumnName="page_order" />
+          <ScalarProperty Name="id_group_page" ColumnName="id_group_page" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_blog_tra">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.tbl_blog_tra">
+        <MappingFragment StoreEntitySet="tbl_blog_tra">
+          <ScalarProperty Name="id_blog_tra" ColumnName="id_blog_tra" />
+          <ScalarProperty Name="titile_blog_tra" ColumnName="titile_blog_tra" />
+          <ScalarProperty Name="short_des_blog_tra" ColumnName="short_des_blog_tra" />
+          <ScalarProperty Name="des_blog_tra" ColumnName="des_blog_tra" />
+          <ScalarProperty Name="status_blog_tra" ColumnName="status_blog_tra" />
+          <ScalarProperty Name="type_blog_tra" ColumnName="type_blog_tra" />
+          <ScalarProperty Name="create_date_blog_tra" ColumnName="create_date_blog_tra" />
+          <ScalarProperty Name="img_blog_tra" ColumnName="img_blog_tra" />
+          <ScalarProperty Name="video_blog_tra" ColumnName="video_blog_tra" />
+          <ScalarProperty Name="id_company" ColumnName="id_company" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_menu_dulich">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.tbl_menu_dulich">
+        <MappingFragment StoreEntitySet="tbl_menu_dulich">
+          <ScalarProperty Name="id_menu_dulich" ColumnName="id_menu_dulich" />
+          <ScalarProperty Name="name_menu_dulich" ColumnName="name_menu_dulich" />
+          <ScalarProperty Name="link_menu_dulich" ColumnName="link_menu_dulich" />
+          <ScalarProperty Name="trangthai_menu_dulich" ColumnName="trangthai_menu_dulich" />
+          <ScalarProperty Name="thutu_menu_dulich" ColumnName="thutu_menu_dulich" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_new_dulich">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.tbl_new_dulich">
+        <MappingFragment StoreEntitySet="tbl_new_dulich">
+          <ScalarProperty Name="id_new_dulich" ColumnName="id_new_dulich" />
+          <ScalarProperty Name="name_new_dulich" ColumnName="name_new_dulich" />
+          <ScalarProperty Name="img_new_dulich" ColumnName="img_new_dulich" />
+          <ScalarProperty Name="thutu_new_dulich" ColumnName="thutu_new_dulich" />
+          <ScalarProperty Name="tomtat_new_dulich" ColumnName="tomtat_new_dulich" />
+          <ScalarProperty Name="img1_new_dulich" ColumnName="img1_new_dulich" />
+          <ScalarProperty Name="img2_new_dulich" ColumnName="img2_new_dulich" />
+          <ScalarProperty Name="img3_new_dulich" ColumnName="img3_new_dulich" />
+          <ScalarProperty Name="img4_new_dulich" ColumnName="img4_new_dulich" />
+          <ScalarProperty Name="img5_new_dulich" ColumnName="img5_new_dulich" />
+          <ScalarProperty Name="mota_new_dulich" ColumnName="mota_new_dulich" />
+          <ScalarProperty Name="trangthai_new_dulich" ColumnName="trangthai_new_dulich" />
+          <ScalarProperty Name="type_new_dulich" ColumnName="type_new_dulich" />
+          <ScalarProperty Name="img6_new_dulich" ColumnName="img6_new_dulich" />
+          <ScalarProperty Name="img7_new_dulich" ColumnName="img7_new_dulich" />
+          <ScalarProperty Name="class_new_dulich" ColumnName="class_new_dulich" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_products_tra">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.tbl_products_tra">
+        <MappingFragment StoreEntitySet="tbl_products_tra">
+          <ScalarProperty Name="id_products_tra" ColumnName="id_products_tra" />
+          <ScalarProperty Name="img_products_tra" ColumnName="img_products_tra" />
+          <ScalarProperty Name="img1_products_tra" ColumnName="img1_products_tra" />
+          <ScalarProperty Name="img2_products_tra" ColumnName="img2_products_tra" />
+          <ScalarProperty Name="img3_products_tra" ColumnName="img3_products_tra" />
+          <ScalarProperty Name="name_products_tra" ColumnName="name_products_tra" />
+          <ScalarProperty Name="code_products_tra" ColumnName="code_products_tra" />
+          <ScalarProperty Name="des_products_tra" ColumnName="des_products_tra" />
+          <ScalarProperty Name="status_products_tra" ColumnName="status_products_tra" />
+          <ScalarProperty Name="newprice_products_tra" ColumnName="newprice_products_tra" />
+          <ScalarProperty Name="oldprice_products_tra" ColumnName="oldprice_products_tra" />
+          <ScalarProperty Name="type_products_tra" ColumnName="type_products_tra" />
+          <ScalarProperty Name="featured_products_tra" ColumnName="featured_products_tra" />
+          <ScalarProperty Name="discount_products_tra" ColumnName="discount_products_tra" />
+          <ScalarProperty Name="yes_products_tra" ColumnName="yes_products_tra" />
+          <ScalarProperty Name="new_products_tra" ColumnName="new_products_tra" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_slide_dulich">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.tbl_slide_dulich">
+        <MappingFragment StoreEntitySet="tbl_slide_dulich">
+          <ScalarProperty Name="id_slide_dulich" ColumnName="id_slide_dulich" />
+          <ScalarProperty Name="name_silde_dulich" ColumnName="name_silde_dulich" />
+          <ScalarProperty Name="img_silde_dulich" ColumnName="img_silde_dulich" />
+          <ScalarProperty Name="tomtat_silde_dulich" ColumnName="tomtat_silde_dulich" />
+          <ScalarProperty Name="trangthai_silde_dulich" ColumnName="trangthai_silde_dulich" />
+          <ScalarProperty Name="thutu_silde_dulich" ColumnName="thutu_silde_dulich" />
+          <ScalarProperty Name="thutunew_dulich" ColumnName="thutunew_dulich" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_slide_tra">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.tbl_slide_tra">
+        <MappingFragment StoreEntitySet="tbl_slide_tra">
+          <ScalarProperty Name="id_slide_tra" ColumnName="id_slide_tra" />
+          <ScalarProperty Name="img_slide_tra" ColumnName="img_slide_tra" />
+          <ScalarProperty Name="title_slide_tra" ColumnName="title_slide_tra" />
+          <ScalarProperty Name="des_slide_tra" ColumnName="des_slide_tra" />
+          <ScalarProperty Name="status_slide_tra" ColumnName="status_slide_tra" />
+          <ScalarProperty Name="title1_slide_tra" ColumnName="title1_slide_tra" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_spam_dulich">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.tbl_spam_dulich">
+        <MappingFragment StoreEntitySet="tbl_spam_dulich">
+          <ScalarProperty Name="id_spam_dulich" ColumnName="id_spam_dulich" />
+          <ScalarProperty Name="name_spam_dulich" ColumnName="name_spam_dulich" />
+          <ScalarProperty Name="hinh_spam_dulich" ColumnName="hinh_spam_dulich" />
+          <ScalarProperty Name="link_spam_dulich" ColumnName="link_spam_dulich" />
+          <ScalarProperty Name="mo_spam_dulich" ColumnName="mo_spam_dulich" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDomains">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.tblDomain">
+        <MappingFragment StoreEntitySet="tblDomain">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="domain_name" ColumnName="domain_name" />
+          <ScalarProperty Name="id_company" ColumnName="id_company" />
+          <ScalarProperty Name="domain_status" ColumnName="domain_status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSysCompanies">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.tblSysCompany">
+        <MappingFragment StoreEntitySet="tblSysCompany">
+          <ScalarProperty Name="id_company" ColumnName="id_company" />
+          <ScalarProperty Name="company_name" ColumnName="company_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSysGroupPages">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.tblSysGroupPage">
+        <MappingFragment StoreEntitySet="tblSysGroupPage">
+          <ScalarProperty Name="id_group_page" ColumnName="id_group_page" />
+          <ScalarProperty Name="group_page_name" ColumnName="group_page_name" />
+          <ScalarProperty Name="group_page_status" ColumnName="group_page_status" />
+          <ScalarProperty Name="group_page_create" ColumnName="group_page_create" />
+          <ScalarProperty Name="id_company" ColumnName="id_company" />
+          <ScalarProperty Name="group_page_order" ColumnName="group_page_order" />
+          <ScalarProperty Name="group_page_img" ColumnName="group_page_img" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSysGroupPageDetails">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.tblSysGroupPageDetail">
+        <MappingFragment StoreEntitySet="tblSysGroupPageDetail">
+          <ScalarProperty Name="id_page" ColumnName="id_page" />
+          <ScalarProperty Name="id_group_page" ColumnName="id_group_page" />
+          <ScalarProperty Name="page_name" ColumnName="page_name" />
+          <ScalarProperty Name="page_status" ColumnName="page_status" />
+          <ScalarProperty Name="page_create" ColumnName="page_create" />
+          <ScalarProperty Name="page_link" ColumnName="page_link" />
+          <ScalarProperty Name="id_company" ColumnName="id_company" />
+          <ScalarProperty Name="page_key" ColumnName="page_key" />
+          <ScalarProperty Name="max_record" ColumnName="max_record" />
+          <ScalarProperty Name="page_order" ColumnName="page_order" />
+          <ScalarProperty Name="page_type_role" ColumnName="page_type_role" />
+          <ScalarProperty Name="page_icon" ColumnName="page_icon" />
+          <ScalarProperty Name="page_type" ColumnName="page_type" />
+          <ScalarProperty Name="page_type_chart" ColumnName="page_type_chart" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSysPictures">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.tblSysPicture">
+        <MappingFragment StoreEntitySet="tblSysPicture">
+          <ScalarProperty Name="picture_id" ColumnName="picture_id" />
+          <ScalarProperty Name="advert_id" ColumnName="advert_id" />
+          <ScalarProperty Name="originalFilepath" ColumnName="originalFilepath" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="converted" ColumnName="converted" />
+          <ScalarProperty Name="convertedFilename" ColumnName="convertedFilename" />
+          <ScalarProperty Name="tocheck" ColumnName="tocheck" />
+          <ScalarProperty Name="isvalidated" ColumnName="isvalidated" />
+          <ScalarProperty Name="convertedFilename90" ColumnName="convertedFilename90" />
+          <ScalarProperty Name="convertedFilename180" ColumnName="convertedFilename180" />
+          <ScalarProperty Name="convertedFilename270" ColumnName="convertedFilename270" />
+          <ScalarProperty Name="angleType" ColumnName="angleType" />
+          <ScalarProperty Name="type_id" ColumnName="type_id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="cms_sql_id" ColumnName="cms_sql_id" />
+          <ScalarProperty Name="shortdescription" ColumnName="shortdescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSysUser_Page">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.tblSysUser_Page">
+        <MappingFragment StoreEntitySet="tblSysUser_Page">
+          <ScalarProperty Name="id_user_page" ColumnName="id_user_page" />
+          <ScalarProperty Name="user_page_name" ColumnName="user_page_name" />
+          <ScalarProperty Name="user_page_control" ColumnName="user_page_control" />
+          <ScalarProperty Name="user_page_sexy" ColumnName="user_page_sexy" />
+          <ScalarProperty Name="user_page_parent" ColumnName="user_page_parent" />
+          <ScalarProperty Name="user_page_order" ColumnName="user_page_order" />
+          <ScalarProperty Name="user_vip" ColumnName="user_vip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSysUserGroupPages">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.tblSysUserGroupPage">
+        <MappingFragment StoreEntitySet="tblSysUserGroupPage">
+          <ScalarProperty Name="role_group_page_id" ColumnName="role_group_page_id" />
+          <ScalarProperty Name="role_group_page_name" ColumnName="role_group_page_name" />
+          <ScalarProperty Name="role_group_page_des" ColumnName="role_group_page_des" />
+          <ScalarProperty Name="create_date" ColumnName="create_date" />
+          <ScalarProperty Name="update_by" ColumnName="update_by" />
+          <ScalarProperty Name="create_by" ColumnName="create_by" />
+          <ScalarProperty Name="id_company" ColumnName="id_company" />
+          <ScalarProperty Name="role_group_status" ColumnName="role_group_status" />
+          <ScalarProperty Name="role_page_view" ColumnName="role_page_view" />
+          <ScalarProperty Name="role_page_create" ColumnName="role_page_create" />
+          <ScalarProperty Name="role_page_del" ColumnName="role_page_del" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSysUserGroupPageDetails">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.tblSysUserGroupPageDetail">
+        <MappingFragment StoreEntitySet="tblSysUserGroupPageDetail">
+          <ScalarProperty Name="role_group_page_id" ColumnName="role_group_page_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="id_company" ColumnName="id_company" />
+          <ScalarProperty Name="id_group_user_detail" ColumnName="id_group_user_detail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSysUserGroupPagePages">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.tblSysUserGroupPagePage">
+        <MappingFragment StoreEntitySet="tblSysUserGroupPagePage">
+          <ScalarProperty Name="role_group_page_id" ColumnName="role_group_page_id" />
+          <ScalarProperty Name="id_page" ColumnName="id_page" />
+          <ScalarProperty Name="id_company" ColumnName="id_company" />
+          <ScalarProperty Name="id_group_page_detail" ColumnName="id_group_page_detail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSysUserRoleGroups">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.tblSysUserRoleGroup">
+        <MappingFragment StoreEntitySet="tblSysUserRoleGroup">
+          <ScalarProperty Name="group_role_id" ColumnName="group_role_id" />
+          <ScalarProperty Name="group_role_name" ColumnName="group_role_name" />
+          <ScalarProperty Name="group_role_description" ColumnName="group_role_description" />
+          <ScalarProperty Name="group_role_create" ColumnName="group_role_create" />
+          <ScalarProperty Name="group_role_parent" ColumnName="group_role_parent" />
+          <ScalarProperty Name="group_role_type" ColumnName="group_role_type" />
+          <ScalarProperty Name="update_by" ColumnName="update_by" />
+          <ScalarProperty Name="create_by" ColumnName="create_by" />
+          <ScalarProperty Name="id_company" ColumnName="id_company" />
+          <ScalarProperty Name="group_role_status" ColumnName="group_role_status" />
+          <ScalarProperty Name="id_page" ColumnName="id_page" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSysUserRolePages">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.tblSysUserRolePage">
+        <MappingFragment StoreEntitySet="tblSysUserRolePage">
+          <ScalarProperty Name="id_page" ColumnName="id_page" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="role_page_view" ColumnName="role_page_view" />
+          <ScalarProperty Name="role_page_create" ColumnName="role_page_create" />
+          <ScalarProperty Name="role_page_del" ColumnName="role_page_del" />
+          <ScalarProperty Name="role_page_config" ColumnName="role_page_config" />
+          <ScalarProperty Name="role_page_role" ColumnName="role_page_role" />
+          <ScalarProperty Name="id_company" ColumnName="id_company" />
+          <ScalarProperty Name="id_user_role_page" ColumnName="id_user_role_page" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblUsers">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.tblUser">
+        <MappingFragment StoreEntitySet="tblUser">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="user_email" ColumnName="user_email" />
+          <ScalarProperty Name="user_pass" ColumnName="user_pass" />
+          <ScalarProperty Name="user_fullname" ColumnName="user_fullname" />
+          <ScalarProperty Name="user_status" ColumnName="user_status" />
+          <ScalarProperty Name="user_create" ColumnName="user_create" />
+          <ScalarProperty Name="user_update" ColumnName="user_update" />
+          <ScalarProperty Name="id_group_user" ColumnName="id_group_user" />
+          <ScalarProperty Name="user_img" ColumnName="user_img" />
+          <ScalarProperty Name="user_vip" ColumnName="user_vip" />
+          <ScalarProperty Name="user_vip_end" ColumnName="user_vip_end" />
+          <ScalarProperty Name="user_role" ColumnName="user_role" />
+          <ScalarProperty Name="forget_pass" ColumnName="forget_pass" />
+          <ScalarProperty Name="user_money" ColumnName="user_money" />
+          <ScalarProperty Name="user_avatar" ColumnName="user_avatar" />
+          <ScalarProperty Name="user_online" ColumnName="user_online" />
+          <ScalarProperty Name="id_company" ColumnName="id_company" />
+          <ScalarProperty Name="user_disk" ColumnName="user_disk" />
+          <ScalarProperty Name="user_code" ColumnName="user_code" />
+          <ScalarProperty Name="seri_number" ColumnName="seri_number" />
+          <ScalarProperty Name="user_birthday" ColumnName="user_birthday" />
+          <ScalarProperty Name="user_code_country" ColumnName="user_code_country" />
+          <ScalarProperty Name="user_gender" ColumnName="user_gender" />
+          <ScalarProperty Name="user_id_facebook" ColumnName="user_id_facebook" />
+          <ScalarProperty Name="user_point" ColumnName="user_point" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblUserClouds">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.tblUserCloud">
+        <MappingFragment StoreEntitySet="tblUserCloud">
+          <ScalarProperty Name="user_cloud_id" ColumnName="user_cloud_id" />
+          <ScalarProperty Name="user_code" ColumnName="user_code" />
+          <ScalarProperty Name="user_birthday" ColumnName="user_birthday" />
+          <ScalarProperty Name="user_code_country" ColumnName="user_code_country" />
+          <ScalarProperty Name="user_gender" ColumnName="user_gender" />
+          <ScalarProperty Name="user_id_facebook" ColumnName="user_id_facebook" />
+          <ScalarProperty Name="user_email" ColumnName="user_email" />
+          <ScalarProperty Name="user_fullname" ColumnName="user_fullname" />
+          <ScalarProperty Name="user_fname" ColumnName="user_fname" />
+          <ScalarProperty Name="user_lname" ColumnName="user_lname" />
+          <ScalarProperty Name="user_avatar" ColumnName="user_avatar" />
+          <ScalarProperty Name="user_type" ColumnName="user_type" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblUserFriends">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.tblUserFriend">
+        <MappingFragment StoreEntitySet="tblUserFriends">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="social_id" ColumnName="social_id" />
+          <ScalarProperty Name="social_user" ColumnName="social_user" />
+          <ScalarProperty Name="social_type" ColumnName="social_type" />
+          <ScalarProperty Name="social_name" ColumnName="social_name" />
+          <ScalarProperty Name="social_picture" ColumnName="social_picture" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblUserImgs">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.tblUserImg">
+        <MappingFragment StoreEntitySet="tblUserImg">
+          <ScalarProperty Name="id_user_img" ColumnName="id_user_img" />
+          <ScalarProperty Name="user_img_name" ColumnName="user_img_name" />
+          <ScalarProperty Name="user_img_sexy_key" ColumnName="user_img_sexy_key" />
+          <ScalarProperty Name="user_img_size" ColumnName="user_img_size" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="user_img_create" ColumnName="user_img_create" />
+          <ScalarProperty Name="user_img_w" ColumnName="user_img_w" />
+          <ScalarProperty Name="user_img_h" ColumnName="user_img_h" />
+          <ScalarProperty Name="user_img_type" ColumnName="user_img_type" />
+          <ScalarProperty Name="admin_view" ColumnName="admin_view" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user_steel">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.user_steel">
+        <MappingFragment StoreEntitySet="user_steel">
+          <ScalarProperty Name="id_user" ColumnName="id_user" />
+          <ScalarProperty Name="user_first_name" ColumnName="user_first_name" />
+          <ScalarProperty Name="user_last_name" ColumnName="user_last_name" />
+          <ScalarProperty Name="user_full_name" ColumnName="user_full_name" />
+          <ScalarProperty Name="user_email" ColumnName="user_email" />
+          <ScalarProperty Name="user_status" ColumnName="user_status" />
+          <ScalarProperty Name="user_pass" ColumnName="user_pass" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="web_banner">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.web_banner">
+        <MappingFragment StoreEntitySet="web_banner">
+          <ScalarProperty Name="id_banner" ColumnName="id_banner" />
+          <ScalarProperty Name="banner_name" ColumnName="banner_name" />
+          <ScalarProperty Name="banner_order" ColumnName="banner_order" />
+          <ScalarProperty Name="banner_link" ColumnName="banner_link" />
+          <ScalarProperty Name="banner_img" ColumnName="banner_img" />
+          <ScalarProperty Name="banner_tiny" ColumnName="banner_tiny" />
+          <ScalarProperty Name="banner_status" ColumnName="banner_status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="web_chater">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.web_chater">
+        <MappingFragment StoreEntitySet="web_chater">
+          <ScalarProperty Name="id_chater" ColumnName="id_chater" />
+          <ScalarProperty Name="chater_name" ColumnName="chater_name" />
+          <ScalarProperty Name="customer_logo" ColumnName="customer_logo" />
+          <ScalarProperty Name="customer_prod" ColumnName="customer_prod" />
+          <ScalarProperty Name="customer_idea" ColumnName="customer_idea" />
+          <ScalarProperty Name="customer_order" ColumnName="customer_order" />
+          <ScalarProperty Name="customer_status" ColumnName="customer_status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="web_chater_content">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.web_chater_content">
+        <MappingFragment StoreEntitySet="web_chater_content">
+          <ScalarProperty Name="id_chater" ColumnName="id_chater" />
+          <ScalarProperty Name="id_employer" ColumnName="id_employer" />
+          <ScalarProperty Name="chater_content" ColumnName="chater_content" />
+          <ScalarProperty Name="chater_content_create" ColumnName="chater_content_create" />
+          <ScalarProperty Name="id_up" ColumnName="id_up" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="web_content">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.web_content">
+        <MappingFragment StoreEntitySet="web_content">
+          <ScalarProperty Name="id_content" ColumnName="id_content" />
+          <ScalarProperty Name="content_name" ColumnName="content_name" />
+          <ScalarProperty Name="id_menu" ColumnName="id_menu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="web_content_other">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.web_content_other">
+        <MappingFragment StoreEntitySet="web_content_other">
+          <ScalarProperty Name="id_content_other" ColumnName="id_content_other" />
+          <ScalarProperty Name="content_other_title" ColumnName="content_other_title" />
+          <ScalarProperty Name="content_other" ColumnName="content_other" />
+          <ScalarProperty Name="id_menu" ColumnName="id_menu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="web_customer">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.web_customer">
+        <MappingFragment StoreEntitySet="web_customer">
+          <ScalarProperty Name="id_customer" ColumnName="id_customer" />
+          <ScalarProperty Name="customer_name" ColumnName="customer_name" />
+          <ScalarProperty Name="customer_logo" ColumnName="customer_logo" />
+          <ScalarProperty Name="customer_prod" ColumnName="customer_prod" />
+          <ScalarProperty Name="customer_idea" ColumnName="customer_idea" />
+          <ScalarProperty Name="customer_order" ColumnName="customer_order" />
+          <ScalarProperty Name="customer_status" ColumnName="customer_status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="web_department">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.web_department">
+        <MappingFragment StoreEntitySet="web_department">
+          <ScalarProperty Name="id_department" ColumnName="id_department" />
+          <ScalarProperty Name="department_name" ColumnName="department_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="web_employer">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.web_employer">
+        <MappingFragment StoreEntitySet="web_employer">
+          <ScalarProperty Name="id_employer" ColumnName="id_employer" />
+          <ScalarProperty Name="employer_name" ColumnName="employer_name" />
+          <ScalarProperty Name="id_title" ColumnName="id_title" />
+          <ScalarProperty Name="employer_code" ColumnName="employer_code" />
+          <ScalarProperty Name="employer_ext" ColumnName="employer_ext" />
+          <ScalarProperty Name="employer_mobile" ColumnName="employer_mobile" />
+          <ScalarProperty Name="employer_status" ColumnName="employer_status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="web_list_product">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.web_list_product">
+        <MappingFragment StoreEntitySet="web_list_product">
+          <ScalarProperty Name="id_list_prod" ColumnName="id_list_prod" />
+          <ScalarProperty Name="list_prod_name" ColumnName="list_prod_name" />
+          <ScalarProperty Name="list_prod_order" ColumnName="list_prod_order" />
+          <ScalarProperty Name="list_prod_link" ColumnName="list_prod_link" />
+          <ScalarProperty Name="list_prod_status" ColumnName="list_prod_status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="web_menu_root">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.web_menu_root">
+        <MappingFragment StoreEntitySet="web_menu_root">
+          <ScalarProperty Name="id_menu" ColumnName="id_menu" />
+          <ScalarProperty Name="menu_name" ColumnName="menu_name" />
+          <ScalarProperty Name="menu_order" ColumnName="menu_order" />
+          <ScalarProperty Name="menu_code" ColumnName="menu_code" />
+          <ScalarProperty Name="banner_tiny" ColumnName="banner_tiny" />
+          <ScalarProperty Name="menu_status" ColumnName="menu_status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="web_products">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.web_products">
+        <MappingFragment StoreEntitySet="web_products">
+          <ScalarProperty Name="id_prod" ColumnName="id_prod" />
+          <ScalarProperty Name="prod_name" ColumnName="prod_name" />
+          <ScalarProperty Name="prod_order" ColumnName="prod_order" />
+          <ScalarProperty Name="prod_status" ColumnName="prod_status" />
+          <ScalarProperty Name="prod_content" ColumnName="prod_content" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="web_title">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.web_title">
+        <MappingFragment StoreEntitySet="web_title">
+          <ScalarProperty Name="id_title" ColumnName="id_title" />
+          <ScalarProperty Name="title_name" ColumnName="title_name" />
+          <ScalarProperty Name="id_department" ColumnName="id_department" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="web_vangia_config">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.web_vangia_config">
+        <MappingFragment StoreEntitySet="web_vangia_config">
+          <ScalarProperty Name="detail_type_word_vg" ColumnName="detail_type_word_vg" />
+          <ScalarProperty Name="type_word_vg" ColumnName="type_word_vg" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name_vg" ColumnName="name_vg" />
+          <ScalarProperty Name="key_word_vg" ColumnName="key_word_vg" />
+          <ScalarProperty Name="laguage_word_vg" ColumnName="laguage_word_vg" />
+          <ScalarProperty Name="order_word_vg" ColumnName="order_word_vg" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="web_vangia_doitac">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.web_vangia_doitac">
+        <MappingFragment StoreEntitySet="web_vangia_doitac">
+          <ScalarProperty Name="vangia_id_doitac" ColumnName="vangia_id_doitac" />
+          <ScalarProperty Name="vangia_name_doitac" ColumnName="vangia_name_doitac" />
+          <ScalarProperty Name="vangia_img_doitac" ColumnName="vangia_img_doitac" />
+          <ScalarProperty Name="vangia_noidung" ColumnName="vangia_noidung" />
+          <ScalarProperty Name="vangia_status_doitac" ColumnName="vangia_status_doitac" />
+          <ScalarProperty Name="vangia_order_doitac" ColumnName="vangia_order_doitac" />
+          <ScalarProperty Name="vangia_language_doitac" ColumnName="vangia_language_doitac" />
+          <ScalarProperty Name="vangia_type_doitac" ColumnName="vangia_type_doitac" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="web_vangia_duanmau">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.web_vangia_duanmau">
+        <MappingFragment StoreEntitySet="web_vangia_duanmau">
+          <ScalarProperty Name="vangia_id_duanmau" ColumnName="vangia_id_duanmau" />
+          <ScalarProperty Name="vangia_img_duanmau" ColumnName="vangia_img_duanmau" />
+          <ScalarProperty Name="vangia_name_duanmau" ColumnName="vangia_name_duanmau" />
+          <ScalarProperty Name="vangia_time_duanmau" ColumnName="vangia_time_duanmau" />
+          <ScalarProperty Name="vangia_img1_duanmau" ColumnName="vangia_img1_duanmau" />
+          <ScalarProperty Name="vangia_img2_duanmau" ColumnName="vangia_img2_duanmau" />
+          <ScalarProperty Name="vangia_img3_duanmau" ColumnName="vangia_img3_duanmau" />
+          <ScalarProperty Name="vangia_status_duanmau" ColumnName="vangia_status_duanmau" />
+          <ScalarProperty Name="vangia_order_duanmau" ColumnName="vangia_order_duanmau" />
+          <ScalarProperty Name="vangia_language" ColumnName="vangia_language" />
+          <ScalarProperty Name="vangia_content_duanmau" ColumnName="vangia_content_duanmau" />
+          <ScalarProperty Name="vangia_tomtat_duanmau" ColumnName="vangia_tomtat_duanmau" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="web_vangia_employee">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.web_vangia_employee">
+        <MappingFragment StoreEntitySet="web_vangia_employee">
+          <ScalarProperty Name="vangia_id_employee" ColumnName="vangia_id_employee" />
+          <ScalarProperty Name="vangia_img_employee" ColumnName="vangia_img_employee" />
+          <ScalarProperty Name="vangia_name_employee" ColumnName="vangia_name_employee" />
+          <ScalarProperty Name="vangia_tiesu_employee" ColumnName="vangia_tiesu_employee" />
+          <ScalarProperty Name="vangia_status_employee" ColumnName="vangia_status_employee" />
+          <ScalarProperty Name="vangia_order_employee" ColumnName="vangia_order_employee" />
+          <ScalarProperty Name="vangia_language_employee" ColumnName="vangia_language_employee" />
+          <ScalarProperty Name="vangia_team_employee" ColumnName="vangia_team_employee" />
+          <ScalarProperty Name="vangia_noidung_employee" ColumnName="vangia_noidung_employee" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="web_vangia_language">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.web_vangia_language">
+        <MappingFragment StoreEntitySet="web_vangia_language">
+          <ScalarProperty Name="vangia_id_language" ColumnName="vangia_id_language" />
+          <ScalarProperty Name="vangia_name_language" ColumnName="vangia_name_language" />
+          <ScalarProperty Name="vangia_code_langue" ColumnName="vangia_code_langue" />
+          <ScalarProperty Name="vangia_status_lague" ColumnName="vangia_status_lague" />
+          <ScalarProperty Name="vangia_icon_language" ColumnName="vangia_icon_language" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="web_vangia_menu">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.web_vangia_menu">
+        <MappingFragment StoreEntitySet="web_vangia_menu">
+          <ScalarProperty Name="vangia_id_menu" ColumnName="vangia_id_menu" />
+          <ScalarProperty Name="vangia_name_menu" ColumnName="vangia_name_menu" />
+          <ScalarProperty Name="vangia_link_menu" ColumnName="vangia_link_menu" />
+          <ScalarProperty Name="vangia_status_menu" ColumnName="vangia_status_menu" />
+          <ScalarProperty Name="vangia_order_menu" ColumnName="vangia_order_menu" />
+          <ScalarProperty Name="vangia_id_language" ColumnName="vangia_id_language" />
+          <ScalarProperty Name="vangia_key_menu" ColumnName="vangia_key_menu" />
+          <ScalarProperty Name="vangia_loai_menu" ColumnName="vangia_loai_menu" />
+          <ScalarProperty Name="vangia_tt_menu" ColumnName="vangia_tt_menu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="web_vangia_menucon">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.web_vangia_menucon">
+        <MappingFragment StoreEntitySet="web_vangia_menucon">
+          <ScalarProperty Name="vangia_id_menucon" ColumnName="vangia_id_menucon" />
+          <ScalarProperty Name="vangia_name_menucon" ColumnName="vangia_name_menucon" />
+          <ScalarProperty Name="vangia_link_menucon" ColumnName="vangia_link_menucon" />
+          <ScalarProperty Name="vangia_menucha_menucon" ColumnName="vangia_menucha_menucon" />
+          <ScalarProperty Name="vangia_status_menucon" ColumnName="vangia_status_menucon" />
+          <ScalarProperty Name="vangia_order_menucon" ColumnName="vangia_order_menucon" />
+          <ScalarProperty Name="vangia_language_menucon" ColumnName="vangia_language_menucon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="web_vangia_news">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.web_vangia_news">
+        <MappingFragment StoreEntitySet="web_vangia_news">
+          <ScalarProperty Name="vangia_vanban_news" ColumnName="vangia_vanban_news" />
+          <ScalarProperty Name="vangia_id_news" ColumnName="vangia_id_news" />
+          <ScalarProperty Name="vangia_name_news" ColumnName="vangia_name_news" />
+          <ScalarProperty Name="vangia_img_news" ColumnName="vangia_img_news" />
+          <ScalarProperty Name="vangia_links_news" ColumnName="vangia_links_news" />
+          <ScalarProperty Name="vangia_type_news" ColumnName="vangia_type_news" />
+          <ScalarProperty Name="vangia_img1_news" ColumnName="vangia_img1_news" />
+          <ScalarProperty Name="vangia_img2_news" ColumnName="vangia_img2_news" />
+          <ScalarProperty Name="vangia_tomtat_news" ColumnName="vangia_tomtat_news" />
+          <ScalarProperty Name="vangia_noidung_news" ColumnName="vangia_noidung_news" />
+          <ScalarProperty Name="vangia_status_news" ColumnName="vangia_status_news" />
+          <ScalarProperty Name="vangia_order_news" ColumnName="vangia_order_news" />
+          <ScalarProperty Name="vangia_language_news" ColumnName="vangia_language_news" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="web_vangia_products">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.web_vangia_products">
+        <MappingFragment StoreEntitySet="web_vangia_products">
+          <ScalarProperty Name="ful_img9_products_vg" ColumnName="ful_img9_products_vg" />
+          <ScalarProperty Name="ful_img8_products_vg" ColumnName="ful_img8_products_vg" />
+          <ScalarProperty Name="ful_img7_products_vg" ColumnName="ful_img7_products_vg" />
+          <ScalarProperty Name="ful_img6_products_vg" ColumnName="ful_img6_products_vg" />
+          <ScalarProperty Name="ful_img5_products_vg" ColumnName="ful_img5_products_vg" />
+          <ScalarProperty Name="ful_img4_products_vg" ColumnName="ful_img4_products_vg" />
+          <ScalarProperty Name="vangia_id_products" ColumnName="vangia_id_products" />
+          <ScalarProperty Name="vangia_img_products" ColumnName="vangia_img_products" />
+          <ScalarProperty Name="vangia_name_products" ColumnName="vangia_name_products" />
+          <ScalarProperty Name="vangia_noidung_products" ColumnName="vangia_noidung_products" />
+          <ScalarProperty Name="vangia_img1_products" ColumnName="vangia_img1_products" />
+          <ScalarProperty Name="vangia_img2_products" ColumnName="vangia_img2_products" />
+          <ScalarProperty Name="vangia_img3_products" ColumnName="vangia_img3_products" />
+          <ScalarProperty Name="vangia_tomtat_products" ColumnName="vangia_tomtat_products" />
+          <ScalarProperty Name="vangia_order_products" ColumnName="vangia_order_products" />
+          <ScalarProperty Name="vangia_language_products" ColumnName="vangia_language_products" />
+          <ScalarProperty Name="vangia_status_products" ColumnName="vangia_status_products" />
+          <ScalarProperty Name="vangia_type_products" ColumnName="vangia_type_products" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="web_vangia_project">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.web_vangia_project">
+        <MappingFragment StoreEntitySet="web_vangia_project">
+          <ScalarProperty Name="vangia_link_video_project" ColumnName="vangia_link_video_project" />
+          <ScalarProperty Name="vangia_vanban_project" ColumnName="vangia_vanban_project" />
+          <ScalarProperty Name="vangia_img9_project" ColumnName="vangia_img9_project" />
+          <ScalarProperty Name="vangia_img8_project" ColumnName="vangia_img8_project" />
+          <ScalarProperty Name="vangia_img7_project" ColumnName="vangia_img7_project" />
+          <ScalarProperty Name="vangia_img6_project" ColumnName="vangia_img6_project" />
+          <ScalarProperty Name="vangia_img5_project" ColumnName="vangia_img5_project" />
+          <ScalarProperty Name="vangia_img4_project" ColumnName="vangia_img4_project" />
+          <ScalarProperty Name="vangia_id_project" ColumnName="vangia_id_project" />
+          <ScalarProperty Name="vangia_img1_project" ColumnName="vangia_img1_project" />
+          <ScalarProperty Name="vangia_img2_project" ColumnName="vangia_img2_project" />
+          <ScalarProperty Name="vangia_img3_project" ColumnName="vangia_img3_project" />
+          <ScalarProperty Name="vangia_img_project" ColumnName="vangia_img_project" />
+          <ScalarProperty Name="vangia_content_project" ColumnName="vangia_content_project" />
+          <ScalarProperty Name="vangia_name_project" ColumnName="vangia_name_project" />
+          <ScalarProperty Name="vangia_time_project" ColumnName="vangia_time_project" />
+          <ScalarProperty Name="vangia_status_project" ColumnName="vangia_status_project" />
+          <ScalarProperty Name="vangia_order_project" ColumnName="vangia_order_project" />
+          <ScalarProperty Name="vangia_language_project" ColumnName="vangia_language_project" />
+          <ScalarProperty Name="vangia_tomtat_project" ColumnName="vangia_tomtat_project" />
+          <ScalarProperty Name="vangia_typeid_project" ColumnName="vangia_typeid_project" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="web_vangia_silde">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.web_vangia_silde">
+        <MappingFragment StoreEntitySet="web_vangia_silde">
+          <ScalarProperty Name="vangia_type_slide" ColumnName="vangia_type_slide" />
+          <ScalarProperty Name="vangia_stype_slide" ColumnName="vangia_stype_slide" />
+          <ScalarProperty Name="vangia_link_silde" ColumnName="vangia_link_silde" />
+          <ScalarProperty Name="vangia_id_silde" ColumnName="vangia_id_silde" />
+          <ScalarProperty Name="vangia_noidung_silde" ColumnName="vangia_noidung_silde" />
+          <ScalarProperty Name="vangia_tomtat_silde" ColumnName="vangia_tomtat_silde" />
+          <ScalarProperty Name="vangia_img_silde" ColumnName="vangia_img_silde" />
+          <ScalarProperty Name="vangia_name_silde" ColumnName="vangia_name_silde" />
+          <ScalarProperty Name="vangia_status_silde" ColumnName="vangia_status_silde" />
+          <ScalarProperty Name="vangia_order_silde" ColumnName="vangia_order_silde" />
+          <ScalarProperty Name="vangia_language_silde" ColumnName="vangia_language_silde" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="web_vangia_team">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.web_vangia_team">
+        <MappingFragment StoreEntitySet="web_vangia_team">
+          <ScalarProperty Name="vangia_id_team" ColumnName="vangia_id_team" />
+          <ScalarProperty Name="vangia_name_team" ColumnName="vangia_name_team" />
+          <ScalarProperty Name="vangia_status_team" ColumnName="vangia_status_team" />
+          <ScalarProperty Name="vangia_language_team" ColumnName="vangia_language_team" />
+          <ScalarProperty Name="vangia_tomtat_team" ColumnName="vangia_tomtat_team" />
+          <ScalarProperty Name="vangia_img_team" ColumnName="vangia_img_team" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="web_vangia_tuyendung">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.web_vangia_tuyendung">
+        <MappingFragment StoreEntitySet="web_vangia_tuyendung">
+          <ScalarProperty Name="vangia_id_tuyendung" ColumnName="vangia_id_tuyendung" />
+          <ScalarProperty Name="vangia_name_tuyendung" ColumnName="vangia_name_tuyendung" />
+          <ScalarProperty Name="vangia_img_tuyendung" ColumnName="vangia_img_tuyendung" />
+          <ScalarProperty Name="vangia_tomtat_tuyendung" ColumnName="vangia_tomtat_tuyendung" />
+          <ScalarProperty Name="vangia_img1_tuyendung" ColumnName="vangia_img1_tuyendung" />
+          <ScalarProperty Name="vangia_img2_tuyendung" ColumnName="vangia_img2_tuyendung" />
+          <ScalarProperty Name="vangia_status_tuyendung" ColumnName="vangia_status_tuyendung" />
+          <ScalarProperty Name="vangia_noidung_tuyendung" ColumnName="vangia_noidung_tuyendung" />
+          <ScalarProperty Name="vangia_language_tuyendung" ColumnName="vangia_language_tuyendung" />
+          <ScalarProperty Name="vangia_order_tuyendung" ColumnName="vangia_order_tuyendung" />
+          <ScalarProperty Name="vangia_type_tuyendung" ColumnName="vangia_type_tuyendung" />
+          <ScalarProperty Name="vangia_ma_tuyendung" ColumnName="vangia_ma_tuyendung" />
+          <ScalarProperty Name="vangia_vitri_tuyendung" ColumnName="vangia_vitri_tuyendung" />
+          <ScalarProperty Name="vangia_soluong_tuyendung" ColumnName="vangia_soluong_tuyendung" />
+          <ScalarProperty Name="vangia_diadiem_tuyendung" ColumnName="vangia_diadiem_tuyendung" />
+          <ScalarProperty Name="vangia_date_tuyendung" ColumnName="vangia_date_tuyendung" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="web_vangia_type_products">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.web_vangia_type_products">
+        <MappingFragment StoreEntitySet="web_vangia_type_products">
+          <ScalarProperty Name="vangia_id_type_products" ColumnName="vangia_id_type_products" />
+          <ScalarProperty Name="vangia_img_type_products" ColumnName="vangia_img_type_products" />
+          <ScalarProperty Name="vangia_name_type_products" ColumnName="vangia_name_type_products" />
+          <ScalarProperty Name="vangia_status_type_products" ColumnName="vangia_status_type_products" />
+          <ScalarProperty Name="vangia_order_type_products" ColumnName="vangia_order_type_products" />
+          <ScalarProperty Name="vangia_language_type_products" ColumnName="vangia_language_type_products" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="web_vangia_typeproject">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.web_vangia_typeproject">
+        <MappingFragment StoreEntitySet="web_vangia_typeproject">
+          <ScalarProperty Name="vangia_id_typeproject" ColumnName="vangia_id_typeproject" />
+          <ScalarProperty Name="vangia_name_typeproject" ColumnName="vangia_name_typeproject" />
+          <ScalarProperty Name="vangia_status_typeproject" ColumnName="vangia_status_typeproject" />
+          <ScalarProperty Name="vangia_language_typeproject" ColumnName="vangia_language_typeproject" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="fs_manga_img">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.fs_manga_img">
+        <MappingFragment StoreEntitySet="fs_manga_img">
+          <ScalarProperty Name="chap_id" ColumnName="chap_id" />
+          <ScalarProperty Name="img_orther" ColumnName="img_orther" />
+          <ScalarProperty Name="img_link" ColumnName="img_link" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="grid_view_mapping">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.grid_view_mapping">
+        <MappingFragment StoreEntitySet="grid_view_mapping">
+          <ScalarProperty Name="id_mapped" ColumnName="id_mapped" />
+          <ScalarProperty Name="id_ctr_name" ColumnName="id_ctr_name" />
+          <ScalarProperty Name="orther" ColumnName="orther" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="log_store_prod">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.log_store_prod">
+        <MappingFragment StoreEntitySet="log_store_prod">
+          <ScalarProperty Name="id_store_prod" ColumnName="id_store_prod" />
+          <ScalarProperty Name="store_prod_name" ColumnName="store_prod_name" />
+          <ScalarProperty Name="store_prod_code" ColumnName="store_prod_code" />
+          <ScalarProperty Name="store_prod_img" ColumnName="store_prod_img" />
+          <ScalarProperty Name="store_prod_count" ColumnName="store_prod_count" />
+          <ScalarProperty Name="store_prod_cost" ColumnName="store_prod_cost" />
+          <ScalarProperty Name="store_prod_cost_sell" ColumnName="store_prod_cost_sell" />
+          <ScalarProperty Name="store_prod_shelf" ColumnName="store_prod_shelf" />
+          <ScalarProperty Name="log_sell" ColumnName="log_sell" />
+          <ScalarProperty Name="id_store_cate" ColumnName="id_store_cate" />
+          <ScalarProperty Name="store_cate_name" ColumnName="store_cate_name" />
+          <ScalarProperty Name="id_store_unit" ColumnName="id_store_unit" />
+          <ScalarProperty Name="store_unit_name" ColumnName="store_unit_name" />
+          <ScalarProperty Name="id_store" ColumnName="id_store" />
+          <ScalarProperty Name="store_name" ColumnName="store_name" />
+          <ScalarProperty Name="id_store_stock" ColumnName="id_store_stock" />
+          <ScalarProperty Name="store_stock_code" ColumnName="store_stock_code" />
+          <ScalarProperty Name="id_store_slot" ColumnName="id_store_slot" />
+          <ScalarProperty Name="store_slot_code" ColumnName="store_slot_code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sys_data_fixed">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.sys_data_fixed">
+        <MappingFragment StoreEntitySet="sys_data_fixed">
+          <ScalarProperty Name="ctr_client_id" ColumnName="ctr_client_id" />
+          <ScalarProperty Name="record_order" ColumnName="record_order" />
+          <ScalarProperty Name="st_value" ColumnName="st_value" />
+          <ScalarProperty Name="st_name" ColumnName="st_name" />
+          <ScalarProperty Name="st_parent" ColumnName="st_parent" />
+          <ScalarProperty Name="ctr_key_query" ColumnName="ctr_key_query" />
+          <ScalarProperty Name="id_form" ColumnName="id_form" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sys_store_prod">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.sys_store_prod">
+        <MappingFragment StoreEntitySet="sys_store_prod">
+          <ScalarProperty Name="id_store_prod" ColumnName="id_store_prod" />
+          <ScalarProperty Name="store_prod_count" ColumnName="store_prod_count" />
+          <ScalarProperty Name="id_store_slot" ColumnName="id_store_slot" />
+          <ScalarProperty Name="store_prod_cost" ColumnName="store_prod_cost" />
+          <ScalarProperty Name="store_prod_shelf" ColumnName="store_prod_shelf" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSysUserListShareDetails">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.tblSysUserListShareDetail">
+        <MappingFragment StoreEntitySet="tblSysUserListShareDetail">
+          <ScalarProperty Name="group_role_id" ColumnName="group_role_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="id_company" ColumnName="id_company" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSysUserRoleRecords">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.tblSysUserRoleRecord">
+        <MappingFragment StoreEntitySet="tblSysUserRoleRecord">
+          <ScalarProperty Name="user_id_master" ColumnName="user_id_master" />
+          <ScalarProperty Name="user_id_staff" ColumnName="user_id_staff" />
+          <ScalarProperty Name="role_type" ColumnName="role_type" />
+          <ScalarProperty Name="id_page" ColumnName="id_page" />
+          <ScalarProperty Name="id_company" ColumnName="id_company" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="wb_advertising">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.wb_advertising">
+        <MappingFragment StoreEntitySet="wb_advertising">
+          <ScalarProperty Name="id_advertising" ColumnName="id_advertising" />
+          <ScalarProperty Name="name_advertising" ColumnName="name_advertising" />
+          <ScalarProperty Name="links_advertising" ColumnName="links_advertising" />
+          <ScalarProperty Name="status_advertising" ColumnName="status_advertising" />
+          <ScalarProperty Name="order_advertising" ColumnName="order_advertising" />
+          <ScalarProperty Name="img_advertising" ColumnName="img_advertising" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="wb_banner">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.wb_banner">
+        <MappingFragment StoreEntitySet="wb_banner">
+          <ScalarProperty Name="id_banner" ColumnName="id_banner" />
+          <ScalarProperty Name="name_banner" ColumnName="name_banner" />
+          <ScalarProperty Name="links_banner" ColumnName="links_banner" />
+          <ScalarProperty Name="order_banner" ColumnName="order_banner" />
+          <ScalarProperty Name="image_banner" ColumnName="image_banner" />
+          <ScalarProperty Name="status_banner" ColumnName="status_banner" />
+          <ScalarProperty Name="type_banner" ColumnName="type_banner" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="wb_comment">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.wb_comment">
+        <MappingFragment StoreEntitySet="wb_comment">
+          <ScalarProperty Name="id_comment" ColumnName="id_comment" />
+          <ScalarProperty Name="noidung_comment" ColumnName="noidung_comment" />
+          <ScalarProperty Name="id_products" ColumnName="id_products" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="name_full" ColumnName="name_full" />
+          <ScalarProperty Name="email" ColumnName="email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="wb_mail">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.wb_mail">
+        <MappingFragment StoreEntitySet="wb_mail">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="mail_name" ColumnName="mail_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="wb_menu">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.wb_menu">
+        <MappingFragment StoreEntitySet="wb_menu">
+          <ScalarProperty Name="id_menu" ColumnName="id_menu" />
+          <ScalarProperty Name="menu_name" ColumnName="menu_name" />
+          <ScalarProperty Name="menu_key_url" ColumnName="menu_key_url" />
+          <ScalarProperty Name="menu_order" ColumnName="menu_order" />
+          <ScalarProperty Name="menu_status" ColumnName="menu_status" />
+          <ScalarProperty Name="menu_title" ColumnName="menu_title" />
+          <ScalarProperty Name="menu_links" ColumnName="menu_links" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="wb_menu_products">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.wb_menu_products">
+        <MappingFragment StoreEntitySet="wb_menu_products">
+          <ScalarProperty Name="id_menu_products" ColumnName="id_menu_products" />
+          <ScalarProperty Name="menu_products_name" ColumnName="menu_products_name" />
+          <ScalarProperty Name="menu_products_key" ColumnName="menu_products_key" />
+          <ScalarProperty Name="menu_products_order" ColumnName="menu_products_order" />
+          <ScalarProperty Name="img_products" ColumnName="img_products" />
+          <ScalarProperty Name="menu_status" ColumnName="menu_status" />
+          <ScalarProperty Name="menu_tomtat" ColumnName="menu_tomtat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="wb_products">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.wb_products">
+        <MappingFragment StoreEntitySet="wb_products">
+          <ScalarProperty Name="id_products" ColumnName="id_products" />
+          <ScalarProperty Name="name_products" ColumnName="name_products" />
+          <ScalarProperty Name="type_products" ColumnName="type_products" />
+          <ScalarProperty Name="tomtat_products" ColumnName="tomtat_products" />
+          <ScalarProperty Name="noidung_products" ColumnName="noidung_products" />
+          <ScalarProperty Name="price_products" ColumnName="price_products" />
+          <ScalarProperty Name="giamgia_products" ColumnName="giamgia_products" />
+          <ScalarProperty Name="giasaugiam_products" ColumnName="giasaugiam_products" />
+          <ScalarProperty Name="status_products" ColumnName="status_products" />
+          <ScalarProperty Name="img_main_products" ColumnName="img_main_products" />
+          <ScalarProperty Name="order_products" ColumnName="order_products" />
+          <ScalarProperty Name="img1_products" ColumnName="img1_products" />
+          <ScalarProperty Name="img2_products" ColumnName="img2_products" />
+          <ScalarProperty Name="img3_products" ColumnName="img3_products" />
+          <ScalarProperty Name="img4_products" ColumnName="img4_products" />
+          <ScalarProperty Name="tieubieu_products" ColumnName="tieubieu_products" />
+          <ScalarProperty Name="img5_products" ColumnName="img5_products" />
+          <ScalarProperty Name="img0_products" ColumnName="img0_products" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="web_tr_menu_product">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.web_tr_menu_product">
+        <MappingFragment StoreEntitySet="web_tr_menu_product">
+          <ScalarProperty Name="id_menu_products" ColumnName="id_menu_products" />
+          <ScalarProperty Name="name_menu_products" ColumnName="name_menu_products" />
+          <ScalarProperty Name="order_menu_products" ColumnName="order_menu_products" />
+          <ScalarProperty Name="status_menu_products" ColumnName="status_menu_products" />
+          <ScalarProperty Name="img_menu_products" ColumnName="img_menu_products" />
+          <ScalarProperty Name="tomtat_menu_products" ColumnName="tomtat_menu_products" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="web_tr_menutop">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.web_tr_menutop">
+        <MappingFragment StoreEntitySet="web_tr_menutop">
+          <ScalarProperty Name="id_menu_top" ColumnName="id_menu_top" />
+          <ScalarProperty Name="name_menu_top" ColumnName="name_menu_top" />
+          <ScalarProperty Name="links_menu_top" ColumnName="links_menu_top" />
+          <ScalarProperty Name="key_links_menu_top" ColumnName="key_links_menu_top" />
+          <ScalarProperty Name="status_menu_top" ColumnName="status_menu_top" />
+          <ScalarProperty Name="order_menu_top" ColumnName="order_menu_top" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="web_tr_products">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.web_tr_products">
+        <MappingFragment StoreEntitySet="web_tr_products">
+          <ScalarProperty Name="id_products_tr" ColumnName="id_products_tr" />
+          <ScalarProperty Name="name_product_tr" ColumnName="name_product_tr" />
+          <ScalarProperty Name="type_products_tr" ColumnName="type_products_tr" />
+          <ScalarProperty Name="status_products_tr" ColumnName="status_products_tr" />
+          <ScalarProperty Name="order_products_tr" ColumnName="order_products_tr" />
+          <ScalarProperty Name="img_main_products_tr" ColumnName="img_main_products_tr" />
+          <ScalarProperty Name="img1_main_products_tr" ColumnName="img1_main_products_tr" />
+          <ScalarProperty Name="Specials" ColumnName="Specials" />
+          <ScalarProperty Name="price_products" ColumnName="price_products" />
+          <ScalarProperty Name="tomtat_products" ColumnName="tomtat_products" />
+          <ScalarProperty Name="noidung_products" ColumnName="noidung_products" />
+          <ScalarProperty Name="img_small_products" ColumnName="img_small_products" />
+          <ScalarProperty Name="img2_main_products_tr" ColumnName="img2_main_products_tr" />
+          <ScalarProperty Name="img3_main_products_tr" ColumnName="img3_main_products_tr" />
+          <ScalarProperty Name="price_products1" ColumnName="price_products1" />
+          <ScalarProperty Name="phantram_products" ColumnName="phantram_products" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="web_tr_quangcao">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.web_tr_quangcao">
+        <MappingFragment StoreEntitySet="web_tr_quangcao">
+          <ScalarProperty Name="id_quangcao" ColumnName="id_quangcao" />
+          <ScalarProperty Name="name_quangcao" ColumnName="name_quangcao" />
+          <ScalarProperty Name="links_quangcao" ColumnName="links_quangcao" />
+          <ScalarProperty Name="status_quangcao" ColumnName="status_quangcao" />
+          <ScalarProperty Name="order_quangcao" ColumnName="order_quangcao" />
+          <ScalarProperty Name="img_quangcao" ColumnName="img_quangcao" />
+          <ScalarProperty Name="type_quangcao" ColumnName="type_quangcao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblMath_vangia">
+      <EntityTypeMapping TypeName="DataAdminvanGiaModel.tblMath_vangia">
+        <MappingFragment StoreEntitySet="tblMath_vangia">
+          <ScalarProperty Name="TypeMath" ColumnName="TypeMath" />
+          <ScalarProperty Name="ValueMath" ColumnName="ValueMath" />
+          <ScalarProperty Name="NameMath" ColumnName="NameMath" />
+          <ScalarProperty Name="idMath" ColumnName="idMath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

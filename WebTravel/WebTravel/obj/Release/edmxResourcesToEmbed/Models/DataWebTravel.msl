@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WebTravelModelStoreContainer" CdmEntityContainer="WebTravelEntities">
+    <EntitySetMapping Name="tbl_blog_tra">
+      <EntityTypeMapping TypeName="WebTravelModel.tbl_blog_tra">
+        <MappingFragment StoreEntitySet="tbl_blog_tra">
+          <ScalarProperty Name="id_blog_tra" ColumnName="id_blog_tra" />
+          <ScalarProperty Name="titile_blog_tra" ColumnName="titile_blog_tra" />
+          <ScalarProperty Name="short_des_blog_tra" ColumnName="short_des_blog_tra" />
+          <ScalarProperty Name="des_blog_tra" ColumnName="des_blog_tra" />
+          <ScalarProperty Name="status_blog_tra" ColumnName="status_blog_tra" />
+          <ScalarProperty Name="type_blog_tra" ColumnName="type_blog_tra" />
+          <ScalarProperty Name="create_date_blog_tra" ColumnName="create_date_blog_tra" />
+          <ScalarProperty Name="img_blog_tra" ColumnName="img_blog_tra" />
+          <ScalarProperty Name="video_blog_tra" ColumnName="video_blog_tra" />
+          <ScalarProperty Name="id_company" ColumnName="id_company" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSysPictures">
+      <EntityTypeMapping TypeName="WebTravelModel.tblSysPicture">
+        <MappingFragment StoreEntitySet="tblSysPicture">
+          <ScalarProperty Name="picture_id" ColumnName="picture_id" />
+          <ScalarProperty Name="advert_id" ColumnName="advert_id" />
+          <ScalarProperty Name="originalFilepath" ColumnName="originalFilepath" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="converted" ColumnName="converted" />
+          <ScalarProperty Name="convertedFilename" ColumnName="convertedFilename" />
+          <ScalarProperty Name="tocheck" ColumnName="tocheck" />
+          <ScalarProperty Name="isvalidated" ColumnName="isvalidated" />
+          <ScalarProperty Name="convertedFilename90" ColumnName="convertedFilename90" />
+          <ScalarProperty Name="convertedFilename180" ColumnName="convertedFilename180" />
+          <ScalarProperty Name="convertedFilename270" ColumnName="convertedFilename270" />
+          <ScalarProperty Name="angleType" ColumnName="angleType" />
+          <ScalarProperty Name="type_id" ColumnName="type_id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="cms_sql_id" ColumnName="cms_sql_id" />
+          <ScalarProperty Name="shortdescription" ColumnName="shortdescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="web_vangia_config">
+      <EntityTypeMapping TypeName="WebTravelModel.web_vangia_config">
+        <MappingFragment StoreEntitySet="web_vangia_config">
+          <ScalarProperty Name="detail_type_word_vg" ColumnName="detail_type_word_vg" />
+          <ScalarProperty Name="type_word_vg" ColumnName="type_word_vg" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name_vg" ColumnName="name_vg" />
+          <ScalarProperty Name="key_word_vg" ColumnName="key_word_vg" />
+          <ScalarProperty Name="laguage_word_vg" ColumnName="laguage_word_vg" />
+          <ScalarProperty Name="order_word_vg" ColumnName="order_word_vg" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="web_vangia_doitac">
+      <EntityTypeMapping TypeName="WebTravelModel.web_vangia_doitac">
+        <MappingFragment StoreEntitySet="web_vangia_doitac">
+          <ScalarProperty Name="vangia_id_doitac" ColumnName="vangia_id_doitac" />
+          <ScalarProperty Name="vangia_name_doitac" ColumnName="vangia_name_doitac" />
+          <ScalarProperty Name="vangia_img_doitac" ColumnName="vangia_img_doitac" />
+          <ScalarProperty Name="vangia_noidung" ColumnName="vangia_noidung" />
+          <ScalarProperty Name="vangia_status_doitac" ColumnName="vangia_status_doitac" />
+          <ScalarProperty Name="vangia_order_doitac" ColumnName="vangia_order_doitac" />
+          <ScalarProperty Name="vangia_language_doitac" ColumnName="vangia_language_doitac" />
+          <ScalarProperty Name="vangia_type_doitac" ColumnName="vangia_type_doitac" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="web_vangia_duanmau">
+      <EntityTypeMapping TypeName="WebTravelModel.web_vangia_duanmau">
+        <MappingFragment StoreEntitySet="web_vangia_duanmau">
+          <ScalarProperty Name="vangia_id_duanmau" ColumnName="vangia_id_duanmau" />
+          <ScalarProperty Name="vangia_img_duanmau" ColumnName="vangia_img_duanmau" />
+          <ScalarProperty Name="vangia_name_duanmau" ColumnName="vangia_name_duanmau" />
+          <ScalarProperty Name="vangia_time_duanmau" ColumnName="vangia_time_duanmau" />
+          <ScalarProperty Name="vangia_img1_duanmau" ColumnName="vangia_img1_duanmau" />
+          <ScalarProperty Name="vangia_img2_duanmau" ColumnName="vangia_img2_duanmau" />
+          <ScalarProperty Name="vangia_img3_duanmau" ColumnName="vangia_img3_duanmau" />
+          <ScalarProperty Name="vangia_status_duanmau" ColumnName="vangia_status_duanmau" />
+          <ScalarProperty Name="vangia_order_duanmau" ColumnName="vangia_order_duanmau" />
+          <ScalarProperty Name="vangia_language" ColumnName="vangia_language" />
+          <ScalarProperty Name="vangia_content_duanmau" ColumnName="vangia_content_duanmau" />
+          <ScalarProperty Name="vangia_tomtat_duanmau" ColumnName="vangia_tomtat_duanmau" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="web_vangia_employee">
+      <EntityTypeMapping TypeName="WebTravelModel.web_vangia_employee">
+        <MappingFragment StoreEntitySet="web_vangia_employee">
+          <ScalarProperty Name="vangia_id_employee" ColumnName="vangia_id_employee" />
+          <ScalarProperty Name="vangia_img_employee" ColumnName="vangia_img_employee" />
+          <ScalarProperty Name="vangia_name_employee" ColumnName="vangia_name_employee" />
+          <ScalarProperty Name="vangia_tiesu_employee" ColumnName="vangia_tiesu_employee" />
+          <ScalarProperty Name="vangia_status_employee" ColumnName="vangia_status_employee" />
+          <ScalarProperty Name="vangia_order_employee" ColumnName="vangia_order_employee" />
+          <ScalarProperty Name="vangia_language_employee" ColumnName="vangia_language_employee" />
+          <ScalarProperty Name="vangia_team_employee" ColumnName="vangia_team_employee" />
+          <ScalarProperty Name="vangia_noidung_employee" ColumnName="vangia_noidung_employee" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="web_vangia_language">
+      <EntityTypeMapping TypeName="WebTravelModel.web_vangia_language">
+        <MappingFragment StoreEntitySet="web_vangia_language">
+          <ScalarProperty Name="vangia_id_language" ColumnName="vangia_id_language" />
+          <ScalarProperty Name="vangia_name_language" ColumnName="vangia_name_language" />
+          <ScalarProperty Name="vangia_code_langue" ColumnName="vangia_code_langue" />
+          <ScalarProperty Name="vangia_status_lague" ColumnName="vangia_status_lague" />
+          <ScalarProperty Name="vangia_icon_language" ColumnName="vangia_icon_language" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="web_vangia_menu">
+      <EntityTypeMapping TypeName="WebTravelModel.web_vangia_menu">
+        <MappingFragment StoreEntitySet="web_vangia_menu">
+          <ScalarProperty Name="vangia_id_menu" ColumnName="vangia_id_menu" />
+          <ScalarProperty Name="vangia_name_menu" ColumnName="vangia_name_menu" />
+          <ScalarProperty Name="vangia_link_menu" ColumnName="vangia_link_menu" />
+          <ScalarProperty Name="vangia_status_menu" ColumnName="vangia_status_menu" />
+          <ScalarProperty Name="vangia_order_menu" ColumnName="vangia_order_menu" />
+          <ScalarProperty Name="vangia_id_language" ColumnName="vangia_id_language" />
+          <ScalarProperty Name="vangia_key_menu" ColumnName="vangia_key_menu" />
+          <ScalarProperty Name="vangia_loai_menu" ColumnName="vangia_loai_menu" />
+          <ScalarProperty Name="vangia_tt_menu" ColumnName="vangia_tt_menu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="web_vangia_menucon">
+      <EntityTypeMapping TypeName="WebTravelModel.web_vangia_menucon">
+        <MappingFragment StoreEntitySet="web_vangia_menucon">
+          <ScalarProperty Name="vangia_id_menucon" ColumnName="vangia_id_menucon" />
+          <ScalarProperty Name="vangia_name_menucon" ColumnName="vangia_name_menucon" />
+          <ScalarProperty Name="vangia_link_menucon" ColumnName="vangia_link_menucon" />
+          <ScalarProperty Name="vangia_menucha_menucon" ColumnName="vangia_menucha_menucon" />
+          <ScalarProperty Name="vangia_status_menucon" ColumnName="vangia_status_menucon" />
+          <ScalarProperty Name="vangia_order_menucon" ColumnName="vangia_order_menucon" />
+          <ScalarProperty Name="vangia_language_menucon" ColumnName="vangia_language_menucon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="web_vangia_news">
+      <EntityTypeMapping TypeName="WebTravelModel.web_vangia_news">
+        <MappingFragment StoreEntitySet="web_vangia_news">
+          <ScalarProperty Name="vangia_vanban_news" ColumnName="vangia_vanban_news" />
+          <ScalarProperty Name="vangia_id_news" ColumnName="vangia_id_news" />
+          <ScalarProperty Name="vangia_name_news" ColumnName="vangia_name_news" />
+          <ScalarProperty Name="vangia_img_news" ColumnName="vangia_img_news" />
+          <ScalarProperty Name="vangia_links_news" ColumnName="vangia_links_news" />
+          <ScalarProperty Name="vangia_type_news" ColumnName="vangia_type_news" />
+          <ScalarProperty Name="vangia_img1_news" ColumnName="vangia_img1_news" />
+          <ScalarProperty Name="vangia_img2_news" ColumnName="vangia_img2_news" />
+          <ScalarProperty Name="vangia_tomtat_news" ColumnName="vangia_tomtat_news" />
+          <ScalarProperty Name="vangia_noidung_news" ColumnName="vangia_noidung_news" />
+          <ScalarProperty Name="vangia_status_news" ColumnName="vangia_status_news" />
+          <ScalarProperty Name="vangia_order_news" ColumnName="vangia_order_news" />
+          <ScalarProperty Name="vangia_language_news" ColumnName="vangia_language_news" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="web_vangia_products">
+      <EntityTypeMapping TypeName="WebTravelModel.web_vangia_products">
+        <MappingFragment StoreEntitySet="web_vangia_products">
+          <ScalarProperty Name="ful_img9_products_vg" ColumnName="ful_img9_products_vg" />
+          <ScalarProperty Name="ful_img8_products_vg" ColumnName="ful_img8_products_vg" />
+          <ScalarProperty Name="ful_img7_products_vg" ColumnName="ful_img7_products_vg" />
+          <ScalarProperty Name="ful_img6_products_vg" ColumnName="ful_img6_products_vg" />
+          <ScalarProperty Name="ful_img5_products_vg" ColumnName="ful_img5_products_vg" />
+          <ScalarProperty Name="ful_img4_products_vg" ColumnName="ful_img4_products_vg" />
+          <ScalarProperty Name="vangia_id_products" ColumnName="vangia_id_products" />
+          <ScalarProperty Name="vangia_img_products" ColumnName="vangia_img_products" />
+          <ScalarProperty Name="vangia_name_products" ColumnName="vangia_name_products" />
+          <ScalarProperty Name="vangia_noidung_products" ColumnName="vangia_noidung_products" />
+          <ScalarProperty Name="vangia_img1_products" ColumnName="vangia_img1_products" />
+          <ScalarProperty Name="vangia_img2_products" ColumnName="vangia_img2_products" />
+          <ScalarProperty Name="vangia_img3_products" ColumnName="vangia_img3_products" />
+          <ScalarProperty Name="vangia_tomtat_products" ColumnName="vangia_tomtat_products" />
+          <ScalarProperty Name="vangia_order_products" ColumnName="vangia_order_products" />
+          <ScalarProperty Name="vangia_language_products" ColumnName="vangia_language_products" />
+          <ScalarProperty Name="vangia_status_products" ColumnName="vangia_status_products" />
+          <ScalarProperty Name="vangia_type_products" ColumnName="vangia_type_products" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="web_vangia_project">
+      <EntityTypeMapping TypeName="WebTravelModel.web_vangia_project">
+        <MappingFragment StoreEntitySet="web_vangia_project">
+          <ScalarProperty Name="company" ColumnName="company" />
+          <ScalarProperty Name="vangia_link_video_project" ColumnName="vangia_link_video_project" />
+          <ScalarProperty Name="vangia_vanban_project" ColumnName="vangia_vanban_project" />
+          <ScalarProperty Name="vangia_img9_project" ColumnName="vangia_img9_project" />
+          <ScalarProperty Name="vangia_img8_project" ColumnName="vangia_img8_project" />
+          <ScalarProperty Name="vangia_img7_project" ColumnName="vangia_img7_project" />
+          <ScalarProperty Name="vangia_img6_project" ColumnName="vangia_img6_project" />
+          <ScalarProperty Name="vangia_img5_project" ColumnName="vangia_img5_project" />
+          <ScalarProperty Name="vangia_img4_project" ColumnName="vangia_img4_project" />
+          <ScalarProperty Name="vangia_id_project" ColumnName="vangia_id_project" />
+          <ScalarProperty Name="vangia_img1_project" ColumnName="vangia_img1_project" />
+          <ScalarProperty Name="vangia_img2_project" ColumnName="vangia_img2_project" />
+          <ScalarProperty Name="vangia_img3_project" ColumnName="vangia_img3_project" />
+          <ScalarProperty Name="vangia_img_project" ColumnName="vangia_img_project" />
+          <ScalarProperty Name="vangia_content_project" ColumnName="vangia_content_project" />
+          <ScalarProperty Name="vangia_name_project" ColumnName="vangia_name_project" />
+          <ScalarProperty Name="vangia_time_project" ColumnName="vangia_time_project" />
+          <ScalarProperty Name="vangia_status_project" ColumnName="vangia_status_project" />
+          <ScalarProperty Name="vangia_order_project" ColumnName="vangia_order_project" />
+          <ScalarProperty Name="vangia_language_project" ColumnName="vangia_language_project" />
+          <ScalarProperty Name="vangia_tomtat_project" ColumnName="vangia_tomtat_project" />
+          <ScalarProperty Name="vangia_typeid_project" ColumnName="vangia_typeid_project" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="web_vangia_silde">
+      <EntityTypeMapping TypeName="WebTravelModel.web_vangia_silde">
+        <MappingFragment StoreEntitySet="web_vangia_silde">
+          <ScalarProperty Name="company" ColumnName="company" />
+          <ScalarProperty Name="vangia_type_slide" ColumnName="vangia_type_slide" />
+          <ScalarProperty Name="vangia_stype_slide" ColumnName="vangia_stype_slide" />
+          <ScalarProperty Name="vangia_link_silde" ColumnName="vangia_link_silde" />
+          <ScalarProperty Name="vangia_id_silde" ColumnName="vangia_id_silde" />
+          <ScalarProperty Name="vangia_noidung_silde" ColumnName="vangia_noidung_silde" />
+          <ScalarProperty Name="vangia_tomtat_silde" ColumnName="vangia_tomtat_silde" />
+          <ScalarProperty Name="vangia_img_silde" ColumnName="vangia_img_silde" />
+          <ScalarProperty Name="vangia_name_silde" ColumnName="vangia_name_silde" />
+          <ScalarProperty Name="vangia_status_silde" ColumnName="vangia_status_silde" />
+          <ScalarProperty Name="vangia_order_silde" ColumnName="vangia_order_silde" />
+          <ScalarProperty Name="vangia_language_silde" ColumnName="vangia_language_silde" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="web_vangia_team">
+      <EntityTypeMapping TypeName="WebTravelModel.web_vangia_team">
+        <MappingFragment StoreEntitySet="web_vangia_team">
+          <ScalarProperty Name="vangia_id_team" ColumnName="vangia_id_team" />
+          <ScalarProperty Name="vangia_name_team" ColumnName="vangia_name_team" />
+          <ScalarProperty Name="vangia_status_team" ColumnName="vangia_status_team" />
+          <ScalarProperty Name="vangia_language_team" ColumnName="vangia_language_team" />
+          <ScalarProperty Name="vangia_tomtat_team" ColumnName="vangia_tomtat_team" />
+          <ScalarProperty Name="vangia_img_team" ColumnName="vangia_img_team" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="web_vangia_tuyendung">
+      <EntityTypeMapping TypeName="WebTravelModel.web_vangia_tuyendung">
+        <MappingFragment StoreEntitySet="web_vangia_tuyendung">
+          <ScalarProperty Name="vangia_id_tuyendung" ColumnName="vangia_id_tuyendung" />
+          <ScalarProperty Name="vangia_name_tuyendung" ColumnName="vangia_name_tuyendung" />
+          <ScalarProperty Name="vangia_img_tuyendung" ColumnName="vangia_img_tuyendung" />
+          <ScalarProperty Name="vangia_tomtat_tuyendung" ColumnName="vangia_tomtat_tuyendung" />
+          <ScalarProperty Name="vangia_img1_tuyendung" ColumnName="vangia_img1_tuyendung" />
+          <ScalarProperty Name="vangia_img2_tuyendung" ColumnName="vangia_img2_tuyendung" />
+          <ScalarProperty Name="vangia_status_tuyendung" ColumnName="vangia_status_tuyendung" />
+          <ScalarProperty Name="vangia_noidung_tuyendung" ColumnName="vangia_noidung_tuyendung" />
+          <ScalarProperty Name="vangia_language_tuyendung" ColumnName="vangia_language_tuyendung" />
+          <ScalarProperty Name="vangia_order_tuyendung" ColumnName="vangia_order_tuyendung" />
+          <ScalarProperty Name="vangia_type_tuyendung" ColumnName="vangia_type_tuyendung" />
+          <ScalarProperty Name="vangia_ma_tuyendung" ColumnName="vangia_ma_tuyendung" />
+          <ScalarProperty Name="vangia_vitri_tuyendung" ColumnName="vangia_vitri_tuyendung" />
+          <ScalarProperty Name="vangia_soluong_tuyendung" ColumnName="vangia_soluong_tuyendung" />
+          <ScalarProperty Name="vangia_diadiem_tuyendung" ColumnName="vangia_diadiem_tuyendung" />
+          <ScalarProperty Name="vangia_date_tuyendung" ColumnName="vangia_date_tuyendung" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="web_vangia_type_products">
+      <EntityTypeMapping TypeName="WebTravelModel.web_vangia_type_products">
+        <MappingFragment StoreEntitySet="web_vangia_type_products">
+          <ScalarProperty Name="vangia_id_type_products" ColumnName="vangia_id_type_products" />
+          <ScalarProperty Name="vangia_img_type_products" ColumnName="vangia_img_type_products" />
+          <ScalarProperty Name="vangia_name_type_products" ColumnName="vangia_name_type_products" />
+          <ScalarProperty Name="vangia_status_type_products" ColumnName="vangia_status_type_products" />
+          <ScalarProperty Name="vangia_order_type_products" ColumnName="vangia_order_type_products" />
+          <ScalarProperty Name="vangia_language_type_products" ColumnName="vangia_language_type_products" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="web_vangia_typeproject">
+      <EntityTypeMapping TypeName="WebTravelModel.web_vangia_typeproject">
+        <MappingFragment StoreEntitySet="web_vangia_typeproject">
+          <ScalarProperty Name="vangia_id_typeproject" ColumnName="vangia_id_typeproject" />
+          <ScalarProperty Name="vangia_name_typeproject" ColumnName="vangia_name_typeproject" />
+          <ScalarProperty Name="vangia_status_typeproject" ColumnName="vangia_status_typeproject" />
+          <ScalarProperty Name="vangia_language_typeproject" ColumnName="vangia_language_typeproject" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

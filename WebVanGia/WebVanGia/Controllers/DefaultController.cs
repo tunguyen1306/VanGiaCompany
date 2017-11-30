@@ -49,11 +49,25 @@ namespace WebVanGia.Controllers
         [HttpPost]
         public ActionResult LoadProducts()
         {
-            var urlLink = ConfigurationManager.AppSettings["domainvg"];
+        //     public string vangia_img_id
+        //{
+        //    get
+        //    {
+        //        var regex = new Regex(@"^(?<id>\d+).*$");
+        //        var match = regex.Match(originalFilepath);
+
+        //        if (match.Success)
+        //        {
+        //            return match.Groups["id"].Value;
+        //        }
+        //        return null;
+        //    }
+        //}
+        var urlLink = ConfigurationManager.AppSettings["domainvg"];
 
             var qrData = (from dataPro in dbadmin.web_vangia_project
                           join dataImg in dbadmin.tblSysPictures on dataPro.vangia_id_project equals dataImg.advert_id
-                          where dataImg.position == 1 && dataPro.vangia_status_project == 1 && dataPro.vangia_typeid_project == 1
+                          where dataImg.position == 1 && dataPro.vangia_status_project == 1 && dataPro.vangia_typeid_project == 1 && dataPro.company==1
                           select new ProductsModel { tblProject = dataPro, tblPicture = dataImg }).ToList();
             return Json(qrData.Select(x => new
             {
@@ -78,7 +92,7 @@ namespace WebVanGia.Controllers
             var pageSize = 10;
             var qrData = (from dataPro in dbadmin.web_vangia_project
                           join dataImg in dbadmin.tblSysPictures on dataPro.vangia_id_project equals dataImg.advert_id
-                          where dataImg.position == 1 && dataPro.vangia_status_project == 1 && dataPro.vangia_typeid_project == 1
+                          where dataImg.position == 1 && dataPro.vangia_status_project == 1 && dataPro.vangia_typeid_project == 1 && dataPro.company == 1
                           select new ProductsModel { tblProject = dataPro, tblPicture = dataImg }).ToList();
             return View(qrData.ToList().ToPagedList(pagenum, pageSize));
         }
@@ -88,7 +102,7 @@ namespace WebVanGia.Controllers
             var pageSize = 10;
             var qrData = (from dataPro in dbadmin.web_vangia_project
                           join dataImg in dbadmin.tblSysPictures on dataPro.vangia_id_project equals dataImg.advert_id
-                          where dataImg.position == 1 && dataPro.vangia_status_project == 1 && dataPro.vangia_typeid_project == 1
+                          where dataImg.position == 1 && dataPro.vangia_status_project == 1 && dataPro.vangia_typeid_project == 1 && dataPro.company == 1
                           select new ProductsModel { tblProject = dataPro, tblPicture = dataImg }).ToList();
             return PartialView("Trade", qrData.ToList().ToPagedList(pagenum, pageSize));
         }
@@ -115,7 +129,7 @@ namespace WebVanGia.Controllers
             var urlLink = ConfigurationManager.AppSettings["domainvg"];
         
 
-            var data = dbadmin.web_vangia_silde.OrderBy(x => x.vangia_order_silde).Take(10).ToList().Select(x=>new SliderModel
+            var data = dbadmin.web_vangia_silde.OrderBy(x => x.vangia_order_silde).Where(x=>x.company==1).Take(10).ToList().Select(x=>new SliderModel
             {
                 vangia_id_silde=x.vangia_id_silde,
                 vangia_img_silde=x.vangia_img_silde,

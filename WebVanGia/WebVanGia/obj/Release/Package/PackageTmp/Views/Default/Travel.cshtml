@@ -37,7 +37,7 @@
                                                         <div class="row">
                                                             <div class="span12 module_number_2 module_cont pb20 module_gallery">
                                                                 <div class="list-of-images images_in_a_row_3">
-                                                                    @foreach (var item in dbadmin.web_vangia_project.Where(x => x.vangia_typeid_project == 31).OrderByDescending(x => x.vangia_id_project).Skip(1).Take(1))
+                                                                    @foreach (var item in dbadmin.web_vangia_project.Where(x => x.vangia_typeid_project == 31).OrderByDescending(x => Guid.NewGuid()).ToList().Skip(1).Take(1).ToList())
                                                                     {
                                                                         <div class="gallery_item ">
                                                                             <div class="pf_output_container">
@@ -66,7 +66,7 @@
 
                                                                     }
 
-                                                                    @foreach (var item in dbadmin.web_vangia_project.Where(x => x.vangia_typeid_project == 31).OrderByDescending(x => x.vangia_id_project).Skip(2).Take(1))
+                                                                    @foreach (var item in dbadmin.web_vangia_project.Where(x => x.vangia_typeid_project == 31).OrderByDescending(x => Guid.NewGuid()).ToList().Skip(2).Take(1).ToList())
                                                                     {
                                                                         <div class="gallery_item ">
                                                                             <div class="pf_output_container">
@@ -94,7 +94,7 @@
                                                                         </div>
 
                                                                     }
-                                                                    @foreach (var item in dbadmin.web_vangia_project.Where(x => x.vangia_typeid_project == 31).OrderByDescending(x => x.vangia_id_project).Skip(3).Take(1))
+                                                                    @foreach (var item in dbadmin.web_vangia_project.Where(x => x.vangia_typeid_project == 31).OrderByDescending(x => Guid.NewGuid()).ToList().Skip(3).Take(1).ToList())
                                                                     {
                                                                         <div class="gallery_item ">
                                                                             <div class="pf_output_container">
@@ -140,11 +140,11 @@
                                         </div>
                                     </div>
                                     <div class="dn"></div>
-                                    <div class="row">
+                                    @*<div class="row">
                                         <div class="span12 module_cont module_blog module_none_padding module_blog_page">
                                             <div class="blog_post_page">
                                                
-                                                @foreach (var item in dbadmin.web_vangia_project.Where(x => x.vangia_typeid_project == 31).OrderByDescending(x => x.vangia_id_project).Skip(4).Take(1))
+                                                @foreach (var item in dbadmin.web_vangia_project.Where(x => x.vangia_typeid_project == 31).OrderByDescending(x => Guid.NewGuid()).ToList().Skip(4).Take(1).ToList())
                                                 {
                                                     <a href="@Url.Action("DetailProduct","Default",new { id=item.vangia_name_project.UrlFrendly()+"-"+item.vangia_id_project})">  <h2 class="">@item.vangia_name_project</h2></a>
                                                     <div class="pf_output_container">
@@ -162,7 +162,7 @@
 
 
                                         </div>
-                                    </div>
+                                    </div>*@
 
                                 </div><!-- .contentarea -->
                             </div>

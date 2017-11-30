@@ -1,0 +1,207 @@
+﻿@using WebTravel.Models
+@using System.Configuration
+@{
+    ViewBag.Title = "Travel";
+    Layout = "~/Views/Shared/_LayoutWeb.cshtml";
+    WebTravelEntities dbadmin = new WebTravelEntities();
+}
+<div class="site_wrapper">
+    <div class="main_wrapper">
+        <div class="content_wrapper">
+            <div class="container simple-post-container">
+                <div class="content_block no-sidebar row">
+                    <div class="fl-container ">
+                        <div class="row">
+                            <div class="posts-block simple-post ">
+                                <div class="contentarea">
+                                    <div class="row">
+                                        <div class="span12 module_cont module_blog module_none_padding module_blog_page">
+                                            <div class="blog_post_page">
+
+
+                                                <div class="pf_output_container">
+                                                    <div class="slider-wrapper theme-default">
+                                                        <div class="">
+                                                            <iframe width="560" height="415" src="https://www.youtube.com/embed/Rs5R6SOhAgs" frameborder="0" allowfullscreen></iframe>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="blog_post_content">
+                                                    <article class="contentarea">
+                                                        <div class="single_post_top">
+                                                            <h1 class="blogpost_title">TOUR DU LỊCH</h1>
+
+                                                        </div>
+
+                                                        <div class="row">
+                                                            <div class="span12 module_number_2 module_cont pb20 module_gallery">
+                                                                <div class="list-of-images images_in_a_row_3">
+                                                                    @foreach (var item in dbadmin.web_vangia_project.Where(x => x.vangia_typeid_project == 31).OrderByDescending(x => x.vangia_id_project).Skip(1).Take(1))
+                                                                    {
+                                                                        <div class="gallery_item ">
+                                                                            <div class="pf_output_container">
+                                                                                <div class="slider-wrapper theme-default">
+                                                                                    <div class="gallery_item_padding">
+                                                                                        <div class="gallery_item_wrapper">
+                                                                                            <a href="@Url.Action("DetailProduct","Home",new { id=item.vangia_name_project.UrlFrendly()+"-"+item.vangia_id_project})">  <h2 class="">@item.vangia_name_project</h2></a>
+                                                                                            <div class="pf_output_container">
+                                                                                                <div class="slider-wrapper theme-default">
+                                                                                                    <div class="nivoSlider">
+                                                                                                        @foreach (var itemPic in dbadmin.tblSysPictures.Where(x => x.advert_id == item.vangia_id_project))
+                                                                                                        {
+                                                                                                            <img src="@(ConfigurationManager.AppSettings["domainvg"] +  (itemPic.originalFilepath!=null?( itemPic.originalFilepath.Split('_')[0] +"/"+ itemPic.originalFilepath) :"img.png"))" alt="" />
+                                                                                                        }
+                                                                                                        
+
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+
+                                                                    }
+
+                                                                    @foreach (var item in dbadmin.web_vangia_project.Where(x => x.vangia_typeid_project == 31).OrderByDescending(x => x.vangia_id_project).Skip(2).Take(1))
+                                                                    {
+                                                                        <div class="gallery_item ">
+                                                                            <div class="pf_output_container">
+                                                                                <div class="slider-wrapper theme-default">
+                                                                                    <div class="gallery_item_padding">
+                                                                                        <div class="gallery_item_wrapper">
+                                                                                            <a href="@Url.Action("DetailProduct","Home",new { id=item.vangia_name_project.UrlFrendly()+"-"+item.vangia_id_project})">  <h2 class="">@item.vangia_name_project</h2></a>
+                                                                                            <div class="pf_output_container">
+                                                                                                <div class="slider-wrapper theme-default">
+                                                                                                    <div class="nivoSlider">
+                                                                                                        @foreach (var itemPic in dbadmin.tblSysPictures.Where(x => x.advert_id == item.vangia_id_project))
+                                                                                                        {
+                                                                                                            <img src="@(ConfigurationManager.AppSettings["domainvg"] +  (itemPic.originalFilepath!=null?( itemPic.originalFilepath.Split('_')[0] +"/"+ itemPic.originalFilepath) :"img.png"))" alt="" />
+                                                                                                        }
+
+
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+
+                                                                    }
+                                                                    @foreach (var item in dbadmin.web_vangia_project.Where(x => x.vangia_typeid_project == 31).OrderByDescending(x => x.vangia_id_project).Skip(3).Take(1))
+                                                                    {
+                                                                        <div class="gallery_item ">
+                                                                            <div class="pf_output_container">
+                                                                                <div class="slider-wrapper theme-default">
+                                                                                    <div class="gallery_item_padding">
+                                                                                        <div class="gallery_item_wrapper">
+                                                                                           
+                                                                                            <a href="@Url.Action("DetailProduct","Home",new { id=item.vangia_name_project.UrlFrendly()+"-"+item.vangia_id_project})">  <h2 class="">@item.vangia_name_project</h2></a>
+                                                                                            <div class="pf_output_container">
+                                                                                                <div class="slider-wrapper theme-default">
+                                                                                                    <div class="nivoSlider">
+                                                                                                        @foreach (var itemPic in dbadmin.tblSysPictures.Where(x => x.advert_id == item.vangia_id_project))
+                                                                                                        {
+                                                                                                            <img src="@(ConfigurationManager.AppSettings["domainvg"] +  (itemPic.originalFilepath!=null?( itemPic.originalFilepath.Split('_')[0] +"/"+ itemPic.originalFilepath) :"img.png"))" alt="" />
+                                                                                                        }
+                                                                                                        
+
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+
+                                                                    }
+
+
+
+                                                                    <div class="clear"></div>
+                                                                </div>
+                                                            </div><!-- .module_cont -->
+                                                        </div>
+
+                                                    </article>
+                                                </div>
+                                            </div>
+                                            <!--.blog_post_page -->
+
+
+                                        </div>
+                                    </div>
+                                    <div class="dn"></div>
+                                    <div class="row">
+                                        <div class="span12 module_cont module_blog module_none_padding module_blog_page">
+                                            <div class="blog_post_page">
+                                               
+                                                @foreach (var item in dbadmin.web_vangia_project.Where(x => x.vangia_typeid_project == 31).OrderByDescending(x => x.vangia_id_project).Skip(4).Take(1))
+                                                {
+                                                    <a href="@Url.Action("DetailProduct","Home",new { id=item.vangia_name_project.UrlFrendly()+"-"+item.vangia_id_project})">  <h2 class="">@item.vangia_name_project</h2></a>
+                                                    <div class="pf_output_container">
+                                                        <div class="slider-wrapper theme-default">
+                                                            <div class="nivoSlider">
+                                                                @foreach (var itemPic in dbadmin.tblSysPictures.Where(x => x.advert_id == item.vangia_id_project))
+                                                                {
+                                                                    <img src="@(ConfigurationManager.AppSettings["domainvg"] +  (itemPic.originalFilepath!=null?( itemPic.originalFilepath.Split('_')[0] +"/"+ itemPic.originalFilepath) :"img.png"))" alt="" width="570" height="368" />
+                                                                }
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                }
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+
+                                </div><!-- .contentarea -->
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div><!-- .fl-container -->
+                    <div class="clear"></div>
+                </div>
+            </div><!-- .container -->
+        </div><!-- .content_wrapper -->
+    </div><!-- .main_wrapper -->
+</div>
+
+@Scripts.Render("~/bundles/jquery")
+<script>
+    jQuery(document).ready(function () {
+        "use strict";
+        jQuery('.commentlist').find('li').each(function () {
+            if (jQuery(this).find('ul').size() > 0) {
+                jQuery(this).addClass('has_ul');
+            }
+        });
+        jQuery('.form-allowed-tags').width(jQuery('#commentform').width() - jQuery('.form-submit').width() - 13);
+        jQuery('.comment-reply-link').click(function () {
+            jQuery('.form-allowed-tags').width(jQuery('#commentform').width() - jQuery('.form-submit').width() - 13);
+        });
+
+        jQuery('.pf_output_container').each(function () {
+            if (jQuery(this).html() == '') {
+                jQuery(this).parents('.blog_post_page').addClass('no_pf');
+            } else {
+                jQuery(this).parents('.blog_post_page').addClass('has_pf');
+            }
+        });
+    });
+    jQuery(window).resize(function () {
+        "use strict";
+        jQuery('.form-allowed-tags').width(jQuery('#commentform').width() - jQuery('.form-submit').width() - 13);
+    });
+</script>
+@*<script src="~/Template/js/jquery.isotope.min.js"></script>
+    <script src="~/Template/js/sorting.js"></script>*@

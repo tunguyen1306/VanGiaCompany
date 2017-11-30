@@ -1,0 +1,257 @@
+﻿@{
+    ViewBag.Title = "Math";
+    Layout = "~/Views/Shared/_LayoutWeb.cshtml";
+    WebTravelEntities dbadmin = new WebTravelEntities();
+    var data = dbadmin.tblMath_vangia.ToList();
+}
+@using WebVanGia.Models
+@using System.Configuration
+@using WebTravel.Models
+@model WebVanGia.Models.tblMath_vangia
+
+<div class="site_wrapper">
+    <div class="main_wrapper">
+        <div class="content_wrapper">
+            <div class="container">
+                <div class="content_block row no-sidebar">
+                    <div class="fl-container">
+                        <div class="row">
+                            <div class="posts-block">
+                                <div class="contentarea">
+                                    <div class="row">
+                                        <div class="span12 first-module module_number_1 module_cont pb20 module_content">
+                                            <div class="module_content">
+                                                <h1>CHI PHÍ DỰ KIẾN</h1>
+                                            </div>
+                                        </div><!-- .module_cont -->
+                                    </div>
+                                    @*<div class="row clShow hidden">
+
+
+
+                                        </div>*@
+                                    <div class="row">
+                                        <div class="span6 module_number_2 module_cont pb0 module_html">
+                                            <div class="module_content contact_form">
+                                                <div id="note"></div>
+                                                <div id="fields">
+                                                    <form id="ajax-contact-form" action="#">
+                                                        <p class="form-submit">
+                                                            <label>Công Trình</label>
+                                                            @Html.DropDownListFor(x => x.ValueMath,
+                               new SelectList(data.Where(x => x.TypeMath == 1), "ValueMath", "NameMath"), "Chọn công trình",
+                                new { @class = "form-control form_field dropLoaiCongTrinh" })
+                                                        </p>
+
+                                                        <p class="form-submit">
+                                                            <label>Loại mặt tiền</label>
+                                                            @Html.DropDownListFor(x => x.ValueMath,
+                               new SelectList(data.Where(x => x.TypeMath == 2), "ValueMath", "NameMath"), "Chọn loại mặt tiền",
+                                new { @class = "form-control form_field dropMatTien" })
+                                                        </p>
+                                                        <p class="form-submit">
+                                                            <label>Mức đầu tư</label>
+                                                            @Html.DropDownListFor(x => x.ValueMath,
+                               new SelectList(data.Where(x => x.TypeMath == 3), "ValueMath", "NameMath"), "Chọn mức đầu tư",
+                                new { @class = "form-control form_field dropDauTu" })
+                                                        </p>
+                                                        <p class="form-submit">
+                                                            <label>Loại móng</label>
+                                                            @Html.DropDownListFor(x => x.ValueMath,
+                               new SelectList(data.Where(x => x.TypeMath == 4), "ValueMath", "NameMath"), "Chọn loại móng",
+                                new { @class = "form-control form_field dropLoaiMong" })
+                                                        </p>
+                                                        <p class="form-submit">
+                                                            <label>Kiểu mái</label>
+                                                            @Html.DropDownListFor(x => x.ValueMath,
+                               new SelectList(data.Where(x => x.TypeMath == 5), "ValueMath", "NameMath"), "Chọn kiểu mái",
+                                new { @class = "form-control form_field dropKieuMai" })
+                                                        </p><p class="form-submit">
+                                                            <label>Lộ giới</label>
+                                                            @Html.DropDownListFor(x => x.ValueMath,
+                               new SelectList(data.Where(x => x.TypeMath == 6), "ValueMath", "NameMath"), "Chọn lộ giới",
+                                new { @class = "form-control form_field dropLoGioi" })
+                                                        </p><p class="form-submit">
+                                                            <label>Tầng hầm</label>
+                                                            @Html.DropDownListFor(x => x.ValueMath,
+                               new SelectList(data.Where(x => x.TypeMath == 7), "ValueMath", "NameMath"), "Chọn tầng hầm",
+                               new { @class = "form-control form_field dropTangHam" })
+                                                        </p>
+
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="span6 module_number_2 module_cont pb0 module_html">
+                                            <div class="module_content contact_form">
+                                                <div id="note"></div>
+                                                <div id="fields">
+                                                    <form id="ajax-contact-form" action="#">
+                                                        <p class="form-submit">
+                                                            <label>Chiều ngang</label>
+                                                            <input type="text" id="txtChieuNgang" class="form_field txtChieuNgang" />
+                                                        </p>
+
+                                                        <p class="form-submit">
+                                                            <label>Chiều dọc</label>
+                                                            <input type="text" id="txtChieuDoc" class="form_field txtChieuDoc" />
+                                                        </p>
+                                                        <p class="form-submit">
+                                                            <label>Số tầng</label>
+                                                            <input type="text" id="txtSoTang" class="form_field txtSoTang" />
+                                                        </p>
+
+                                                        <p class="form-submit">
+                                                            <input name="submit" type="button" class="btnTinhTien" id="submit" value="Tính tiền" />
+                                                            <input type="hidden" id="txtSoTien" class="txtSoTien" value="@data.Where(x=>x.TypeMath==8).Select(x=>x.ValueMath).FirstOrDefault()" />
+                                                            <input type="hidden" id="txtTyLe" class="txtTyLe" value="@data.Where(x=>x.TypeMath==9).Select(x=>x.ValueMath).FirstOrDefault()" />
+
+                                                        </p>
+                                                        <p class="form-submit">
+                                                            <label>Thành tiền</label>
+                                                            <input type="text" id="txtTongTien" disabled class="form_field txtTongTien" />
+                                                        </p>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@Scripts.Render("~/bundles/jquery")
+<script>
+    jQuery(document).ready(function () {
+        "use strict";
+        centerWindow();
+        body.addClass('centered_page');
+    });
+    jQuery(window).load(function () {
+        "use strict";
+        centerWindow();
+    });
+    jQuery(window).resize(function () {
+        "use strict";
+        centerWindow();
+        setTimeout('centerWindow()', 500);
+        setTimeout('centerWindow()', 1000);
+    });
+    function centerWindow() {
+        "use strict";
+        var setTop = (window_h - site_wrapper.height() - parseInt(site_wrapper.css('padding-top')) - parseInt(site_wrapper.css('padding-bottom'))) / 2;
+        var setLeft = (window_w - header_w - site_wrapper.width() - parseInt(site_wrapper.css('padding-right')) - parseInt(site_wrapper.css('padding-left'))) / 2 + header_w;
+        if (setTop < 0) {
+            site_wrapper.addClass('fixed');
+            site_wrapper.css({ 'top': 0 + 'px', 'margin-left': setLeft + 'px' });
+        } else {
+            site_wrapper.css({ 'top': setTop + 'px', 'margin-left': setLeft + 'px' });
+            site_wrapper.removeClass('fixed');
+            jQuery('body').removeClass('addPadding');
+        }
+    }
+
+
+    jQuery('.btnTinhTien').click(function () {
+        var t = 0;
+        var a = jQuery(".dropLoaiCongTrinh option:selected").val();
+        var b = jQuery(".dropMatTien option:selected").val();
+        var c = jQuery(".dropDauTu option:selected").val();
+        var d = jQuery(".dropLoaiMong option:selected").val();
+        var e = jQuery(".dropKieuMai option:selected").val();
+        var f = jQuery(".dropLoGioi option:selected").val();
+        var g = jQuery(".dropTangHam option:selected").val();
+        var h = jQuery(".txtSoTien").val();
+        var i = jQuery(".txtChieuNgang").val();
+        var j = jQuery(".txtChieuDoc").val();
+        var k = jQuery(".txtSoTang").val();
+        var w = jQuery(".txtTyLe").val();
+        if (a == "") {
+
+            alert('-Chọn Loại công trình');
+            t++
+        }
+
+
+        if (b == "") {
+            alert('-Chọn Loại mặt tiền');
+
+            t++
+
+        }
+
+        if (c == "") {
+
+            alert('-Chọn Loại đầu tư');
+            t++
+        }
+        if (d == "") {
+            alert('-Chọn Loại móng');
+            t++
+        }
+        if (e == "") {
+            alert('-Chọn kiểu mái');
+            t++
+        }
+        if (f == "") {
+            alert('-Chọn Lộ giới');
+            t++
+        }
+        if (g == "") {
+            alert('-Chọn tầng hầm');
+            t++
+        }
+        if (h == "") {
+            t++
+        }
+        if (i == "") {
+            alert('-Chiều ngang không được rỗng');
+            t++
+        }
+        if (j == "") {
+            alert('-Chiều dài không được rỗng');
+            t++
+        }
+        if (k == "") {
+            alert('-Số tầng không được rỗng');
+            t++
+        }
+        if (t == 0) {
+
+            var k1 = parseInt(k) + 1.5
+            var total = ((a * b * c * d * e * f * g * h * i * j * k1) / 1000000).toFixed(0);
+            //var tu=0;
+            //if (total.length>6) {
+            //    tu= total.substr(0, total.length - 6)
+            //} else {
+            //    tu = total;
+            //}
+
+            var y = total * 30 / 100
+            var totalall = tien(total);
+            jQuery('.txtTongTien').val(totalall + ',000,000đ');
+            //$('.txtNhanCong').html(tien(y));
+        }
+
+    });
+    function tien(val) {
+
+        if (val != null) {
+
+            while (/(\d+)(\d{3})/.test(val.toString())) {
+                val = val.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+            }
+            return val;
+        }
+        else {
+            return '';
+        }
+
+    }
+</script> 

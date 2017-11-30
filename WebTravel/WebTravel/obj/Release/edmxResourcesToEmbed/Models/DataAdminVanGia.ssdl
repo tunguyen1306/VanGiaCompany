@@ -1,0 +1,1749 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DataAdminvanGiaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ctr_in_form">
+    <Key>
+      <PropertyRef Name="id_ctr_in_form" />
+    </Key>
+    <Property Name="id_ctr" Type="int" Nullable="false" />
+    <Property Name="id_form" Type="int" Nullable="false" />
+    <Property Name="order_ctr" Type="int" Nullable="false" />
+    <Property Name="ctr_client_id" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ctr_store" Type="nvarchar" MaxLength="200" />
+    <Property Name="ctr_name" Type="nvarchar" MaxLength="200" />
+    <Property Name="id_ctr_in_form" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ctr_placeholder" Type="nvarchar" MaxLength="200" />
+    <Property Name="ctr_name_us" Type="nvarchar" MaxLength="200" />
+    <Property Name="ctr_placeholder_us" Type="nvarchar" MaxLength="200" />
+    <Property Name="ctr_parent_active" Type="nvarchar" MaxLength="50" />
+    <Property Name="ctr_effect_show" Type="nvarchar" MaxLength="50" />
+    <Property Name="ctr_query_data" Type="ntext" />
+    <Property Name="ctr_require_validate" Type="bit" />
+    <Property Name="ctr_require_validate_rex" Type="nvarchar" MaxLength="250" />
+    <Property Name="ctr_require_validate_mess" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="ctr_steel">
+    <Key>
+      <PropertyRef Name="id_ctr" />
+    </Key>
+    <Property Name="ctr_name" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="ctr_request_default" Type="nvarchar" MaxLength="500" />
+    <Property Name="ctr_page_name" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="ctr_type" Type="int" Nullable="false" />
+    <Property Name="id_ctr" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ctr_client_id" Type="nvarchar" MaxLength="50" />
+    <Property Name="id_project" Type="int" />
+    <Property Name="ctr_des" Type="ntext" />
+    <Property Name="ctr_store_default" Type="nvarchar" MaxLength="200" />
+    <Property Name="ctr_placeholder" Type="nvarchar" MaxLength="200" />
+    <Property Name="ctr_placeholder_us" Type="nvarchar" MaxLength="200" />
+    <Property Name="ctr_name_us" Type="nvarchar" MaxLength="200" />
+    <Property Name="ctr_code_js" Type="ntext" />
+    <Property Name="ctr_img" Type="nvarchar" MaxLength="200" />
+    <Property Name="ctr_require_validate" Type="bit" />
+    <Property Name="ctr_require_validate_rex" Type="nvarchar" MaxLength="250" />
+    <Property Name="ctr_require_validate_mess" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="form_steel">
+    <Key>
+      <PropertyRef Name="id_form" />
+    </Key>
+    <Property Name="id_form" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="form_name" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="id_project" Type="int" />
+    <Property Name="form_grid_view" Type="nvarchar" MaxLength="200" />
+    <Property Name="form_name_us" Type="nvarchar" MaxLength="500" />
+    <Property Name="form_view_store" Type="int" />
+    <Property Name="form_grid_chart" Type="nvarchar" MaxLength="200" />
+    <Property Name="form_grid_form" Type="nvarchar" MaxLength="200" />
+    <Property Name="form_db" Type="int" />
+    <Property Name="fs_table_name" Type="nvarchar" MaxLength="200" />
+    <Property Name="fs_store_c_u_d_s" Type="nvarchar" MaxLength="200" />
+    <Property Name="fs_script_page_load" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="form_store">
+    <Key>
+      <PropertyRef Name="id_form_store" />
+    </Key>
+    <Property Name="id_form_store" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="form_store_code" Type="nvarchar" MaxLength="200" />
+    <Property Name="form_store_type" Type="int" />
+    <Property Name="form_store_admin" Type="int" />
+  </EntityType>
+  <EntityType Name="form_store_para">
+    <Key>
+      <PropertyRef Name="id_store_para" />
+    </Key>
+    <Property Name="id_store_para" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="store_para_name" Type="nvarchar" MaxLength="200" />
+    <Property Name="store_para_type" Type="int" />
+    <Property Name="id_form_store" Type="int" />
+  </EntityType>
+  <EntityType Name="fs_auth">
+    <Key>
+      <PropertyRef Name="auth_id" />
+    </Key>
+    <Property Name="auth_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="auth_name" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="fs_manga">
+    <Key>
+      <PropertyRef Name="manga_id" />
+    </Key>
+    <Property Name="manga_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="manga_name" Type="nvarchar" MaxLength="250" />
+    <Property Name="manga_key" Type="nvarchar" MaxLength="250" />
+    <Property Name="type_id" Type="bigint" />
+    <Property Name="manga_des" Type="ntext" />
+    <Property Name="manga_img" Type="nvarchar" MaxLength="500" />
+    <Property Name="manga_view" Type="int" />
+    <Property Name="manga_status" Type="int" />
+    <Property Name="manga_create" Type="datetime" />
+    <Property Name="auth_id" Type="bigint" />
+  </EntityType>
+  <EntityType Name="fs_manga_chap">
+    <Key>
+      <PropertyRef Name="chap_id" />
+    </Key>
+    <Property Name="chap_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="manga_id" Type="bigint" />
+    <Property Name="chap_name" Type="nvarchar" MaxLength="250" />
+    <Property Name="chap_orther" Type="int" />
+    <Property Name="chap_create" Type="datetime" />
+    <Property Name="chap_key" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'nhvanxol_dulichbautrang.dbo.fs_manga_img' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="fs_manga_img">
+    <Key>
+      <PropertyRef Name="img_orther" />
+    </Key>
+    <Property Name="chap_id" Type="bigint" />
+    <Property Name="img_orther" Type="int" Nullable="false" />
+    <Property Name="img_link" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="fs_manga_tag">
+    <Key>
+      <PropertyRef Name="tag_id" />
+    </Key>
+    <Property Name="tag_id" Type="bigint" Nullable="false" />
+    <Property Name="manga_id" Type="bigint" />
+    <Property Name="tag_view" Type="int" />
+  </EntityType>
+  <EntityType Name="fs_manga_type">
+    <Key>
+      <PropertyRef Name="type_id" />
+    </Key>
+    <Property Name="type_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="type_name" Type="nvarchar" MaxLength="250" />
+    <Property Name="type_key" Type="nvarchar" MaxLength="250" />
+    <Property Name="type_orther" Type="int" />
+    <Property Name="type_status" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'nhvanxol_dulichbautrang.dbo.grid_view_mapping' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="grid_view_mapping">
+    <Key>
+      <PropertyRef Name="id_mapped" />
+    </Key>
+    <Property Name="id_mapped" Type="int" Nullable="false" />
+    <Property Name="id_ctr_name" Type="nvarchar" MaxLength="200" />
+    <Property Name="orther" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'nhvanxol_dulichbautrang.dbo.log_store_prod' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="log_store_prod">
+    <Key>
+      <PropertyRef Name="id_store_prod" />
+      <PropertyRef Name="store_prod_name" />
+      <PropertyRef Name="store_prod_code" />
+      <PropertyRef Name="store_prod_img" />
+      <PropertyRef Name="store_prod_count" />
+      <PropertyRef Name="store_prod_cost" />
+      <PropertyRef Name="store_prod_cost_sell" />
+      <PropertyRef Name="store_prod_shelf" />
+      <PropertyRef Name="log_sell" />
+      <PropertyRef Name="id_store_cate" />
+      <PropertyRef Name="store_cate_name" />
+      <PropertyRef Name="id_store_unit" />
+      <PropertyRef Name="store_unit_name" />
+      <PropertyRef Name="id_store" />
+      <PropertyRef Name="store_name" />
+      <PropertyRef Name="id_store_stock" />
+      <PropertyRef Name="store_stock_code" />
+      <PropertyRef Name="id_store_slot" />
+      <PropertyRef Name="store_slot_code" />
+    </Key>
+    <Property Name="id_store_prod" Type="int" Nullable="false" />
+    <Property Name="store_prod_name" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="store_prod_code" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="store_prod_img" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="store_prod_count" Type="int" Nullable="false" />
+    <Property Name="store_prod_cost" Type="int" Nullable="false" />
+    <Property Name="store_prod_cost_sell" Type="int" Nullable="false" />
+    <Property Name="store_prod_shelf" Type="int" Nullable="false" />
+    <Property Name="log_sell" Type="datetime" Nullable="false" />
+    <Property Name="id_store_cate" Type="int" Nullable="false" />
+    <Property Name="store_cate_name" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="id_store_unit" Type="int" Nullable="false" />
+    <Property Name="store_unit_name" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="id_store" Type="int" Nullable="false" />
+    <Property Name="store_name" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="id_store_stock" Type="int" Nullable="false" />
+    <Property Name="store_stock_code" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="id_store_slot" Type="int" Nullable="false" />
+    <Property Name="store_slot_code" Type="nvarchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mar_project">
+    <Key>
+      <PropertyRef Name="mar_project_name" />
+    </Key>
+    <Property Name="id_mar_project" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="mar_project_name" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="mar_project_status" Type="int" />
+    <Property Name="mar_project_begin" Type="datetime" Nullable="false" />
+    <Property Name="mar_project_end" Type="datetime" Nullable="false" />
+    <Property Name="mar_project_sell_off" Type="int" />
+    <Property Name="mar_project_sell_type" Type="int" />
+  </EntityType>
+  <EntityType Name="pct_department">
+    <Key>
+      <PropertyRef Name="id_department" />
+    </Key>
+    <Property Name="id_department" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="department_name" Type="nvarchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pct_employee">
+    <Key>
+      <PropertyRef Name="id_employee" />
+    </Key>
+    <Property Name="id_employee" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_title" Type="int" Nullable="false" />
+    <Property Name="employee_name" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="employee_address" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="employee_mobile" Type="nvarchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pct_ticket">
+    <Key>
+      <PropertyRef Name="id_ticket" />
+    </Key>
+    <Property Name="id_ticket" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_employee" Type="int" Nullable="false" />
+    <Property Name="ticket_fromdate" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="ticket_todate" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="ticket_money" Type="int" Nullable="false" />
+    <Property Name="ticket_add" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="ticket_note" Type="nvarchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pct_title">
+    <Key>
+      <PropertyRef Name="id_title" />
+    </Key>
+    <Property Name="id_title" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_department" Type="int" Nullable="false" />
+    <Property Name="title_name" Type="nvarchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <EntityType Name="project_steel">
+    <Key>
+      <PropertyRef Name="id_project" />
+    </Key>
+    <Property Name="id_project" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="project_name" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="project_status" Type="int" />
+    <Property Name="project_des" Type="ntext" />
+  </EntityType>
+  <EntityType Name="so_orther">
+    <Key>
+      <PropertyRef Name="so_id" />
+    </Key>
+    <Property Name="so_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="so_code" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="so_date" Type="datetime" />
+    <Property Name="so_user_id" Type="int" Nullable="false" />
+    <Property Name="so_sms_status" Type="int" />
+    <Property Name="so_fullname" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="so_email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="so_phone_number" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="so_address" Type="nvarchar" MaxLength="500" Nullable="false" />
+  </EntityType>
+  <EntityType Name="so_orther_detail">
+    <Key>
+      <PropertyRef Name="so_orther_id" />
+      <PropertyRef Name="so_prod_id" />
+    </Key>
+    <Property Name="so_orther_id" Type="int" Nullable="false" />
+    <Property Name="so_prod_id" Type="int" Nullable="false" />
+    <Property Name="so_prod_count_id" Type="int" Nullable="false" />
+    <Property Name="so_prod_price" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="so_prod_image_detail">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="so_image" Type="nvarchar" MaxLength="250" />
+    <Property Name="so_orther" Type="int" />
+    <Property Name="so_id_prod" Type="int" />
+  </EntityType>
+  <EntityType Name="store_">
+    <Key>
+      <PropertyRef Name="store_name" />
+    </Key>
+    <Property Name="id_store" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="store_name" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="store_ads" Type="nvarchar" MaxLength="200" />
+    <Property Name="store_phone" Type="nvarchar" MaxLength="200" />
+    <Property Name="store_des" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="store_cate">
+    <Key>
+      <PropertyRef Name="store_cate_name" />
+    </Key>
+    <Property Name="id_store_cate" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="store_cate_name" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="store_cate_order" Type="int" />
+    <Property Name="store_cate_status" Type="int" />
+    <Property Name="store_cate_key" Type="nvarchar" MaxLength="200" />
+    <Property Name="store_cate_img" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="store_com_ship">
+    <Key>
+      <PropertyRef Name="id_store_com_ship" />
+    </Key>
+    <Property Name="id_store_com_ship" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="store_com_type">
+    <Key>
+      <PropertyRef Name="id_store_com_type" />
+    </Key>
+    <Property Name="id_store_com_type" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="type_name" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="store_company">
+    <Key>
+      <PropertyRef Name="id_store_company" />
+    </Key>
+    <Property Name="id_store_company" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="company_name" Type="nvarchar" MaxLength="200" />
+    <Property Name="company_code" Type="nvarchar" MaxLength="200" />
+    <Property Name="company_address" Type="nvarchar" MaxLength="200" />
+    <Property Name="company_phone" Type="nvarchar" MaxLength="200" />
+    <Property Name="company_email" Type="nvarchar" MaxLength="200" />
+    <Property Name="company_website" Type="nvarchar" MaxLength="200" />
+    <Property Name="company_logo" Type="nvarchar" MaxLength="200" />
+    <Property Name="company_des" Type="nvarchar" MaxLength="200" />
+    <Property Name="id_store_com_type" Type="int" />
+    <Property Name="company_fax" Type="nvarchar" MaxLength="200" />
+    <Property Name="company_bank" Type="nvarchar" MaxLength="200" />
+    <Property Name="company_bank_ads" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="store_contact">
+    <Key>
+      <PropertyRef Name="id_store_contact" />
+    </Key>
+    <Property Name="id_store_contact" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_store_company" Type="int" />
+    <Property Name="contact_full_name" Type="nvarchar" MaxLength="200" />
+    <Property Name="contact_chat" Type="nvarchar" MaxLength="200" />
+    <Property Name="contact_mobile" Type="nvarchar" MaxLength="200" />
+    <Property Name="contact_title" Type="nvarchar" MaxLength="200" />
+    <Property Name="contact_ext" Type="nvarchar" MaxLength="200" />
+    <Property Name="contact_email" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="store_exp">
+    <Key>
+      <PropertyRef Name="id_store_exp" />
+    </Key>
+    <Property Name="id_store_exp" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="store_exp_name" Type="nvarchar" MaxLength="200" />
+    <Property Name="store_exp_list_data" Type="nvarchar" MaxLength="200" />
+    <Property Name="store_exp_creater" Type="int" />
+    <Property Name="store_exp_checker" Type="int" />
+    <Property Name="store_exp_cost" Type="int" />
+  </EntityType>
+  <EntityType Name="store_imp">
+    <Key>
+      <PropertyRef Name="id_store_imp" />
+    </Key>
+    <Property Name="id_store_imp" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="store_imp_name" Type="nvarchar" MaxLength="200" />
+    <Property Name="store_imp_checker" Type="int" />
+    <Property Name="store_imp_creater" Type="int" />
+    <Property Name="store_imp_list_data" Type="nvarchar" MaxLength="200" />
+    <Property Name="store_imp_store" Type="int" />
+  </EntityType>
+  <EntityType Name="store_prod">
+    <Key>
+      <PropertyRef Name="store_prod_code" />
+    </Key>
+    <Property Name="id_store_prod" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="store_prod_name" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="id_store_unit" Type="int" Nullable="false" />
+    <Property Name="store_prod_img" Type="nvarchar" MaxLength="200" />
+    <Property Name="store_prod_code" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="id_store_cate" Type="int" />
+    <Property Name="store_prod_cost" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="store_prod_sku">
+    <Key>
+      <PropertyRef Name="id_store_prod" />
+      <PropertyRef Name="id_prod_sku" />
+    </Key>
+    <Property Name="id_store_prod_sku" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_store_prod" Type="int" Nullable="false" />
+    <Property Name="sku_count" Type="int" Nullable="false" />
+    <Property Name="id_prod_sku" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="store_slot">
+    <Key>
+      <PropertyRef Name="store_slot_code" />
+    </Key>
+    <Property Name="id_store_slot" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_store" Type="int" />
+    <Property Name="store_slot_code" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="id_store_stock" Type="int" />
+    <Property Name="store_slot_contain" Type="int" />
+  </EntityType>
+  <EntityType Name="store_stock">
+    <Key>
+      <PropertyRef Name="store_stock_code" />
+    </Key>
+    <Property Name="id_store_stock" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="store_stock_code" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="store_stock_status" Type="int" />
+    <Property Name="store_stock_store" Type="int" />
+  </EntityType>
+  <EntityType Name="store_unit">
+    <Key>
+      <PropertyRef Name="store_unit_name" />
+    </Key>
+    <Property Name="id_store_unit" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="store_unit_name" Type="nvarchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sys_company">
+    <Key>
+      <PropertyRef Name="id_company" />
+    </Key>
+    <Property Name="id_company" Type="int" Nullable="false" />
+    <Property Name="company_name" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'nhvanxol_dulichbautrang.dbo.sys_data_fixed' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="sys_data_fixed">
+    <Key>
+      <PropertyRef Name="ctr_client_id" />
+    </Key>
+    <Property Name="ctr_client_id" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="record_order" Type="int" />
+    <Property Name="st_value" Type="nvarchar" MaxLength="200" />
+    <Property Name="st_name" Type="nvarchar" MaxLength="200" />
+    <Property Name="st_parent" Type="nvarchar" MaxLength="200" />
+    <Property Name="ctr_key_query" Type="nvarchar" MaxLength="200" />
+    <Property Name="id_form" Type="int" />
+  </EntityType>
+  <EntityType Name="sys_fs_help">
+    <Key>
+      <PropertyRef Name="id_fs_help" />
+    </Key>
+    <Property Name="id_fs_help" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fs_help_name" Type="nvarchar" MaxLength="200" />
+    <Property Name="fs_help_content" Type="ntext" />
+  </EntityType>
+  <EntityType Name="sys_gridview_control">
+    <Key>
+      <PropertyRef Name="table_name" />
+      <PropertyRef Name="column_name" />
+    </Key>
+    <Property Name="table_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="column_name" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="column_caption" Type="nvarchar" MaxLength="250" />
+    <Property Name="column_key" Type="bit" />
+    <Property Name="column_edit" Type="bit" />
+  </EntityType>
+  <EntityType Name="sys_group_page">
+    <Key>
+      <PropertyRef Name="id_group_page" />
+    </Key>
+    <Property Name="id_group_page" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="group_page_name" Type="nvarchar" MaxLength="200" />
+    <Property Name="group_page_status" Type="int" />
+    <Property Name="group_page_order" Type="int" />
+    <Property Name="group_page_icon" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="sys_info">
+    <Key>
+      <PropertyRef Name="id_sys_info" />
+    </Key>
+    <Property Name="id_sys_info" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sys_info_name" Type="nvarchar" MaxLength="200" />
+    <Property Name="sys_info_des" Type="ntext" />
+    <Property Name="sys_info_key" Type="int" />
+  </EntityType>
+  <EntityType Name="sys_mapped_col">
+    <Key>
+      <PropertyRef Name="id_mapped_col" />
+    </Key>
+    <Property Name="id_mapped_col" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_mapped" Type="int" />
+    <Property Name="mapped_col_name" Type="nvarchar" MaxLength="200" />
+    <Property Name="mapped_col_type" Type="nvarchar" MaxLength="50" />
+    <Property Name="mapped_col_key" Type="int" />
+    <Property Name="mapped_col_code" Type="nvarchar" MaxLength="200" />
+    <Property Name="mapped_col_order" Type="int" />
+  </EntityType>
+  <EntityType Name="sys_mapped_join">
+    <Key>
+      <PropertyRef Name="id_mapped_join" />
+    </Key>
+    <Property Name="id_mapped_join" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="mapped_table_parent" Type="int" />
+    <Property Name="referencedTableName" Type="int" />
+    <Property Name="ref_name" Type="nvarchar" MaxLength="100" />
+    <Property Name="id_mapped_col_p" Type="int" />
+    <Property Name="id_mapped_col_c" Type="int" />
+  </EntityType>
+  <EntityType Name="sys_mapped_operators">
+    <Key>
+      <PropertyRef Name="id_operators" />
+    </Key>
+    <Property Name="id_operators" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="operators_name" Type="nvarchar" MaxLength="100" />
+    <Property Name="operators_label" Type="nvarchar" MaxLength="100" />
+    <Property Name="operators_cardinality" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="sys_mapped_table">
+    <Key>
+      <PropertyRef Name="id_mapped" />
+    </Key>
+    <Property Name="id_mapped" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="mapped_name" Type="nvarchar" MaxLength="200" />
+    <Property Name="mapped_code" Type="nvarchar" MaxLength="200" />
+    <Property Name="type_other" Type="int" />
+  </EntityType>
+  <EntityType Name="sys_mapped_ty_op">
+    <Key>
+      <PropertyRef Name="id_operators" />
+      <PropertyRef Name="id_operators_type" />
+    </Key>
+    <Property Name="id_operators" Type="int" Nullable="false" />
+    <Property Name="id_operators_type" Type="int" Nullable="false" />
+    <Property Name="op_order" Type="int" />
+  </EntityType>
+  <EntityType Name="sys_mapped_type">
+    <Key>
+      <PropertyRef Name="id_operators_type" />
+    </Key>
+    <Property Name="id_operators_type" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="operators_type_name" Type="nvarchar" MaxLength="100" />
+    <Property Name="operators_type_editor" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="sys_page">
+    <Key>
+      <PropertyRef Name="id_page" />
+    </Key>
+    <Property Name="id_page" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="page_name" Type="nvarchar" MaxLength="200" />
+    <Property Name="id_form" Type="int" />
+    <Property Name="page_order" Type="int" />
+    <Property Name="id_group_page" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'nhvanxol_dulichbautrang.dbo.sys_store_prod' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="sys_store_prod">
+    <Key>
+      <PropertyRef Name="id_store_prod" />
+      <PropertyRef Name="store_prod_count" />
+      <PropertyRef Name="id_store_slot" />
+      <PropertyRef Name="store_prod_cost" />
+      <PropertyRef Name="store_prod_shelf" />
+    </Key>
+    <Property Name="id_store_prod" Type="int" Nullable="false" />
+    <Property Name="store_prod_count" Type="int" Nullable="false" />
+    <Property Name="id_store_slot" Type="int" Nullable="false" />
+    <Property Name="store_prod_cost" Type="int" Nullable="false" />
+    <Property Name="store_prod_shelf" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_blog_tra">
+    <Key>
+      <PropertyRef Name="id_blog_tra" />
+    </Key>
+    <Property Name="id_blog_tra" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="titile_blog_tra" Type="nvarchar" MaxLength="250" />
+    <Property Name="short_des_blog_tra" Type="nvarchar(max)" />
+    <Property Name="des_blog_tra" Type="nvarchar(max)" />
+    <Property Name="status_blog_tra" Type="int" />
+    <Property Name="type_blog_tra" Type="int" />
+    <Property Name="create_date_blog_tra" Type="datetime" />
+    <Property Name="img_blog_tra" Type="varchar" MaxLength="2000" />
+    <Property Name="video_blog_tra" Type="varchar" MaxLength="2000" />
+    <Property Name="id_company" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_menu_dulich">
+    <Key>
+      <PropertyRef Name="id_menu_dulich" />
+    </Key>
+    <Property Name="id_menu_dulich" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name_menu_dulich" Type="nvarchar" MaxLength="200" />
+    <Property Name="link_menu_dulich" Type="nvarchar" MaxLength="200" />
+    <Property Name="trangthai_menu_dulich" Type="int" />
+    <Property Name="thutu_menu_dulich" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_new_dulich">
+    <Key>
+      <PropertyRef Name="id_new_dulich" />
+    </Key>
+    <Property Name="id_new_dulich" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name_new_dulich" Type="nvarchar" MaxLength="200" />
+    <Property Name="img_new_dulich" Type="nvarchar" MaxLength="200" />
+    <Property Name="thutu_new_dulich" Type="int" />
+    <Property Name="tomtat_new_dulich" Type="ntext" />
+    <Property Name="img1_new_dulich" Type="nvarchar" MaxLength="200" />
+    <Property Name="img2_new_dulich" Type="nvarchar" MaxLength="200" />
+    <Property Name="img3_new_dulich" Type="nvarchar" MaxLength="200" />
+    <Property Name="img4_new_dulich" Type="nvarchar" MaxLength="200" />
+    <Property Name="img5_new_dulich" Type="ntext" />
+    <Property Name="mota_new_dulich" Type="ntext" />
+    <Property Name="trangthai_new_dulich" Type="int" />
+    <Property Name="type_new_dulich" Type="int" />
+    <Property Name="img6_new_dulich" Type="nvarchar" MaxLength="200" />
+    <Property Name="img7_new_dulich" Type="nvarchar" MaxLength="200" />
+    <Property Name="class_new_dulich" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="tbl_products_tra">
+    <Key>
+      <PropertyRef Name="id_products_tra" />
+    </Key>
+    <Property Name="id_products_tra" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="img_products_tra" Type="nvarchar" MaxLength="200" />
+    <Property Name="img1_products_tra" Type="nvarchar" MaxLength="200" />
+    <Property Name="img2_products_tra" Type="nvarchar" MaxLength="200" />
+    <Property Name="img3_products_tra" Type="ntext" />
+    <Property Name="name_products_tra" Type="nvarchar" MaxLength="200" />
+    <Property Name="code_products_tra" Type="nvarchar" MaxLength="200" />
+    <Property Name="des_products_tra" Type="ntext" />
+    <Property Name="status_products_tra" Type="int" />
+    <Property Name="newprice_products_tra" Type="nvarchar" MaxLength="200" />
+    <Property Name="oldprice_products_tra" Type="nvarchar" MaxLength="200" />
+    <Property Name="type_products_tra" Type="int" />
+    <Property Name="featured_products_tra" Type="int" />
+    <Property Name="discount_products_tra" Type="nvarchar" MaxLength="200" />
+    <Property Name="yes_products_tra" Type="int" />
+    <Property Name="new_products_tra" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_slide_dulich">
+    <Key>
+      <PropertyRef Name="id_slide_dulich" />
+    </Key>
+    <Property Name="id_slide_dulich" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name_silde_dulich" Type="nvarchar" MaxLength="200" />
+    <Property Name="img_silde_dulich" Type="nvarchar" MaxLength="200" />
+    <Property Name="tomtat_silde_dulich" Type="ntext" />
+    <Property Name="trangthai_silde_dulich" Type="int" />
+    <Property Name="thutu_silde_dulich" Type="int" />
+    <Property Name="thutunew_dulich" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_slide_tra">
+    <Key>
+      <PropertyRef Name="id_slide_tra" />
+    </Key>
+    <Property Name="id_slide_tra" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="img_slide_tra" Type="nvarchar" MaxLength="200" />
+    <Property Name="title_slide_tra" Type="nvarchar" MaxLength="200" />
+    <Property Name="des_slide_tra" Type="ntext" />
+    <Property Name="status_slide_tra" Type="int" />
+    <Property Name="title1_slide_tra" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="tbl_spam_dulich">
+    <Key>
+      <PropertyRef Name="id_spam_dulich" />
+    </Key>
+    <Property Name="id_spam_dulich" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name_spam_dulich" Type="ntext" />
+    <Property Name="hinh_spam_dulich" Type="nvarchar" MaxLength="200" />
+    <Property Name="link_spam_dulich" Type="ntext" />
+    <Property Name="mo_spam_dulich" Type="ntext" />
+  </EntityType>
+  <EntityType Name="tblDomain">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="domain_name" Type="nvarchar" MaxLength="250" />
+    <Property Name="id_company" Type="bigint" />
+    <Property Name="domain_status" Type="int" />
+  </EntityType>
+  <EntityType Name="tblMath_vangia">
+    <Key>
+      <PropertyRef Name="idMath" />
+    </Key>
+    <Property Name="idMath" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameMath" Type="nvarchar" MaxLength="50" />
+    <Property Name="ValueMath" Type="varchar" MaxLength="50" />
+    <Property Name="TypeMath" Type="int" />
+  </EntityType>
+  <EntityType Name="tblSysCompany">
+    <Key>
+      <PropertyRef Name="id_company" />
+    </Key>
+    <Property Name="id_company" Type="int" Nullable="false" />
+    <Property Name="company_name" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="tblSysGroupPage">
+    <Key>
+      <PropertyRef Name="id_group_page" />
+    </Key>
+    <Property Name="id_group_page" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="group_page_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="group_page_status" Type="int" />
+    <Property Name="group_page_create" Type="datetime" />
+    <Property Name="id_company" Type="int" />
+    <Property Name="group_page_order" Type="int" />
+    <Property Name="group_page_img" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblSysGroupPageDetail">
+    <Key>
+      <PropertyRef Name="id_page" />
+    </Key>
+    <Property Name="id_page" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_group_page" Type="int" Nullable="false" />
+    <Property Name="page_name" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="page_status" Type="int" Nullable="false" />
+    <Property Name="page_create" Type="datetime" />
+    <Property Name="page_link" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="id_company" Type="int" Nullable="false" />
+    <Property Name="page_key" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="max_record" Type="int" />
+    <Property Name="page_order" Type="int" />
+    <Property Name="page_type_role" Type="int" Nullable="false" />
+    <Property Name="page_icon" Type="nvarchar" MaxLength="250" />
+    <Property Name="page_type" Type="int" />
+    <Property Name="page_type_chart" Type="int" />
+  </EntityType>
+  <EntityType Name="tblSysPicture">
+    <Key>
+      <PropertyRef Name="picture_id" />
+    </Key>
+    <Property Name="picture_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="advert_id" Type="int" />
+    <Property Name="originalFilepath" Type="varchar" MaxLength="255" />
+    <Property Name="position" Type="tinyint" />
+    <Property Name="converted" Type="datetime" />
+    <Property Name="convertedFilename" Type="varchar" MaxLength="50" />
+    <Property Name="tocheck" Type="bit" />
+    <Property Name="isvalidated" Type="bit" />
+    <Property Name="convertedFilename90" Type="varchar" MaxLength="50" />
+    <Property Name="convertedFilename180" Type="varchar" MaxLength="50" />
+    <Property Name="convertedFilename270" Type="varchar" MaxLength="50" />
+    <Property Name="angleType" Type="tinyint" />
+    <Property Name="type_id" Type="tinyint" />
+    <Property Name="title" Type="nvarchar(max)" />
+    <Property Name="description" Type="nvarchar(max)" />
+    <Property Name="cms_sql_id" Type="int" />
+    <Property Name="shortdescription" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tblSysUser_Page">
+    <Key>
+      <PropertyRef Name="id_user_page" />
+    </Key>
+    <Property Name="id_user_page" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="user_page_name" Type="nvarchar" MaxLength="200" />
+    <Property Name="user_page_control" Type="nvarchar" MaxLength="200" />
+    <Property Name="user_page_sexy" Type="nvarchar" MaxLength="200" />
+    <Property Name="user_page_parent" Type="int" />
+    <Property Name="user_page_order" Type="int" />
+    <Property Name="user_vip" Type="int" />
+  </EntityType>
+  <EntityType Name="tblSysUserGroupPage">
+    <Key>
+      <PropertyRef Name="role_group_page_id" />
+    </Key>
+    <Property Name="role_group_page_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="role_group_page_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="role_group_page_des" Type="ntext" />
+    <Property Name="create_date" Type="datetime" />
+    <Property Name="update_by" Type="int" />
+    <Property Name="create_by" Type="int" />
+    <Property Name="id_company" Type="int" Nullable="false" />
+    <Property Name="role_group_status" Type="int" />
+    <Property Name="role_page_view" Type="int" />
+    <Property Name="role_page_create" Type="int" />
+    <Property Name="role_page_del" Type="int" />
+  </EntityType>
+  <EntityType Name="tblSysUserGroupPageDetail">
+    <Key>
+      <PropertyRef Name="id_group_user_detail" />
+    </Key>
+    <Property Name="role_group_page_id" Type="int" Nullable="false" />
+    <Property Name="user_id" Type="int" Nullable="false" />
+    <Property Name="id_company" Type="int" Nullable="false" />
+    <Property Name="id_group_user_detail" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblSysUserGroupPagePage">
+    <Key>
+      <PropertyRef Name="id_group_page_detail" />
+    </Key>
+    <Property Name="role_group_page_id" Type="int" Nullable="false" />
+    <Property Name="id_page" Type="int" Nullable="false" />
+    <Property Name="id_company" Type="int" Nullable="false" />
+    <Property Name="id_group_page_detail" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'nhvanxol_dulichbautrang.dbo.tblSysUserListShareDetail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="tblSysUserListShareDetail">
+    <Key>
+      <PropertyRef Name="group_role_id" />
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="group_role_id" Type="bigint" Nullable="false" />
+    <Property Name="user_id" Type="bigint" Nullable="false" />
+    <Property Name="id_company" Type="int" />
+  </EntityType>
+  <EntityType Name="tblSysUserRoleGroup">
+    <Key>
+      <PropertyRef Name="group_role_id" />
+    </Key>
+    <Property Name="group_role_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="group_role_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="group_role_description" Type="ntext" />
+    <Property Name="group_role_create" Type="datetime" Nullable="false" />
+    <Property Name="group_role_parent" Type="bigint" />
+    <Property Name="group_role_type" Type="int" />
+    <Property Name="update_by" Type="bigint" Nullable="false" />
+    <Property Name="create_by" Type="bigint" Nullable="false" />
+    <Property Name="id_company" Type="int" Nullable="false" />
+    <Property Name="group_role_status" Type="int" />
+    <Property Name="id_page" Type="int" />
+  </EntityType>
+  <EntityType Name="tblSysUserRolePage">
+    <Key>
+      <PropertyRef Name="id_page" />
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="id_page" Type="int" Nullable="false" />
+    <Property Name="user_id" Type="int" Nullable="false" />
+    <Property Name="role_page_view" Type="int" Nullable="false" />
+    <Property Name="role_page_create" Type="int" Nullable="false" />
+    <Property Name="role_page_del" Type="int" Nullable="false" />
+    <Property Name="role_page_config" Type="int" Nullable="false" />
+    <Property Name="role_page_role" Type="int" Nullable="false" />
+    <Property Name="id_company" Type="int" Nullable="false" />
+    <Property Name="id_user_role_page" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'nhvanxol_dulichbautrang.dbo.tblSysUserRoleRecord' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="tblSysUserRoleRecord">
+    <Key>
+      <PropertyRef Name="user_id_master" />
+      <PropertyRef Name="user_id_staff" />
+      <PropertyRef Name="role_type" />
+      <PropertyRef Name="id_page" />
+    </Key>
+    <Property Name="user_id_master" Type="bigint" Nullable="false" />
+    <Property Name="user_id_staff" Type="bigint" Nullable="false" />
+    <Property Name="role_type" Type="int" Nullable="false" />
+    <Property Name="id_page" Type="int" Nullable="false" />
+    <Property Name="id_company" Type="int" />
+  </EntityType>
+  <EntityType Name="tblUser">
+    <Key>
+      <PropertyRef Name="user_id" />
+      <PropertyRef Name="user_email" />
+    </Key>
+    <Property Name="user_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="user_email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="user_pass" Type="nvarchar" MaxLength="50" />
+    <Property Name="user_fullname" Type="nvarchar" MaxLength="50" />
+    <Property Name="user_status" Type="int" />
+    <Property Name="user_create" Type="datetime" />
+    <Property Name="user_update" Type="datetime" />
+    <Property Name="id_group_user" Type="int" />
+    <Property Name="user_img" Type="nvarchar" MaxLength="100" />
+    <Property Name="user_vip" Type="int" />
+    <Property Name="user_vip_end" Type="datetime" />
+    <Property Name="user_role" Type="int" />
+    <Property Name="forget_pass" Type="nvarchar" MaxLength="50" />
+    <Property Name="user_money" Type="int" />
+    <Property Name="user_avatar" Type="nvarchar" MaxLength="200" />
+    <Property Name="user_online" Type="int" />
+    <Property Name="id_company" Type="int" />
+    <Property Name="user_disk" Type="int" />
+    <Property Name="user_code" Type="nvarchar" MaxLength="20" />
+    <Property Name="seri_number" Type="nvarchar" MaxLength="50" />
+    <Property Name="user_birthday" Type="nvarchar" MaxLength="50" />
+    <Property Name="user_code_country" Type="nvarchar" MaxLength="50" />
+    <Property Name="user_gender" Type="nvarchar" MaxLength="10" />
+    <Property Name="user_id_facebook" Type="nvarchar" MaxLength="50" />
+    <Property Name="user_point" Type="int" />
+  </EntityType>
+  <EntityType Name="tblUserCloud">
+    <Key>
+      <PropertyRef Name="user_cloud_id" />
+    </Key>
+    <Property Name="user_cloud_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="user_code" Type="nvarchar" MaxLength="50" />
+    <Property Name="user_birthday" Type="nvarchar" MaxLength="50" />
+    <Property Name="user_code_country" Type="nvarchar" MaxLength="50" />
+    <Property Name="user_gender" Type="nvarchar" MaxLength="50" />
+    <Property Name="user_id_facebook" Type="nvarchar" MaxLength="50" />
+    <Property Name="user_email" Type="nvarchar" MaxLength="50" />
+    <Property Name="user_fullname" Type="nvarchar" MaxLength="50" />
+    <Property Name="user_fname" Type="nvarchar" MaxLength="50" />
+    <Property Name="user_lname" Type="nvarchar" MaxLength="50" />
+    <Property Name="user_avatar" Type="nvarchar" MaxLength="500" />
+    <Property Name="user_type" Type="nvarchar" MaxLength="50" />
+    <Property Name="user_id" Type="bigint" />
+  </EntityType>
+  <EntityType Name="tblUserFriends">
+    <Key>
+      <PropertyRef Name="user_id" />
+      <PropertyRef Name="social_id" />
+    </Key>
+    <Property Name="user_id" Type="bigint" Nullable="false" />
+    <Property Name="social_id" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="social_user" Type="nvarchar" MaxLength="50" />
+    <Property Name="social_type" Type="nvarchar" MaxLength="50" />
+    <Property Name="social_name" Type="nvarchar" MaxLength="250" />
+    <Property Name="social_picture" Type="ntext" />
+  </EntityType>
+  <EntityType Name="tblUserImg">
+    <Key>
+      <PropertyRef Name="id_user_img" />
+    </Key>
+    <Property Name="id_user_img" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="user_img_name" Type="nvarchar" MaxLength="200" />
+    <Property Name="user_img_sexy_key" Type="nvarchar" MaxLength="200" />
+    <Property Name="user_img_size" Type="float" />
+    <Property Name="user_id" Type="bigint" />
+    <Property Name="user_img_create" Type="datetime" />
+    <Property Name="user_img_w" Type="float" />
+    <Property Name="user_img_h" Type="float" />
+    <Property Name="user_img_type" Type="int" />
+    <Property Name="admin_view" Type="int" />
+  </EntityType>
+  <EntityType Name="user_steel">
+    <Key>
+      <PropertyRef Name="id_user" />
+    </Key>
+    <Property Name="id_user" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="user_first_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="user_last_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="user_full_name" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="user_email" Type="nvarchar" MaxLength="200" />
+    <Property Name="user_status" Type="int" Nullable="false" />
+    <Property Name="user_pass" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'nhvanxol_dulichbautrang.dbo.wb_advertising' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="wb_advertising">
+    <Key>
+      <PropertyRef Name="id_advertising" />
+    </Key>
+    <Property Name="id_advertising" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name_advertising" Type="nvarchar" MaxLength="200" />
+    <Property Name="links_advertising" Type="nvarchar" MaxLength="200" />
+    <Property Name="status_advertising" Type="nvarchar" MaxLength="200" />
+    <Property Name="order_advertising" Type="int" />
+    <Property Name="img_advertising" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'nhvanxol_dulichbautrang.dbo.wb_banner' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="wb_banner">
+    <Key>
+      <PropertyRef Name="id_banner" />
+    </Key>
+    <Property Name="id_banner" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name_banner" Type="nvarchar" MaxLength="200" />
+    <Property Name="links_banner" Type="nvarchar" MaxLength="200" />
+    <Property Name="order_banner" Type="int" />
+    <Property Name="image_banner" Type="nvarchar" MaxLength="200" />
+    <Property Name="status_banner" Type="int" />
+    <Property Name="type_banner" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'nhvanxol_dulichbautrang.dbo.wb_comment' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="wb_comment">
+    <Key>
+      <PropertyRef Name="id_comment" />
+    </Key>
+    <Property Name="id_comment" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="noidung_comment" Type="ntext" />
+    <Property Name="id_products" Type="int" />
+    <Property Name="phone" Type="nvarchar" MaxLength="200" />
+    <Property Name="name_full" Type="nvarchar" MaxLength="200" />
+    <Property Name="email" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'nhvanxol_dulichbautrang.dbo.wb_mail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="wb_mail">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="mail_name" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'nhvanxol_dulichbautrang.dbo.wb_menu' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="wb_menu">
+    <Key>
+      <PropertyRef Name="id_menu" />
+    </Key>
+    <Property Name="id_menu" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="menu_name" Type="nvarchar" MaxLength="200" />
+    <Property Name="menu_key_url" Type="nvarchar" MaxLength="200" />
+    <Property Name="menu_order" Type="int" />
+    <Property Name="menu_status" Type="int" />
+    <Property Name="menu_title" Type="nvarchar" MaxLength="200" />
+    <Property Name="menu_links" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'nhvanxol_dulichbautrang.dbo.wb_menu_products' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="wb_menu_products">
+    <Key>
+      <PropertyRef Name="id_menu_products" />
+    </Key>
+    <Property Name="id_menu_products" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="menu_products_name" Type="nvarchar" MaxLength="200" />
+    <Property Name="menu_products_key" Type="nvarchar" MaxLength="200" />
+    <Property Name="menu_products_order" Type="int" />
+    <Property Name="img_products" Type="nvarchar" MaxLength="200" />
+    <Property Name="menu_status" Type="nvarchar" MaxLength="200" />
+    <Property Name="menu_tomtat" Type="ntext" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'nhvanxol_dulichbautrang.dbo.wb_products' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="wb_products">
+    <Key>
+      <PropertyRef Name="id_products" />
+    </Key>
+    <Property Name="id_products" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name_products" Type="nvarchar" MaxLength="200" />
+    <Property Name="type_products" Type="nvarchar" MaxLength="200" />
+    <Property Name="tomtat_products" Type="ntext" />
+    <Property Name="noidung_products" Type="ntext" />
+    <Property Name="price_products" Type="nvarchar" MaxLength="200" />
+    <Property Name="giamgia_products" Type="nvarchar" MaxLength="200" />
+    <Property Name="giasaugiam_products" Type="nvarchar" MaxLength="200" />
+    <Property Name="status_products" Type="nvarchar" MaxLength="200" />
+    <Property Name="img_main_products" Type="nvarchar" MaxLength="200" />
+    <Property Name="order_products" Type="nvarchar" MaxLength="200" />
+    <Property Name="img1_products" Type="nvarchar" MaxLength="200" />
+    <Property Name="img2_products" Type="nvarchar" MaxLength="200" />
+    <Property Name="img3_products" Type="nvarchar" MaxLength="200" />
+    <Property Name="img4_products" Type="nvarchar" MaxLength="200" />
+    <Property Name="tieubieu_products" Type="nvarchar" MaxLength="200" />
+    <Property Name="img5_products" Type="nvarchar" MaxLength="200" />
+    <Property Name="img0_products" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="web_banner">
+    <Key>
+      <PropertyRef Name="id_banner" />
+    </Key>
+    <Property Name="id_banner" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="banner_name" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="banner_order" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="banner_link" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="banner_img" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="banner_tiny" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="banner_status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="web_chater">
+    <Key>
+      <PropertyRef Name="id_chater" />
+    </Key>
+    <Property Name="id_chater" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="chater_name" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="customer_logo" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="customer_prod" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="customer_idea" Type="ntext" Nullable="false" />
+    <Property Name="customer_order" Type="int" Nullable="false" />
+    <Property Name="customer_status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="web_chater_content">
+    <Key>
+      <PropertyRef Name="id_up" />
+    </Key>
+    <Property Name="id_chater" Type="bigint" Nullable="false" />
+    <Property Name="id_employer" Type="int" Nullable="false" />
+    <Property Name="chater_content" Type="ntext" Nullable="false" />
+    <Property Name="chater_content_create" Type="datetime" Nullable="false" />
+    <Property Name="id_up" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="web_content">
+    <Key>
+      <PropertyRef Name="id_content" />
+    </Key>
+    <Property Name="id_content" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="content_name" Type="ntext" Nullable="false" />
+    <Property Name="id_menu" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="web_content_other">
+    <Key>
+      <PropertyRef Name="id_content_other" />
+    </Key>
+    <Property Name="id_content_other" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="content_other_title" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="content_other" Type="ntext" Nullable="false" />
+    <Property Name="id_menu" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="web_customer">
+    <Key>
+      <PropertyRef Name="id_customer" />
+    </Key>
+    <Property Name="id_customer" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="customer_name" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="customer_logo" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="customer_prod" Type="ntext" Nullable="false" />
+    <Property Name="customer_idea" Type="ntext" Nullable="false" />
+    <Property Name="customer_order" Type="int" Nullable="false" />
+    <Property Name="customer_status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="web_department">
+    <Key>
+      <PropertyRef Name="id_department" />
+    </Key>
+    <Property Name="id_department" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="department_name" Type="nvarchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <EntityType Name="web_employer">
+    <Key>
+      <PropertyRef Name="id_employer" />
+    </Key>
+    <Property Name="id_employer" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="employer_name" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="id_title" Type="int" Nullable="false" />
+    <Property Name="employer_code" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="employer_ext" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="employer_mobile" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="employer_status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="web_list_product">
+    <Key>
+      <PropertyRef Name="id_list_prod" />
+    </Key>
+    <Property Name="id_list_prod" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="list_prod_name" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="list_prod_order" Type="int" Nullable="false" />
+    <Property Name="list_prod_link" Type="int" Nullable="false" />
+    <Property Name="list_prod_status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="web_menu_root">
+    <Key>
+      <PropertyRef Name="id_menu" />
+    </Key>
+    <Property Name="id_menu" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="menu_name" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="menu_order" Type="int" Nullable="false" />
+    <Property Name="menu_code" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="banner_tiny" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="menu_status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="web_products">
+    <Key>
+      <PropertyRef Name="id_prod" />
+    </Key>
+    <Property Name="id_prod" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="prod_name" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="prod_order" Type="int" Nullable="false" />
+    <Property Name="prod_status" Type="int" Nullable="false" />
+    <Property Name="prod_content" Type="ntext" Nullable="false" />
+  </EntityType>
+  <EntityType Name="web_title">
+    <Key>
+      <PropertyRef Name="id_title" />
+    </Key>
+    <Property Name="id_title" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="title_name" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="id_department" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'nhvanxol_dulichbautrang.dbo.web_tr_menu_product' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="web_tr_menu_product">
+    <Key>
+      <PropertyRef Name="id_menu_products" />
+    </Key>
+    <Property Name="id_menu_products" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name_menu_products" Type="nvarchar" MaxLength="200" />
+    <Property Name="order_menu_products" Type="int" />
+    <Property Name="status_menu_products" Type="int" />
+    <Property Name="img_menu_products" Type="nvarchar" MaxLength="200" />
+    <Property Name="tomtat_menu_products" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'nhvanxol_dulichbautrang.dbo.web_tr_menutop' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="web_tr_menutop">
+    <Key>
+      <PropertyRef Name="id_menu_top" />
+    </Key>
+    <Property Name="id_menu_top" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name_menu_top" Type="nvarchar" MaxLength="200" />
+    <Property Name="links_menu_top" Type="nvarchar" MaxLength="200" />
+    <Property Name="key_links_menu_top" Type="nvarchar" MaxLength="200" />
+    <Property Name="status_menu_top" Type="int" />
+    <Property Name="order_menu_top" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'nhvanxol_dulichbautrang.dbo.web_tr_products' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="web_tr_products">
+    <Key>
+      <PropertyRef Name="id_products_tr" />
+    </Key>
+    <Property Name="id_products_tr" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name_product_tr" Type="nvarchar" MaxLength="200" />
+    <Property Name="type_products_tr" Type="int" />
+    <Property Name="status_products_tr" Type="int" />
+    <Property Name="order_products_tr" Type="int" />
+    <Property Name="img_main_products_tr" Type="nvarchar" MaxLength="200" />
+    <Property Name="img1_main_products_tr" Type="nvarchar" MaxLength="200" />
+    <Property Name="Specials" Type="int" />
+    <Property Name="price_products" Type="nvarchar" MaxLength="200" />
+    <Property Name="tomtat_products" Type="ntext" />
+    <Property Name="noidung_products" Type="ntext" />
+    <Property Name="img_small_products" Type="nvarchar" MaxLength="200" />
+    <Property Name="img2_main_products_tr" Type="nvarchar" MaxLength="200" />
+    <Property Name="img3_main_products_tr" Type="nvarchar" MaxLength="200" />
+    <Property Name="price_products1" Type="nvarchar" MaxLength="200" />
+    <Property Name="phantram_products" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'nhvanxol_dulichbautrang.dbo.web_tr_quangcao' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="web_tr_quangcao">
+    <Key>
+      <PropertyRef Name="id_quangcao" />
+    </Key>
+    <Property Name="id_quangcao" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name_quangcao" Type="nvarchar" MaxLength="200" />
+    <Property Name="links_quangcao" Type="nvarchar" MaxLength="200" />
+    <Property Name="status_quangcao" Type="nvarchar" MaxLength="200" />
+    <Property Name="order_quangcao" Type="int" />
+    <Property Name="img_quangcao" Type="nvarchar" MaxLength="200" />
+    <Property Name="type_quangcao" Type="int" />
+  </EntityType>
+  <EntityType Name="web_vangia_config">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name_vg" Type="ntext" />
+    <Property Name="key_word_vg" Type="nvarchar" MaxLength="200" />
+    <Property Name="laguage_word_vg" Type="int" />
+    <Property Name="order_word_vg" Type="int" />
+    <Property Name="type_word_vg" Type="int" />
+    <Property Name="detail_type_word_vg" Type="ntext" />
+  </EntityType>
+  <EntityType Name="web_vangia_doitac">
+    <Key>
+      <PropertyRef Name="vangia_id_doitac" />
+    </Key>
+    <Property Name="vangia_id_doitac" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vangia_name_doitac" Type="ntext" />
+    <Property Name="vangia_img_doitac" Type="nvarchar" MaxLength="200" />
+    <Property Name="vangia_noidung" Type="ntext" />
+    <Property Name="vangia_status_doitac" Type="int" />
+    <Property Name="vangia_order_doitac" Type="int" />
+    <Property Name="vangia_language_doitac" Type="int" />
+    <Property Name="vangia_type_doitac" Type="int" />
+  </EntityType>
+  <EntityType Name="web_vangia_duanmau">
+    <Key>
+      <PropertyRef Name="vangia_id_duanmau" />
+    </Key>
+    <Property Name="vangia_id_duanmau" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vangia_img_duanmau" Type="nvarchar" MaxLength="200" />
+    <Property Name="vangia_name_duanmau" Type="ntext" />
+    <Property Name="vangia_time_duanmau" Type="nvarchar" MaxLength="200" />
+    <Property Name="vangia_img1_duanmau" Type="nvarchar" MaxLength="200" />
+    <Property Name="vangia_img2_duanmau" Type="nvarchar" MaxLength="200" />
+    <Property Name="vangia_img3_duanmau" Type="nvarchar" MaxLength="200" />
+    <Property Name="vangia_status_duanmau" Type="int" />
+    <Property Name="vangia_order_duanmau" Type="int" />
+    <Property Name="vangia_language" Type="int" />
+    <Property Name="vangia_content_duanmau" Type="ntext" />
+    <Property Name="vangia_tomtat_duanmau" Type="ntext" />
+  </EntityType>
+  <EntityType Name="web_vangia_employee">
+    <Key>
+      <PropertyRef Name="vangia_id_employee" />
+    </Key>
+    <Property Name="vangia_id_employee" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vangia_img_employee" Type="nvarchar" MaxLength="200" />
+    <Property Name="vangia_name_employee" Type="nvarchar" MaxLength="200" />
+    <Property Name="vangia_tiesu_employee" Type="ntext" />
+    <Property Name="vangia_status_employee" Type="int" />
+    <Property Name="vangia_order_employee" Type="int" />
+    <Property Name="vangia_language_employee" Type="int" />
+    <Property Name="vangia_team_employee" Type="int" />
+    <Property Name="vangia_noidung_employee" Type="ntext" />
+  </EntityType>
+  <EntityType Name="web_vangia_language">
+    <Key>
+      <PropertyRef Name="vangia_id_language" />
+    </Key>
+    <Property Name="vangia_id_language" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vangia_name_language" Type="nvarchar" MaxLength="200" />
+    <Property Name="vangia_code_langue" Type="nvarchar" MaxLength="200" />
+    <Property Name="vangia_status_lague" Type="int" />
+    <Property Name="vangia_icon_language" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="web_vangia_menu">
+    <Key>
+      <PropertyRef Name="vangia_id_menu" />
+    </Key>
+    <Property Name="vangia_id_menu" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vangia_name_menu" Type="nvarchar" MaxLength="200" />
+    <Property Name="vangia_link_menu" Type="ntext" />
+    <Property Name="vangia_status_menu" Type="int" />
+    <Property Name="vangia_order_menu" Type="int" />
+    <Property Name="vangia_id_language" Type="int" />
+    <Property Name="vangia_key_menu" Type="nvarchar" MaxLength="200" />
+    <Property Name="vangia_loai_menu" Type="int" />
+    <Property Name="vangia_tt_menu" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="web_vangia_menucon">
+    <Key>
+      <PropertyRef Name="vangia_id_menucon" />
+    </Key>
+    <Property Name="vangia_id_menucon" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vangia_name_menucon" Type="nvarchar" MaxLength="200" />
+    <Property Name="vangia_link_menucon" Type="nvarchar" MaxLength="200" />
+    <Property Name="vangia_menucha_menucon" Type="nvarchar" MaxLength="200" />
+    <Property Name="vangia_status_menucon" Type="int" />
+    <Property Name="vangia_order_menucon" Type="int" />
+    <Property Name="vangia_language_menucon" Type="int" />
+  </EntityType>
+  <EntityType Name="web_vangia_news">
+    <Key>
+      <PropertyRef Name="vangia_id_news" />
+    </Key>
+    <Property Name="vangia_id_news" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vangia_name_news" Type="ntext" />
+    <Property Name="vangia_img_news" Type="nvarchar" MaxLength="200" />
+    <Property Name="vangia_links_news" Type="ntext" />
+    <Property Name="vangia_type_news" Type="int" />
+    <Property Name="vangia_img1_news" Type="nvarchar" MaxLength="200" />
+    <Property Name="vangia_img2_news" Type="nvarchar" MaxLength="200" />
+    <Property Name="vangia_tomtat_news" Type="ntext" />
+    <Property Name="vangia_noidung_news" Type="ntext" />
+    <Property Name="vangia_status_news" Type="int" />
+    <Property Name="vangia_order_news" Type="int" />
+    <Property Name="vangia_language_news" Type="int" />
+    <Property Name="vangia_vanban_news" Type="ntext" />
+  </EntityType>
+  <EntityType Name="web_vangia_products">
+    <Key>
+      <PropertyRef Name="vangia_id_products" />
+    </Key>
+    <Property Name="vangia_id_products" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vangia_img_products" Type="nvarchar" MaxLength="200" />
+    <Property Name="vangia_name_products" Type="ntext" />
+    <Property Name="vangia_noidung_products" Type="ntext" />
+    <Property Name="vangia_img1_products" Type="nvarchar" MaxLength="200" />
+    <Property Name="vangia_img2_products" Type="nvarchar" MaxLength="200" />
+    <Property Name="vangia_img3_products" Type="ntext" />
+    <Property Name="vangia_tomtat_products" Type="ntext" />
+    <Property Name="vangia_order_products" Type="int" />
+    <Property Name="vangia_language_products" Type="int" />
+    <Property Name="vangia_status_products" Type="int" />
+    <Property Name="vangia_type_products" Type="int" />
+    <Property Name="ful_img4_products_vg" Type="nvarchar" MaxLength="200" />
+    <Property Name="ful_img5_products_vg" Type="nvarchar" MaxLength="200" />
+    <Property Name="ful_img6_products_vg" Type="nvarchar" MaxLength="200" />
+    <Property Name="ful_img7_products_vg" Type="nvarchar" MaxLength="200" />
+    <Property Name="ful_img8_products_vg" Type="nvarchar" MaxLength="200" />
+    <Property Name="ful_img9_products_vg" Type="ntext" />
+  </EntityType>
+  <EntityType Name="web_vangia_project">
+    <Key>
+      <PropertyRef Name="vangia_id_project" />
+    </Key>
+    <Property Name="vangia_id_project" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vangia_img1_project" Type="ntext" />
+    <Property Name="vangia_img2_project" Type="ntext" />
+    <Property Name="vangia_img3_project" Type="ntext" />
+    <Property Name="vangia_img_project" Type="ntext" />
+    <Property Name="vangia_content_project" Type="ntext" />
+    <Property Name="vangia_name_project" Type="ntext" />
+    <Property Name="vangia_time_project" Type="nvarchar" MaxLength="200" />
+    <Property Name="vangia_status_project" Type="int" />
+    <Property Name="vangia_order_project" Type="int" />
+    <Property Name="vangia_language_project" Type="int" />
+    <Property Name="vangia_tomtat_project" Type="ntext" />
+    <Property Name="vangia_typeid_project" Type="int" />
+    <Property Name="vangia_img4_project" Type="ntext" />
+    <Property Name="vangia_img5_project" Type="ntext" />
+    <Property Name="vangia_img6_project" Type="ntext" />
+    <Property Name="vangia_img7_project" Type="ntext" />
+    <Property Name="vangia_img8_project" Type="ntext" />
+    <Property Name="vangia_img9_project" Type="ntext" />
+    <Property Name="vangia_vanban_project" Type="nvarchar" MaxLength="200" />
+    <Property Name="vangia_link_video_project" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="web_vangia_silde">
+    <Key>
+      <PropertyRef Name="vangia_id_silde" />
+    </Key>
+    <Property Name="vangia_id_silde" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vangia_noidung_silde" Type="ntext" />
+    <Property Name="vangia_tomtat_silde" Type="ntext" />
+    <Property Name="vangia_img_silde" Type="nvarchar" MaxLength="200" />
+    <Property Name="vangia_name_silde" Type="ntext" />
+    <Property Name="vangia_status_silde" Type="int" />
+    <Property Name="vangia_order_silde" Type="int" />
+    <Property Name="vangia_language_silde" Type="int" />
+    <Property Name="vangia_link_silde" Type="ntext" />
+    <Property Name="vangia_stype_slide" Type="ntext" />
+    <Property Name="vangia_type_slide" Type="int" />
+  </EntityType>
+  <EntityType Name="web_vangia_team">
+    <Key>
+      <PropertyRef Name="vangia_id_team" />
+    </Key>
+    <Property Name="vangia_id_team" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vangia_name_team" Type="ntext" />
+    <Property Name="vangia_status_team" Type="int" />
+    <Property Name="vangia_language_team" Type="int" />
+    <Property Name="vangia_tomtat_team" Type="ntext" />
+    <Property Name="vangia_img_team" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="web_vangia_tuyendung">
+    <Key>
+      <PropertyRef Name="vangia_id_tuyendung" />
+    </Key>
+    <Property Name="vangia_id_tuyendung" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vangia_name_tuyendung" Type="ntext" />
+    <Property Name="vangia_img_tuyendung" Type="ntext" />
+    <Property Name="vangia_tomtat_tuyendung" Type="ntext" />
+    <Property Name="vangia_img1_tuyendung" Type="ntext" />
+    <Property Name="vangia_img2_tuyendung" Type="ntext" />
+    <Property Name="vangia_status_tuyendung" Type="int" />
+    <Property Name="vangia_noidung_tuyendung" Type="ntext" />
+    <Property Name="vangia_language_tuyendung" Type="int" />
+    <Property Name="vangia_order_tuyendung" Type="int" />
+    <Property Name="vangia_type_tuyendung" Type="int" />
+    <Property Name="vangia_ma_tuyendung" Type="nvarchar" MaxLength="200" />
+    <Property Name="vangia_vitri_tuyendung" Type="ntext" />
+    <Property Name="vangia_soluong_tuyendung" Type="nvarchar" MaxLength="200" />
+    <Property Name="vangia_diadiem_tuyendung" Type="ntext" />
+    <Property Name="vangia_date_tuyendung" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="web_vangia_type_products">
+    <Key>
+      <PropertyRef Name="vangia_id_type_products" />
+    </Key>
+    <Property Name="vangia_id_type_products" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vangia_img_type_products" Type="nvarchar" MaxLength="200" />
+    <Property Name="vangia_name_type_products" Type="nvarchar" MaxLength="200" />
+    <Property Name="vangia_status_type_products" Type="int" />
+    <Property Name="vangia_order_type_products" Type="int" />
+    <Property Name="vangia_language_type_products" Type="int" />
+  </EntityType>
+  <EntityType Name="web_vangia_typeproject">
+    <Key>
+      <PropertyRef Name="vangia_id_typeproject" />
+    </Key>
+    <Property Name="vangia_id_typeproject" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vangia_name_typeproject" Type="nvarchar" MaxLength="200" />
+    <Property Name="vangia_status_typeproject" Type="int" />
+    <Property Name="vangia_language_typeproject" Type="int" />
+  </EntityType>
+  <EntityContainer Name="DataAdminvanGiaModelStoreContainer">
+    <EntitySet Name="ctr_in_form" EntityType="Self.ctr_in_form" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ctr_steel" EntityType="Self.ctr_steel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="form_steel" EntityType="Self.form_steel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="form_store" EntityType="Self.form_store" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="form_store_para" EntityType="Self.form_store_para" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="fs_auth" EntityType="Self.fs_auth" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="fs_manga" EntityType="Self.fs_manga" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="fs_manga_chap" EntityType="Self.fs_manga_chap" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="fs_manga_tag" EntityType="Self.fs_manga_tag" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="fs_manga_type" EntityType="Self.fs_manga_type" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="mar_project" EntityType="Self.mar_project" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pct_department" EntityType="Self.pct_department" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pct_employee" EntityType="Self.pct_employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pct_ticket" EntityType="Self.pct_ticket" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pct_title" EntityType="Self.pct_title" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="project_steel" EntityType="Self.project_steel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="so_orther" EntityType="Self.so_orther" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="so_orther_detail" EntityType="Self.so_orther_detail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="so_prod_image_detail" EntityType="Self.so_prod_image_detail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="store_" EntityType="Self.store_" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="store_cate" EntityType="Self.store_cate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="store_com_ship" EntityType="Self.store_com_ship" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="store_com_type" EntityType="Self.store_com_type" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="store_company" EntityType="Self.store_company" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="store_contact" EntityType="Self.store_contact" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="store_exp" EntityType="Self.store_exp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="store_imp" EntityType="Self.store_imp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="store_prod" EntityType="Self.store_prod" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="store_prod_sku" EntityType="Self.store_prod_sku" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="store_slot" EntityType="Self.store_slot" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="store_stock" EntityType="Self.store_stock" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="store_unit" EntityType="Self.store_unit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sys_company" EntityType="Self.sys_company" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sys_fs_help" EntityType="Self.sys_fs_help" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sys_gridview_control" EntityType="Self.sys_gridview_control" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sys_group_page" EntityType="Self.sys_group_page" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sys_info" EntityType="Self.sys_info" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sys_mapped_col" EntityType="Self.sys_mapped_col" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sys_mapped_join" EntityType="Self.sys_mapped_join" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sys_mapped_operators" EntityType="Self.sys_mapped_operators" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sys_mapped_table" EntityType="Self.sys_mapped_table" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sys_mapped_ty_op" EntityType="Self.sys_mapped_ty_op" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sys_mapped_type" EntityType="Self.sys_mapped_type" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sys_page" EntityType="Self.sys_page" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_blog_tra" EntityType="Self.tbl_blog_tra" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_menu_dulich" EntityType="Self.tbl_menu_dulich" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_new_dulich" EntityType="Self.tbl_new_dulich" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_products_tra" EntityType="Self.tbl_products_tra" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_slide_dulich" EntityType="Self.tbl_slide_dulich" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_slide_tra" EntityType="Self.tbl_slide_tra" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_spam_dulich" EntityType="Self.tbl_spam_dulich" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblDomain" EntityType="Self.tblDomain" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblMath_vangia" EntityType="Self.tblMath_vangia" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblSysCompany" EntityType="Self.tblSysCompany" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblSysGroupPage" EntityType="Self.tblSysGroupPage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblSysGroupPageDetail" EntityType="Self.tblSysGroupPageDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblSysPicture" EntityType="Self.tblSysPicture" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblSysUser_Page" EntityType="Self.tblSysUser_Page" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblSysUserGroupPage" EntityType="Self.tblSysUserGroupPage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblSysUserGroupPageDetail" EntityType="Self.tblSysUserGroupPageDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblSysUserGroupPagePage" EntityType="Self.tblSysUserGroupPagePage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblSysUserRoleGroup" EntityType="Self.tblSysUserRoleGroup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblSysUserRolePage" EntityType="Self.tblSysUserRolePage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblUser" EntityType="Self.tblUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblUserCloud" EntityType="Self.tblUserCloud" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblUserFriends" EntityType="Self.tblUserFriends" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblUserImg" EntityType="Self.tblUserImg" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="user_steel" EntityType="Self.user_steel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="web_banner" EntityType="Self.web_banner" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="web_chater" EntityType="Self.web_chater" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="web_chater_content" EntityType="Self.web_chater_content" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="web_content" EntityType="Self.web_content" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="web_content_other" EntityType="Self.web_content_other" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="web_customer" EntityType="Self.web_customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="web_department" EntityType="Self.web_department" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="web_employer" EntityType="Self.web_employer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="web_list_product" EntityType="Self.web_list_product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="web_menu_root" EntityType="Self.web_menu_root" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="web_products" EntityType="Self.web_products" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="web_title" EntityType="Self.web_title" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="web_vangia_config" EntityType="Self.web_vangia_config" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="web_vangia_doitac" EntityType="Self.web_vangia_doitac" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="web_vangia_duanmau" EntityType="Self.web_vangia_duanmau" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="web_vangia_employee" EntityType="Self.web_vangia_employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="web_vangia_language" EntityType="Self.web_vangia_language" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="web_vangia_menu" EntityType="Self.web_vangia_menu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="web_vangia_menucon" EntityType="Self.web_vangia_menucon" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="web_vangia_news" EntityType="Self.web_vangia_news" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="web_vangia_products" EntityType="Self.web_vangia_products" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="web_vangia_project" EntityType="Self.web_vangia_project" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="web_vangia_silde" EntityType="Self.web_vangia_silde" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="web_vangia_team" EntityType="Self.web_vangia_team" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="web_vangia_tuyendung" EntityType="Self.web_vangia_tuyendung" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="web_vangia_type_products" EntityType="Self.web_vangia_type_products" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="web_vangia_typeproject" EntityType="Self.web_vangia_typeproject" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="fs_manga_img" EntityType="Self.fs_manga_img" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[fs_manga_img].[chap_id] AS [chap_id], 
+[fs_manga_img].[img_orther] AS [img_orther], 
+[fs_manga_img].[img_link] AS [img_link]
+FROM [dbo].[fs_manga_img] AS [fs_manga_img]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="grid_view_mapping" EntityType="Self.grid_view_mapping" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[grid_view_mapping].[id_mapped] AS [id_mapped], 
+[grid_view_mapping].[id_ctr_name] AS [id_ctr_name], 
+[grid_view_mapping].[orther] AS [orther]
+FROM [dbo].[grid_view_mapping] AS [grid_view_mapping]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="log_store_prod" EntityType="Self.log_store_prod" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[log_store_prod].[id_store_prod] AS [id_store_prod], 
+[log_store_prod].[store_prod_name] AS [store_prod_name], 
+[log_store_prod].[store_prod_code] AS [store_prod_code], 
+[log_store_prod].[store_prod_img] AS [store_prod_img], 
+[log_store_prod].[store_prod_count] AS [store_prod_count], 
+[log_store_prod].[store_prod_cost] AS [store_prod_cost], 
+[log_store_prod].[store_prod_cost_sell] AS [store_prod_cost_sell], 
+[log_store_prod].[store_prod_shelf] AS [store_prod_shelf], 
+[log_store_prod].[log_sell] AS [log_sell], 
+[log_store_prod].[id_store_cate] AS [id_store_cate], 
+[log_store_prod].[store_cate_name] AS [store_cate_name], 
+[log_store_prod].[id_store_unit] AS [id_store_unit], 
+[log_store_prod].[store_unit_name] AS [store_unit_name], 
+[log_store_prod].[id_store] AS [id_store], 
+[log_store_prod].[store_name] AS [store_name], 
+[log_store_prod].[id_store_stock] AS [id_store_stock], 
+[log_store_prod].[store_stock_code] AS [store_stock_code], 
+[log_store_prod].[id_store_slot] AS [id_store_slot], 
+[log_store_prod].[store_slot_code] AS [store_slot_code]
+FROM [dbo].[log_store_prod] AS [log_store_prod]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="sys_data_fixed" EntityType="Self.sys_data_fixed" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[sys_data_fixed].[ctr_client_id] AS [ctr_client_id], 
+[sys_data_fixed].[record_order] AS [record_order], 
+[sys_data_fixed].[st_value] AS [st_value], 
+[sys_data_fixed].[st_name] AS [st_name], 
+[sys_data_fixed].[st_parent] AS [st_parent], 
+[sys_data_fixed].[ctr_key_query] AS [ctr_key_query], 
+[sys_data_fixed].[id_form] AS [id_form]
+FROM [dbo].[sys_data_fixed] AS [sys_data_fixed]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="sys_store_prod" EntityType="Self.sys_store_prod" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[sys_store_prod].[id_store_prod] AS [id_store_prod], 
+[sys_store_prod].[store_prod_count] AS [store_prod_count], 
+[sys_store_prod].[id_store_slot] AS [id_store_slot], 
+[sys_store_prod].[store_prod_cost] AS [store_prod_cost], 
+[sys_store_prod].[store_prod_shelf] AS [store_prod_shelf]
+FROM [dbo].[sys_store_prod] AS [sys_store_prod]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tblSysUserListShareDetail" EntityType="Self.tblSysUserListShareDetail" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[tblSysUserListShareDetail].[group_role_id] AS [group_role_id], 
+[tblSysUserListShareDetail].[user_id] AS [user_id], 
+[tblSysUserListShareDetail].[id_company] AS [id_company]
+FROM [dbo].[tblSysUserListShareDetail] AS [tblSysUserListShareDetail]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tblSysUserRoleRecord" EntityType="Self.tblSysUserRoleRecord" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[tblSysUserRoleRecord].[user_id_master] AS [user_id_master], 
+[tblSysUserRoleRecord].[user_id_staff] AS [user_id_staff], 
+[tblSysUserRoleRecord].[role_type] AS [role_type], 
+[tblSysUserRoleRecord].[id_page] AS [id_page], 
+[tblSysUserRoleRecord].[id_company] AS [id_company]
+FROM [dbo].[tblSysUserRoleRecord] AS [tblSysUserRoleRecord]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="wb_advertising" EntityType="Self.wb_advertising" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[wb_advertising].[id_advertising] AS [id_advertising], 
+[wb_advertising].[name_advertising] AS [name_advertising], 
+[wb_advertising].[links_advertising] AS [links_advertising], 
+[wb_advertising].[status_advertising] AS [status_advertising], 
+[wb_advertising].[order_advertising] AS [order_advertising], 
+[wb_advertising].[img_advertising] AS [img_advertising]
+FROM [dbo].[wb_advertising] AS [wb_advertising]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="wb_banner" EntityType="Self.wb_banner" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[wb_banner].[id_banner] AS [id_banner], 
+[wb_banner].[name_banner] AS [name_banner], 
+[wb_banner].[links_banner] AS [links_banner], 
+[wb_banner].[order_banner] AS [order_banner], 
+[wb_banner].[image_banner] AS [image_banner], 
+[wb_banner].[status_banner] AS [status_banner], 
+[wb_banner].[type_banner] AS [type_banner]
+FROM [dbo].[wb_banner] AS [wb_banner]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="wb_comment" EntityType="Self.wb_comment" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[wb_comment].[id_comment] AS [id_comment], 
+[wb_comment].[noidung_comment] AS [noidung_comment], 
+[wb_comment].[id_products] AS [id_products], 
+[wb_comment].[phone] AS [phone], 
+[wb_comment].[name_full] AS [name_full], 
+[wb_comment].[email] AS [email]
+FROM [dbo].[wb_comment] AS [wb_comment]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="wb_mail" EntityType="Self.wb_mail" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[wb_mail].[id] AS [id], 
+[wb_mail].[mail_name] AS [mail_name]
+FROM [dbo].[wb_mail] AS [wb_mail]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="wb_menu" EntityType="Self.wb_menu" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[wb_menu].[id_menu] AS [id_menu], 
+[wb_menu].[menu_name] AS [menu_name], 
+[wb_menu].[menu_key_url] AS [menu_key_url], 
+[wb_menu].[menu_order] AS [menu_order], 
+[wb_menu].[menu_status] AS [menu_status], 
+[wb_menu].[menu_title] AS [menu_title], 
+[wb_menu].[menu_links] AS [menu_links]
+FROM [dbo].[wb_menu] AS [wb_menu]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="wb_menu_products" EntityType="Self.wb_menu_products" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[wb_menu_products].[id_menu_products] AS [id_menu_products], 
+[wb_menu_products].[menu_products_name] AS [menu_products_name], 
+[wb_menu_products].[menu_products_key] AS [menu_products_key], 
+[wb_menu_products].[menu_products_order] AS [menu_products_order], 
+[wb_menu_products].[img_products] AS [img_products], 
+[wb_menu_products].[menu_status] AS [menu_status], 
+[wb_menu_products].[menu_tomtat] AS [menu_tomtat]
+FROM [dbo].[wb_menu_products] AS [wb_menu_products]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="wb_products" EntityType="Self.wb_products" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[wb_products].[id_products] AS [id_products], 
+[wb_products].[name_products] AS [name_products], 
+[wb_products].[type_products] AS [type_products], 
+[wb_products].[tomtat_products] AS [tomtat_products], 
+[wb_products].[noidung_products] AS [noidung_products], 
+[wb_products].[price_products] AS [price_products], 
+[wb_products].[giamgia_products] AS [giamgia_products], 
+[wb_products].[giasaugiam_products] AS [giasaugiam_products], 
+[wb_products].[status_products] AS [status_products], 
+[wb_products].[img_main_products] AS [img_main_products], 
+[wb_products].[order_products] AS [order_products], 
+[wb_products].[img1_products] AS [img1_products], 
+[wb_products].[img2_products] AS [img2_products], 
+[wb_products].[img3_products] AS [img3_products], 
+[wb_products].[img4_products] AS [img4_products], 
+[wb_products].[tieubieu_products] AS [tieubieu_products], 
+[wb_products].[img5_products] AS [img5_products], 
+[wb_products].[img0_products] AS [img0_products]
+FROM [dbo].[wb_products] AS [wb_products]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="web_tr_menu_product" EntityType="Self.web_tr_menu_product" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[web_tr_menu_product].[id_menu_products] AS [id_menu_products], 
+[web_tr_menu_product].[name_menu_products] AS [name_menu_products], 
+[web_tr_menu_product].[order_menu_products] AS [order_menu_products], 
+[web_tr_menu_product].[status_menu_products] AS [status_menu_products], 
+[web_tr_menu_product].[img_menu_products] AS [img_menu_products], 
+[web_tr_menu_product].[tomtat_menu_products] AS [tomtat_menu_products]
+FROM [dbo].[web_tr_menu_product] AS [web_tr_menu_product]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="web_tr_menutop" EntityType="Self.web_tr_menutop" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[web_tr_menutop].[id_menu_top] AS [id_menu_top], 
+[web_tr_menutop].[name_menu_top] AS [name_menu_top], 
+[web_tr_menutop].[links_menu_top] AS [links_menu_top], 
+[web_tr_menutop].[key_links_menu_top] AS [key_links_menu_top], 
+[web_tr_menutop].[status_menu_top] AS [status_menu_top], 
+[web_tr_menutop].[order_menu_top] AS [order_menu_top]
+FROM [dbo].[web_tr_menutop] AS [web_tr_menutop]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="web_tr_products" EntityType="Self.web_tr_products" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[web_tr_products].[id_products_tr] AS [id_products_tr], 
+[web_tr_products].[name_product_tr] AS [name_product_tr], 
+[web_tr_products].[type_products_tr] AS [type_products_tr], 
+[web_tr_products].[status_products_tr] AS [status_products_tr], 
+[web_tr_products].[order_products_tr] AS [order_products_tr], 
+[web_tr_products].[img_main_products_tr] AS [img_main_products_tr], 
+[web_tr_products].[img1_main_products_tr] AS [img1_main_products_tr], 
+[web_tr_products].[Specials] AS [Specials], 
+[web_tr_products].[price_products] AS [price_products], 
+[web_tr_products].[tomtat_products] AS [tomtat_products], 
+[web_tr_products].[noidung_products] AS [noidung_products], 
+[web_tr_products].[img_small_products] AS [img_small_products], 
+[web_tr_products].[img2_main_products_tr] AS [img2_main_products_tr], 
+[web_tr_products].[img3_main_products_tr] AS [img3_main_products_tr], 
+[web_tr_products].[price_products1] AS [price_products1], 
+[web_tr_products].[phantram_products] AS [phantram_products]
+FROM [dbo].[web_tr_products] AS [web_tr_products]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="web_tr_quangcao" EntityType="Self.web_tr_quangcao" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[web_tr_quangcao].[id_quangcao] AS [id_quangcao], 
+[web_tr_quangcao].[name_quangcao] AS [name_quangcao], 
+[web_tr_quangcao].[links_quangcao] AS [links_quangcao], 
+[web_tr_quangcao].[status_quangcao] AS [status_quangcao], 
+[web_tr_quangcao].[order_quangcao] AS [order_quangcao], 
+[web_tr_quangcao].[img_quangcao] AS [img_quangcao], 
+[web_tr_quangcao].[type_quangcao] AS [type_quangcao]
+FROM [dbo].[web_tr_quangcao] AS [web_tr_quangcao]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

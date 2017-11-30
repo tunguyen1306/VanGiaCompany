@@ -274,11 +274,11 @@ body,html{padding:0;margin:0;-moz-osx-font-smoothing:grayscale;-webkit-font-smoo
 }
 
 .nivo-prevNav:before {
-    background-position: 0 -20px;
+    background-position: 0 -20px!important;
 }
 
 .nivo-nextNav:before {
-    background-position: -19px -20px;
+    background-position: -19px -20px!important;
 
 }
 
@@ -947,7 +947,7 @@ a.fs_slider_next:before {
     position: fixed;
     top: 53px;
     left: 300px;
-    width: 50%;
+    width: 75%;
     opacity: 0.85;
     z-index: 17;
     transition: opacity 400ms, top 300ms;
@@ -970,17 +970,18 @@ a.fs_slider_next:before {
 .fs_title_wrapper h1 {
     text-align: left;
     text-transform: uppercase;
-    font-size: 50px;
+    font-size: 35px;
     line-height: 52px;
     color: #000000;
     margin: 0 0 7px -5px;
+     font-weight:500;
 }
 
 .fs_title_wrapper h3 {
     text-align: left;
     text-transform: none;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 13px;
     line-height: 17px;
     color: #000000;
     margin: 0 0 2px 0;
