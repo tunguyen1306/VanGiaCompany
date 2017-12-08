@@ -54,7 +54,7 @@
                                                                 <i class="stand_icon icon-heart-o"></i>
                                                                 <span>34</span>
                                                             </div>*@
-                                                        <a target="_blank" href="http://www.facebook.com/share.php?u=http://vangia.net/Default/DetailProduct/@Model.tblProject.vangia_name_project.UrlFrendly()-@Model.tblProject.vangia_id_project&title=@Model.tblProject.vangia_name_project" class="top_socials share_facebook"><i class="stand_icon icon-facebook-square"></i></a>
+                                                        <a target="_blank" href="http://www.facebook.com/share.php?u=http://nhutrung.com/nhu-trung/chi-tiet?id=@Model.tblProject.vangia_name_project.UrlFrendly()-@Model.tblProject.vangia_id_project&title=@Model.tblProject.vangia_name_project" class="top_socials share_facebook"><i class="stand_icon icon-facebook-square"></i></a>
                                                         <a target="_blank" href="javascript:void(0);" class="top_socials share_tweet"><i class="stand_icon icon-twitter"></i></a>
                                                         <a target="_blank" href="javascript:void(0);" class="top_socials share_gplus"><i class="icon-google-plus-square"></i></a>
                                                         <a target="_blank" href="javascript:void(0);" class="top_socials share_pinterest"><i class="stand_icon icon-pinterest"></i></a>
@@ -98,23 +98,39 @@
 </div>
 <style>
     .nivo-caption {
-  
 
-    position: absolute;
-    left: 0;
-    top: 0;
-    background: #000;
-    color: #fff;
-    width: 100%;
-    z-index: 8;
-    padding: 5px 10px;
-    opacity: .8;
-    overflow: hidden;
-    display: none;
-    box-sizing: border-box;
-    height:35px;
-}
-.nivo-caption a {
-    display:inline !important;
-}
+
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #000;
+        color: #fff;
+        width: 100%;
+        z-index: 8;
+        padding: 5px 10px;
+        opacity: .8;
+        overflow: hidden;
+        display: none;
+        box-sizing: border-box;
+        height: 35px;
+    }
+    .nivo-caption a {
+        display: inline !important;
+    }
 </style>
+@section share_fb{
+
+    <meta property="og:title" content="@Model.tblProject.vangia_name_project" />
+
+    <meta property="og:url" content='http://nhutrung.com/nhu-trung/chi-tiet?id=@Model.tblProject.vangia_name_project.UrlFrendly()-@Model.tblProject.vangia_id_project' />
+    <meta name="description" content="@Model.tblProject.vangia_tomtat_project">
+    <meta property="og:description" content="@Model.tblProject.vangia_tomtat_project" />
+    <meta name="keywords" content="du lịch-du lich" />
+
+    <meta property="og:image:width" content="600" />
+    <meta property="og:image:height" content="315" />
+
+    <meta property="og:image" content="@(ConfigurationManager.AppSettings["domainvg"] + (Model.tblListPicture.FirstOrDefault() != null ? (Model.tblListPicture.FirstOrDefault().originalFilepath.Split('_')[0] + "/" + Model.tblListPicture.FirstOrDefault().originalFilepath) : "img.png"))" />
+
+
+}

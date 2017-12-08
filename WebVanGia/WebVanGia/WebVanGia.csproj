@@ -676,6 +676,7 @@
     <Content Include="Template\img\gallery\albums\7.jpg" />
     <Content Include="Template\img\gallery\albums\8.jpg" />
     <Content Include="Template\img\gallery\albums\9.jpg" />
+    <Content Include="Template\img\logotab.png" />
     <Content Include="Template\img\portfolio\columns\1.jpg" />
     <Content Include="Template\img\portfolio\columns\10.jpg" />
     <Content Include="Template\img\portfolio\columns\11.jpg" />

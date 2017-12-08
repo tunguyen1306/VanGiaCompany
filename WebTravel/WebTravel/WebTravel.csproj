@@ -314,6 +314,7 @@
     <Content Include="Template\css\responsive.css" />
     <Content Include="Template\css\theme.css" />
     <Content Include="Template\Home.html" />
+    <Content Include="Template\img\about-picture.jpg" />
     <Content Include="Template\img\br1.jpg" />
     <Content Include="Template\img\diamond_sprite.png" />
     <Content Include="Template\img\gallery\albums\widget.jpg" />
@@ -356,6 +357,8 @@
     <Content Include="Template\img\gallery\albums\7.jpg" />
     <Content Include="Template\img\gallery\albums\8.jpg" />
     <Content Include="Template\img\gallery\albums\9.jpg" />
+    <Content Include="Template\img\LogoTabNT.png" />
+    <Content Include="Template\img\NTLogo.png" />
     <Content Include="Template\img\portfolio\columns\1.jpg" />
     <Content Include="Template\img\portfolio\columns\10.jpg" />
     <Content Include="Template\img\portfolio\columns\11.jpg" />
